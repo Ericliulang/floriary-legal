@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户协议 — 花迹 Floriary</title>
+  <style>
+    :root {
+      --brand-800: #2D5A3D;
+      --brand-700: #3E6B4F;
+      --brand-600: #5FAE6E;
+      --brand-400: #8FC79A;
+      --surface-mint: #EEF6F0;
+      --bg: #FAFCFA;
+      --surface: #FFFFFF;
+      --text-primary: #212B26;
+      --text-secondary: #5F6B63;
+      --text-tertiary: #9AA5A0;
+      --border: #E2EAE4;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                   "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--brand-700); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--surface-mint);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .site-header .brand { font-size: 15px; font-weight: 600; color: var(--brand-800); }
+    .site-header .page-type { font-size: 13px; color: var(--text-tertiary); margin-left: auto; }
+
+    .page-container { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+
+    .page-title-block { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .page-title-block h1 { font-size: 26px; font-weight: 700; color: var(--brand-800); margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--text-tertiary); display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .toc { background: var(--surface-mint); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; }
+    .toc-title { font-size: 13px; font-weight: 600; color: var(--brand-700); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .toc ol { padding-left: 20px; }
+    .toc li { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; }
+    .toc li a { color: var(--text-secondary); }
+    .toc li a:hover { color: var(--brand-700); }
+
+    .doc-section { margin-bottom: 36px; }
+    .doc-section h2 { font-size: 18px; font-weight: 700; color: var(--brand-800); margin-bottom: 16px; padding-top: 8px; display: flex; align-items: center; gap: 8px; }
+    .doc-section h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: var(--brand-600); border-radius: 2px; flex-shrink: 0; }
+    .doc-section h3 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 20px 0 10px; }
+    .doc-section p { color: var(--text-secondary); margin-bottom: 12px; }
+    .doc-section ul { padding-left: 20px; margin-bottom: 12px; }
+    .doc-section ul li { color: var(--text-secondary); margin-bottom: 6px; }
+
+    .table-wrap { overflow-x: auto; margin: 12px 0 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead th { background: var(--surface-mint); color: var(--brand-800); font-weight: 600; text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+    tbody td { padding: 10px 14px; color: var(--text-secondary); border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) td { background: #FAFCFA; }
+
+    .callout { background: var(--surface-mint); border-left: 3px solid var(--brand-600); border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0 16px; font-size: 14px; color: var(--text-secondary); }
+    .callout strong { color: var(--brand-800); }
+
+    .callout-warning { background: #FFF8E7; border-left: 3px solid #E08F4C; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0 16px; font-size: 14px; color: #5F6B63; }
+    .callout-warning strong { color: #B45309; }
+
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+    .site-footer { background: var(--surface); border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 13px; color: var(--text-tertiary); }
+    .site-footer a { color: var(--brand-700); }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 8px; flex-wrap: wrap; }
+
+    @media (max-width: 480px) {
+      .page-container { padding: 24px 16px 48px; }
+      .page-title-block h1 { font-size: 22px; }
+      .doc-section h2 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-icon">🌿</div>
+    <span class="brand">花迹 Floriary</span>
+    <span class="page-type">法律文件</span>
+  </header>
+
+  <main class="page-container">
+    <div class="page-title-block">
+      <h1>用户协议</h1>
+      <div class="meta">
+        <span>生效日期：2026 年 6 月 11 日</span>
+        <span>最后更新：2026 年 6 月 11 日</span>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">目录</div>
+      <ol>
+        <li><a href="#s1">服务说明</a></li>
+        <li><a href="#s2">账号注册与使用</a></li>
+        <li><a href="#s3">你的内容</a></li>
+        <li><a href="#s4">付费服务</a></li>
+        <li><a href="#s5">免费版限制</a></li>
+        <li><a href="#s6">账号注销</a></li>
+        <li><a href="#s7">禁止行为</a></li>
+        <li><a href="#s8">服务变更与终止</a></li>
+        <li><a href="#s9">知识产权</a></li>
+        <li><a href="#s10">免责声明</a></li>
+        <li><a href="#s11">适用法律与争议解决</a></li>
+        <li><a href="#s12">协议更新</a></li>
+      </ol>
+    </nav>
+
+    <div class="callout">
+      欢迎使用「花迹 Floriary」。本协议是你与开发者 <strong>Eric Liu</strong>（以下简称「我」或「开发者」）之间关于使用花迹应用的法律协议。<strong>安装、注册或使用本应用，即表示你已阅读、理解并同意本协议的全部条款。</strong><br><br>
+      如不同意本协议，请立即停止使用并从你的设备上卸载本应用。
+    </div>
+
+    <!-- Section 1 -->
+    <section class="doc-section" id="s1">
+      <h2>一、服务说明</h2>
+      <p>花迹是一款植物成长记录应用，提供以下功能：</p>
+      <ul>
+        <li>花园与植株档案管理</li>
+        <li>成长记录（文字备注、照片、养护标签）</li>
+        <li>养护提醒</li>
+        <li>数据统计与热力图</li>
+        <li>结构化数据跨设备云同步（所有账号用户均包含）</li>
+        <li>会员增值功能（解锁更高花园/植株数量上限、完整统计历史等）</li>
+        <li>云存储增值服务（解锁云端图片备份与多设备同步，独立于会员订阅）</li>
+        <li>AI 识图功能（V1.1 及以后版本）</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 2 -->
+    <section class="doc-section" id="s2">
+      <h2>二、账号注册与使用</h2>
+
+      <h3>2.1 注册要求</h3>
+      <ul>
+        <li>你必须提供真实、有效的信息（如邮箱地址），并确保信息准确。</li>
+        <li>每个邮箱地址或第三方账号（Apple ID 等）只能注册一个花迹账号。</li>
+        <li>你须年满 14 周岁（或在监护人指导下，根据所在地法律规定）方可注册使用。</li>
+      </ul>
+
+      <h3>2.2 账号安全</h3>
+      <ul>
+        <li>你负责保管账号凭证（邮箱密码、登录设备），不得将账号转让、出借或共享给他人。</li>
+        <li>如发现账号被盗用，请立即通过「忘记密码」功能重置凭证，并联系开发者邮箱。</li>
+        <li>因账号凭证泄露导致的损失，由账号持有人自行承担，但若因我方服务本身的安全漏洞导致的除外。</li>
+      </ul>
+
+      <h3>2.3 多种登录方式</h3>
+      <p>你可以在「我的 → 账号与安全」中为同一账号绑定多种登录方式（邮箱、Apple ID 等）。每种绑定均需经过验证，同一邮箱/Apple ID 不可同时绑定多个花迹账号。账号必须保留至少一种有效的登录方式，不可全部解绑。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 3 -->
+    <section class="doc-section" id="s3">
+      <h2>三、你的内容</h2>
+
+      <h3>3.1 内容归属</h3>
+      <p>你在花迹中创建的花园、植株、成长记录、照片等内容（统称「用户内容」）的知识产权归属于你。</p>
+
+      <h3>3.2 授权</h3>
+      <p>为向你提供服务（包括数据存储、同步和云端图片备份），你授权我在技术上必要的范围内处理、存储和传输你的内容。此授权不涉及任何商业用途，不向第三方转授。</p>
+
+      <h3>3.3 内容责任</h3>
+      <p>你对自己上传或创建的内容承担责任，并保证：</p>
+      <ul>
+        <li>内容不侵犯他人知识产权、隐私权或其他合法权益；</li>
+        <li>内容不违反中华人民共和国及你所在地的法律法规；</li>
+        <li>不利用本应用存储、传播违法、有害或侵权内容。</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 4 -->
+    <section class="doc-section" id="s4">
+      <h2>四、付费服务</h2>
+      <p>花迹提供两条<strong>完全独立</strong>的付费增值服务，你可以单独订阅其中任一项，也可以同时订阅两项。</p>
+
+      <h3>4.1 会员订阅</h3>
+      <p>会员解锁以下功能权限：</p>
+      <ul>
+        <li>无限花园数量（免费版上限 3 个）</li>
+        <li>每个花园无限植株数量（免费版每园上限 20 株）</li>
+        <li>完整统计历史热力图（免费版仅展示近 1 个月）</li>
+        <li>更高的 AI 识图调用额度（具体额度按版本配置）</li>
+      </ul>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>套餐</th><th>计费方式</th><th>试用</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>月度会员</td><td>自动续费订阅，每月收费</td><td>含 7 天免费试用期</td></tr>
+            <tr><td>年度会员</td><td>自动续费订阅，每年收费</td><td>含 7 天免费试用期</td></tr>
+            <tr><td>永久会员</td><td>一次性买断，无需续费</td><td>无试用期</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout-warning">
+        <strong>重要：</strong>会员<strong>不包含</strong>任何云存储容量，购买会员不会自动获得云端图片备份能力。
+      </div>
+
+      <h3>4.2 云存储订阅</h3>
+      <p>云存储解锁<strong>云端图片备份与多设备同步</strong>能力及对应的存储容量配额。<strong>任何用户（包括免费用户）均可直接订阅云存储，无需先成为付费会员。</strong></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>容量</th><th>计费方式</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1GB、5GB、10GB、20GB（各档位）</td><td>自动续费订阅，可选月付或年付</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>云存储<strong>不提供永久买断</strong>。</p>
+
+      <h3>4.3 自动续费说明</h3>
+      <ul>
+        <li>自动续费订阅将在当前订阅周期结束前 24 小时内自动通过你的 Apple ID 账户扣费续订，续费后订阅期顺延。</li>
+        <li>你可以随时前往「iPhone 设置 → [你的名字] → 订阅」管理或关闭自动续费。</li>
+        <li>关闭自动续费后，订阅权益在当前已付费周期结束前仍然有效，到期后不再续订。</li>
+        <li>含免费试用期的订阅：试用期结束后，如未在试用期内取消，将自动扣费续订。</li>
+      </ul>
+
+      <h3>4.4 退款</h3>
+      <p>所有购买均通过 Apple App Store 完成结算，退款事项请直接联系 Apple（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>）。开发者不直接处理退款。</p>
+
+      <h3>4.5 价格变更</h3>
+      <p>开发者保留调整订阅价格的权利。价格调整将提前在应用内告知，且不影响当前已付费订阅周期内的费用；下一个计费周期起按新价格执行。</p>
+
+      <h3>4.6 到期与超限策略</h3>
+      <p><strong>会员到期（未续费）：</strong></p>
+      <ul>
+        <li>超出免费版额度的花园/植株/记录数据保留，但进入只读状态（无法新增或编辑超限部分，已有数据可查看）。</li>
+        <li>重新订阅会员后，高级功能权限即时恢复。</li>
+      </ul>
+      <p><strong>云存储订阅到期（未续费）：</strong></p>
+      <ul>
+        <li>已上传的云端图片保留，但不再允许上传新图片或同步新图片至云端。</li>
+        <li>结构化数据（花园/植株/记录文字等）的云同步不受影响，持续正常工作。</li>
+        <li>重新订阅后，图片上传与同步功能恢复。</li>
+      </ul>
+      <div class="callout">
+        <strong>重要：到期或超限均不会立即删除你的数据；数据保留，仅限制新增/编辑操作。</strong>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 5 -->
+    <section class="doc-section" id="s5">
+      <h2>五、免费版限制</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>功能</th><th>免费版上限</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>花园数量</td><td>最多 3 个</td></tr>
+            <tr><td>每个花园植株数量</td><td>最多 20 株</td></tr>
+            <tr><td>统计热力图历史</td><td>近 1 个月</td></tr>
+            <tr><td>AI 识图额度</td><td>5 次（终身，V1.1 版本生效）</td></tr>
+            <tr><td>云端图片备份</td><td>不支持（仅本地存储）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>免费版的成长记录（文字）和结构化数据（花园/植株/提醒等）享有与付费用户相同的<strong>云端同步</strong>服务，无限制。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 6 -->
+    <section class="doc-section" id="s6">
+      <h2>六、账号注销</h2>
+      <p>你可以随时通过「我的 → 账号与安全 → 注销账号」申请注销。</p>
+      <ol style="padding-left: 20px; color: var(--text-secondary);">
+        <li style="margin-bottom: 8px;"><strong>订阅提醒</strong>：注销账号<strong>不会自动取消你的 Apple 订阅扣费</strong>。应用会在注销前明确提示，并提供跳转「App Store 订阅管理」的入口，请按需自行前往取消。</li>
+        <li style="margin-bottom: 8px;"><strong>二次验证</strong>：需输入当前密码（或其他已绑定的验证方式）确认是本人操作。</li>
+        <li style="margin-bottom: 8px;"><strong>冷静期</strong>：提交注销申请后，账号进入 <strong>7 天冷静期</strong>。冷静期内你仍可登录并撤销申请。</li>
+        <li style="margin-bottom: 8px;"><strong>数据处理</strong>：冷静期结束后，你的账号数据将被软删除和匿名化；云端图片进入对象存储清理队列。</li>
+        <li><strong>不可恢复</strong>：冷静期结束、数据删除后，数据无法恢复。</li>
+      </ol>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 7 -->
+    <section class="doc-section" id="s7">
+      <h2>七、禁止行为</h2>
+      <p>你在使用本应用时不得：</p>
+      <ul>
+        <li>破解、反编译、逆向工程本应用；</li>
+        <li>绕过付费限制（如冒用他人账号或伪造收据等）；</li>
+        <li>利用本应用存储、传播违法内容（含色情、暴力、涉政敏感内容等）；</li>
+        <li>对服务器发起 DoS/DDoS 攻击或其他干扰服务的行为；</li>
+        <li>爬取、批量下载其他用户的数据；</li>
+        <li>以任何方式滥用识图 AI 服务（含发送与植物识别无关的有害内容）。</li>
+      </ul>
+      <p>违反上述规定的，我有权终止你的账号服务，情节严重的将依法追究法律责任。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 8 -->
+    <section class="doc-section" id="s8">
+      <h2>八、服务变更与终止</h2>
+
+      <h3>8.1 服务变更</h3>
+      <p>我保留对本应用功能、界面、付费方案进行调整的权利，重大变更将提前在应用内通知。</p>
+
+      <h3>8.2 服务终止</h3>
+      <p>若本应用决定永久停止运营，将至少提前 <strong>30 天</strong>在应用内和本页面公告，并说明你的数据如何处理（包括数据导出渠道或清除时间表）。在此期间，你可选择导出或备份你的内容。</p>
+
+      <h3>8.3 账号封禁</h3>
+      <p>如你严重违反本协议，我保留在不预先通知的情况下封禁账号的权利。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 9 -->
+    <section class="doc-section" id="s9">
+      <h2>九、知识产权</h2>
+      <p>本应用的代码、设计、图标、文案及「花迹」「Floriary」品牌名称，其知识产权归开发者所有。你不得在未获授权的情况下使用、复制或传播上述内容。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 10 -->
+    <section class="doc-section" id="s10">
+      <h2>十、免责声明</h2>
+      <ul>
+        <li style="margin-bottom: 10px;"><strong>服务可用性</strong>：本应用按「现状」提供服务，不承诺服务永不中断或无故障。因不可抗力、第三方服务商故障（如 Apple、云服务商）、网络问题等导致的服务中断，不承担赔偿责任，但会尽合理努力恢复服务。</li>
+        <li style="margin-bottom: 10px;"><strong>数据备份</strong>：对于未订阅云存储服务的用户，图片数据仅保存在本地设备，设备丢失、损坏或系统重置可能导致数据丢失，请自行做好备份。</li>
+        <li style="margin-bottom: 10px;"><strong>识图准确性</strong>（V1.1 及以后）：AI 识图结果仅供参考，不构成专业植物学鉴定意见。如用于植物安全评估等专业用途，请咨询相关专业人士。</li>
+        <li><strong>第三方链接</strong>：应用内可能包含跳转至 Apple 订阅管理等第三方页面的链接，该等页面的内容和隐私实践由对应第三方负责，与本应用无关。</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 11 -->
+    <section class="doc-section" id="s11">
+      <h2>十一、适用法律与争议解决</h2>
+      <p>本协议的订立、执行和解释，以及由本协议引起的或与本协议有关的一切争议，均适用<strong>中华人民共和国法律</strong>。</p>
+      <p>发生争议时，双方应首先尝试友好协商解决。协商不成的，任何一方均可提交至<strong>被告住所地有管辖权的人民法院</strong>诉讼解决。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 12 -->
+    <section class="doc-section" id="s12">
+      <h2>十二、协议更新</h2>
+      <p>本协议如有重大变更，我将在生效前至少 <strong>7 天</strong>通过应用内通知或邮件告知。继续使用本应用即表示你接受更新后的协议。</p>
+      <p>如不接受更新后的条款，你应在变更生效前停止使用本应用并注销账号。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="doc-section">
+      <h2>联系方式</h2>
+      <ul>
+        <li><strong>开发者</strong>：Eric Liu</li>
+        <li><strong>邮箱</strong>：<a href="mailto:ericliulang@gmail.com">ericliulang@gmail.com</a></li>
+      </ul>
+      <p style="color: var(--text-tertiary); font-size: 13px; margin-top: 16px;">本协议以中文版本为准。</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">首页</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="terms.html">用户协议</a>
+      <a href="mailto:ericliulang@gmail.com">联系我们</a>
+    </div>
+    <p>© 2026 花迹 Floriary · Eric Liu · All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

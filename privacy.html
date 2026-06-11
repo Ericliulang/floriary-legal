@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 — 花迹 Floriary</title>
+  <style>
+    :root {
+      --brand-800: #2D5A3D;
+      --brand-700: #3E6B4F;
+      --brand-600: #5FAE6E;
+      --brand-400: #8FC79A;
+      --surface-mint: #EEF6F0;
+      --bg: #FAFCFA;
+      --surface: #FFFFFF;
+      --text-primary: #212B26;
+      --text-secondary: #5F6B63;
+      --text-tertiary: #9AA5A0;
+      --border: #E2EAE4;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                   "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--brand-700); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--surface-mint);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .site-header .brand {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--brand-800);
+    }
+    .site-header .page-type {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-left: auto;
+    }
+
+    /* Layout */
+    .page-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    /* Page title block */
+    .page-title-block {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-title-block h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--brand-800);
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ToC */
+    .toc {
+      background: var(--surface-mint);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .toc-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-700);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    .toc ol {
+      padding-left: 20px;
+    }
+    .toc li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+    .toc li a { color: var(--text-secondary); }
+    .toc li a:hover { color: var(--brand-700); }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 36px;
+    }
+    .doc-section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brand-800);
+      margin-bottom: 16px;
+      padding-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .doc-section h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--brand-600);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .doc-section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 20px 0 10px;
+    }
+    .doc-section p {
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .doc-section ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .doc-section ul li {
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    /* Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 12px 0 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    thead th {
+      background: var(--surface-mint);
+      color: var(--brand-800);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td {
+      padding: 10px 14px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) td { background: #FAFCFA; }
+
+    /* Callout */
+    .callout {
+      background: var(--surface-mint);
+      border-left: 3px solid var(--brand-600);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin: 12px 0 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    .callout strong { color: var(--brand-800); }
+
+    /* Divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+    .site-footer a { color: var(--brand-700); }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 480px) {
+      .page-container { padding: 24px 16px 48px; }
+      .page-title-block h1 { font-size: 22px; }
+      .doc-section h2 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-icon">🌿</div>
+    <span class="brand">花迹 Floriary</span>
+    <span class="page-type">法律文件</span>
+  </header>
+
+  <main class="page-container">
+    <div class="page-title-block">
+      <h1>隐私政策</h1>
+      <div class="meta">
+        <span>生效日期：2026 年 6 月 11 日</span>
+        <span>最后更新：2026 年 6 月 11 日</span>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">目录</div>
+      <ol>
+        <li><a href="#s1">我们收集哪些信息</a></li>
+        <li><a href="#s2">信息的用途</a></li>
+        <li><a href="#s3">信息存储与保留</a></li>
+        <li><a href="#s4">信息共享与对外披露</a></li>
+        <li><a href="#s5">数据安全</a></li>
+        <li><a href="#s6">你的权利</a></li>
+        <li><a href="#s7">未成年人</a></li>
+        <li><a href="#s8">政策变更</a></li>
+        <li><a href="#s9">联系我们</a></li>
+      </ol>
+    </nav>
+
+    <div class="callout">
+      本隐私政策说明「花迹 Floriary」（以下简称「本应用」或「花迹」）如何收集、使用、存储和保护你的个人信息。<strong>在使用本应用前，请仔细阅读本政策。</strong><br><br>
+      本应用由独立开发者 <strong>Eric Liu</strong> 开发和运营，联系邮箱：<strong>ericliulang@gmail.com</strong>。
+    </div>
+
+    <!-- Section 1 -->
+    <section class="doc-section" id="s1">
+      <h2>一、我们收集哪些信息</h2>
+
+      <h3>1.1 你主动提供的信息</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>信息类型</th><th>具体内容</th><th>何时收集</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>账号信息</td><td>邮箱地址、经过哈希处理的密码</td><td>邮箱注册/登录时</td></tr>
+            <tr><td>Apple 账号标识</td><td>Apple 分配的唯一用户标识符</td><td>使用「Sign in with Apple」登录时</td></tr>
+            <tr><td>用户创建内容</td><td>花园名称、植株名称与品种、成长记录文字备注、养护类型配置、养护提醒间隔设置</td><td>你在应用内创建、编辑记录时</td></tr>
+            <tr><td>图片</td><td>你拍摄或选择的植物照片</td><td>添加成长记录时（详见第 1.3 节）</td></tr>
+            <tr><td>个人资料</td><td>昵称（可选）</td><td>修改个人资料时</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>1.2 自动生成的信息</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>信息类型</th><th>具体内容</th><th>用途</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>推送通知令牌</td><td>设备 APNs Token</td><td>发送养护到期提醒</td></tr>
+            <tr><td>订阅标识符</td><td>Apple App Store 原始交易 ID、订阅产品 ID</td><td>验证和管理会员状态、云存储订阅状态</td></tr>
+            <tr><td>会话凭证</td><td>加密存储在本机的 JWT access token / refresh token</td><td>维持登录态、跨设备数据同步</td></tr>
+            <tr><td>Apple 授权令牌</td><td>加密存储在服务端的 Apple refresh token（仅 Sign in with Apple 用户）</td><td>账号注销时依 Apple 要求执行 token revoke</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>1.3 图片的特别说明</h3>
+      <p>图片存储方式<strong>由你是否订阅「云存储」增值服务决定</strong>，与是否为付费会员无关：</p>
+      <ul>
+        <li><strong>未订阅云存储（默认）</strong>：你的图片<strong>仅保存在你的设备本地</strong>，不上传至花迹服务器。结构化数据（花园/植株/记录文字等）会正常同步到云端，图片不在同步范围内。</li>
+        <li><strong>订阅了云存储</strong>：你选择上传的图片会加密传输并存储在花迹云端对象存储服务中（国内：阿里云 OSS 或腾讯云 COS）。</li>
+      </ul>
+      <div class="callout">
+        <strong>AI 识图的临时图片处理（V1.1 及以后版本）：</strong>使用识图功能时，图片会临时发送给 AI 视觉识别服务进行分析，调用结束后临时数据即被清除，不计入你的云存储配额，也不作为长期备份保留。
+      </div>
+
+      <h3>1.4 我们不收集的信息</h3>
+      <p>本应用<strong>不收集</strong>以下信息：</p>
+      <ul>
+        <li>位置信息（经纬度/GPS）</li>
+        <li>通讯录</li>
+        <li>麦克风音频</li>
+        <li>面部识别数据</li>
+        <li>第三方广告追踪标识符（IDFA）</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 2 -->
+    <section class="doc-section" id="s2">
+      <h2>二、信息的用途</h2>
+      <p>我们收集上述信息仅用于以下目的：</p>
+      <ul>
+        <li><strong>提供账号服务</strong>：注册、登录、维持登录状态、跨设备数据同步。</li>
+        <li><strong>保存和展示你的内容</strong>：将你的花园、植株、成长记录存储在服务器，让你在多设备上访问和查看。</li>
+        <li><strong>云端图片备份与同步</strong>：在你订阅云存储服务的情况下，上传、存储和同步你选择的图片。</li>
+        <li><strong>发送养护提醒</strong>：根据你设置的养护间隔，通过 APNs 向你的设备发送推送通知。</li>
+        <li><strong>验证订阅状态</strong>：向 Apple 服务器查询订阅收据，确认你的会员或云存储订阅是否有效，并据此开放相应功能权限。</li>
+        <li><strong>账号安全与注销</strong>：二次验证身份、执行冷静期删除流程，以及在你注销账号时依 Apple 要求吊销 Sign in with Apple 授权令牌。</li>
+      </ul>
+      <div class="callout">
+        <strong>我们不会将你的个人信息用于商业广告投放、出售给第三方，或用于本政策未列明的目的。</strong>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 3 -->
+    <section class="doc-section" id="s3">
+      <h2>三、信息存储与保留</h2>
+
+      <h3>3.1 存储位置</h3>
+      <ul>
+        <li><strong>结构化数据</strong>（账号信息、花园/植株/记录文字、订阅状态等）：存储在花迹自建服务器（国内区：腾讯云云服务器 + 云数据库）。</li>
+        <li><strong>云端图片</strong>（仅云存储订阅用户）：存储在对象存储服务（国内区：阿里云 OSS 或腾讯云 COS）。</li>
+        <li><strong>本地图片与本地 token</strong>：仅存储在你的设备本地，不经过花迹服务器。</li>
+      </ul>
+
+      <h3>3.2 保留期限</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>数据类型</th><th>保留规则</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>正常账号数据</td><td>账号有效期间持续保留</td></tr>
+            <tr><td>申请注销后</td><td>进入 7 天冷静期；冷静期结束后对数据进行软删除和匿名化处理（花园/植株/记录标记为已删除并与真实用户身份解除关联，邮箱等可识别信息从用户记录中清除）</td></tr>
+            <tr><td>云端图片（注销后）</td><td>进入对象存储清理队列，于账号注销流程完成后批量清除</td></tr>
+            <tr><td>已删除的记录（用户手动删除）</td><td>关联云端图片标记为待清理，由定期清理任务处理；本地图片仅由设备本地清除</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 4 -->
+    <section class="doc-section" id="s4">
+      <h2>四、信息共享与对外披露</h2>
+      <p>我不会出售你的个人信息。仅在以下必要情形下，信息可能流转至第三方：</p>
+
+      <h3>4.1 Apple</h3>
+      <ul>
+        <li><strong>IAP 收据验证</strong>：向 Apple App Store 服务器核查你的订阅收据，以确认订阅有效性。Apple 的隐私实践详见 <a href="https://www.apple.com/legal/privacy/zh-cn/" target="_blank" rel="noopener">Apple 隐私政策</a>。</li>
+        <li><strong>App Store Server Notifications</strong>：接收 Apple 主动推送的订阅状态变更通知（续费、到期、退款等）。</li>
+        <li><strong>Sign in with Apple</strong>：使用该登录方式时，Apple 会向花迹提供你的唯一标识符和（可选的）邮箱地址，相关处理遵循 Apple 的规定。</li>
+      </ul>
+
+      <h3>4.2 云基础设施提供商</h3>
+      <p>花迹将数据存储在<strong>腾讯云（国内）</strong>的服务器上。这些服务商作为数据处理者，仅在花迹的指令下处理数据，不独立使用你的数据，其服务均受其隐私协议约束。</p>
+
+      <h3>4.3 AI 视觉识别服务（V1.1 及以后版本）</h3>
+      <p>识图功能启用后，你上传的图片会<strong>临时传输</strong>给 AI 服务商（具体服务商届时公布）用于识别，处理完毕后临时数据即被清除。你在使用识图功能时即代表对此知情并同意。</p>
+
+      <h3>4.4 法律要求</h3>
+      <p>如法律法规、法院命令或政府机构强制要求，我们可能依法披露必要信息。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 5 -->
+    <section class="doc-section" id="s5">
+      <h2>五、数据安全</h2>
+      <p>我们采取以下措施保护你的数据安全：</p>
+      <ul>
+        <li>账号密码在存储前经过单向哈希（bcrypt）处理，我们无法还原你的原始密码。</li>
+        <li>数据传输全程使用 HTTPS/TLS 加密。</li>
+        <li>服务端 JWT refresh token 使用唯一标识符，一旦吊销即立即失效，防止重放攻击。</li>
+        <li>Apple refresh token（Sign in with Apple 用户）以加密形式存储在服务器，仅在账号注销时读取调用。</li>
+        <li>云存储对象通过预签名 URL 方式访问，每次 URL 均有时效限制，不对外公开。</li>
+      </ul>
+      <p>尽管如此，任何网络服务均无法保证 100% 的安全性。如遇数据安全事件，我将在合理时间内通过应用内通知或邮件告知受影响的用户。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 6 -->
+    <section class="doc-section" id="s6">
+      <h2>六、你的权利</h2>
+      <p>根据中华人民共和国《个人信息保护法》及相关法规，你享有以下权利：</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>权利</th><th>如何行使</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>查阅和复制</strong>自己的数据</td><td>应用内直接查看；如需导出数据请联系开发者邮箱</td></tr>
+            <tr><td><strong>更正</strong>错误信息</td><td>在「我的 → 个人资料」中自行修改，或联系我们协助处理</td></tr>
+            <tr><td><strong>删除</strong>账号及数据</td><td>「我的 → 账号与安全 → 注销账号」，7 天冷静期后执行</td></tr>
+            <tr><td><strong>撤回</strong>推送通知授权</td><td>在 iPhone「设置 → 通知 → 花迹」中关闭</td></tr>
+            <tr><td>就隐私事项<strong>提出询问或投诉</strong></td><td>发送邮件至：ericliulang@gmail.com</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>我们将在收到请求后 <strong>15 个工作日</strong>内回复。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 7 -->
+    <section class="doc-section" id="s7">
+      <h2>七、未成年人</h2>
+      <p>本应用不面向 14 周岁以下的未成年人提供服务。如你未满 14 周岁，请在监护人陪同下使用，并由监护人阅读并同意本政策。如我们发现已收集未满 14 周岁未成年人的个人信息且未取得监护人同意，将及时删除相关信息。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 8 -->
+    <section class="doc-section" id="s8">
+      <h2>八、政策变更</h2>
+      <p>本政策如有重大变更，我们将通过以下方式提前告知：</p>
+      <ul>
+        <li>在应用内显示更新通知；</li>
+        <li>更新本页面顶部的「生效日期」。</li>
+      </ul>
+      <p>非重大调整（如文字纠错、章节调整）将直接更新本页面，不单独通知。继续使用本应用即视为接受更新后的政策。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 9 -->
+    <section class="doc-section" id="s9">
+      <h2>九、联系我们</h2>
+      <p>如对本隐私政策有任何疑问，请联系：</p>
+      <ul>
+        <li><strong>开发者</strong>：Eric Liu</li>
+        <li><strong>邮箱</strong>：<a href="mailto:ericliulang@gmail.com">ericliulang@gmail.com</a></li>
+        <li><strong>隐私政策页面</strong>：<a href="https://ericliulang.github.io/floriary-legal/privacy.html">https://ericliulang.github.io/floriary-legal/privacy.html</a></li>
+      </ul>
+      <p style="color: var(--text-tertiary); font-size: 13px; margin-top: 16px;">本政策以中文版本为准。</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">首页</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="terms.html">用户协议</a>
+      <a href="mailto:ericliulang@gmail.com">联系我们</a>
+    </div>
+    <p>© 2026 花迹 Floriary · Eric Liu · All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
