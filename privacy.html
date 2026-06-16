@@ -1,235 +1,56 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隐私政策 — 花迹 Floriary</title>
   <style>
-    :root {
-      --brand-800: #2D5A3D;
-      --brand-700: #3E6B4F;
-      --brand-600: #5FAE6E;
-      --brand-400: #8FC79A;
-      --surface-mint: #EEF6F0;
-      --bg: #FAFCFA;
-      --surface: #FFFFFF;
-      --text-primary: #212B26;
-      --text-secondary: #5F6B63;
-      --text-tertiary: #9AA5A0;
-      --border: #E2EAE4;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
-                   "Microsoft YaHei", "Helvetica Neue", sans-serif;
-      background: var(--bg);
-      color: var(--text-primary);
-      font-size: 15px;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--brand-700); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Header */
-    .site-header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--surface-mint);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-    .site-header .brand {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--brand-800);
-    }
-    .site-header .page-type {
-      font-size: 13px;
-      color: var(--text-tertiary);
-      margin-left: auto;
-    }
-
-    /* Layout */
-    .page-container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 32px 24px 64px;
-    }
-
-    /* Page title block */
-    .page-title-block {
-      margin-bottom: 32px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-    .page-title-block h1 {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--brand-800);
-      margin-bottom: 8px;
-    }
-    .meta {
-      font-size: 13px;
-      color: var(--text-tertiary);
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    /* ToC */
-    .toc {
-      background: var(--surface-mint);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 32px;
-    }
-    .toc-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--brand-700);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
-    .toc ol {
-      padding-left: 20px;
-    }
-    .toc li {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 4px;
-    }
-    .toc li a { color: var(--text-secondary); }
-    .toc li a:hover { color: var(--brand-700); }
-
-    /* Sections */
-    .doc-section {
-      margin-bottom: 36px;
-    }
-    .doc-section h2 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--brand-800);
-      margin-bottom: 16px;
-      padding-top: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .doc-section h2::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 18px;
-      background: var(--brand-600);
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-    .doc-section h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin: 20px 0 10px;
-    }
-    .doc-section p {
-      color: var(--text-secondary);
-      margin-bottom: 12px;
-    }
-    .doc-section ul {
-      padding-left: 20px;
-      margin-bottom: 12px;
-    }
-    .doc-section ul li {
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-    }
-
-    /* Table */
-    .table-wrap {
-      overflow-x: auto;
-      margin: 12px 0 16px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-    thead th {
-      background: var(--surface-mint);
-      color: var(--brand-800);
-      font-weight: 600;
-      text-align: left;
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border);
-    }
-    tbody td {
-      padding: 10px 14px;
-      color: var(--text-secondary);
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    tbody tr:last-child td { border-bottom: none; }
-    tbody tr:nth-child(even) td { background: #FAFCFA; }
-
-    /* Callout */
-    .callout {
-      background: var(--surface-mint);
-      border-left: 3px solid var(--brand-600);
-      border-radius: 0 8px 8px 0;
-      padding: 14px 16px;
-      margin: 12px 0 16px;
-      font-size: 14px;
-      color: var(--text-secondary);
-    }
-    .callout strong { color: var(--brand-800); }
-
-    /* Divider */
-    .section-divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 32px 0;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      padding: 24px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-tertiary);
-    }
-    .site-footer a { color: var(--brand-700); }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 480px) {
-      .page-container { padding: 24px 16px 48px; }
-      .page-title-block h1 { font-size: 22px; }
-      .doc-section h2 { font-size: 16px; }
-    }
+    :root{--brand-800:#2D5A3D;--brand-700:#3E6B4F;--brand-600:#5FAE6E;--brand-400:#8FC79A;--surface-mint:#EEF6F0;--bg:#FAFCFA;--surface:#FFFFFF;--text-primary:#212B26;--text-secondary:#5F6B63;--text-tertiary:#9AA5A0;--border:#E2EAE4}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif;background:var(--bg);color:var(--text-primary);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand-700);text-decoration:none}a:hover{text-decoration:underline}
+    .site-header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:20}
+    .logo-icon{width:32px;height:32px;background:var(--surface-mint);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+    .site-header .brand{font-size:15px;font-weight:600;color:var(--brand-800)}
+    .lang-switch{margin-left:auto;position:relative}
+    .lang-btn{font:inherit;font-size:13px;color:var(--text-secondary);background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 12px;cursor:pointer;display:flex;align-items:center;gap:6px}
+    .lang-btn:hover{border-color:var(--brand-400)}
+    .lang-menu{position:absolute;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.10);padding:6px;min-width:148px;list-style:none;z-index:30}
+    .lang-menu[hidden]{display:none}
+    .lang-menu button{width:100%;text-align:left;font:inherit;font-size:14px;color:var(--text-primary);background:none;border:none;border-radius:8px;padding:9px 12px;cursor:pointer}
+    .lang-menu button:hover{background:var(--surface-mint)}
+    .page-container{max-width:720px;margin:0 auto;padding:32px 24px 64px}
+    .page-title-block{margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+    .page-title-block h1{font-size:26px;font-weight:700;color:var(--brand-800);margin-bottom:8px}
+    .meta{font-size:13px;color:var(--text-tertiary);display:flex;gap:16px;flex-wrap:wrap}
+    .toc{background:var(--surface-mint);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:32px}
+    .toc-title{font-size:13px;font-weight:600;color:var(--brand-700);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+    .toc ol{padding-left:20px}
+    .toc li{font-size:14px;color:var(--text-secondary);margin-bottom:4px}
+    .toc li a{color:var(--text-secondary)}.toc li a:hover{color:var(--brand-700)}
+    .doc-section{margin-bottom:36px}
+    .doc-section h2{font-size:18px;font-weight:700;color:var(--brand-800);margin-bottom:16px;padding-top:8px;display:flex;align-items:center;gap:8px}
+    .doc-section h2::before{content:'';display:inline-block;width:4px;height:18px;background:var(--brand-600);border-radius:2px;flex-shrink:0}
+    .doc-section h3{font-size:15px;font-weight:600;color:var(--text-primary);margin:20px 0 10px}
+    .doc-section p{color:var(--text-secondary);margin-bottom:12px}
+    .doc-section ul{padding-left:20px;margin-bottom:12px}
+    .doc-section ul li{color:var(--text-secondary);margin-bottom:6px}
+    .table-wrap{overflow-x:auto;margin:12px 0 16px}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    thead th{background:var(--surface-mint);color:var(--brand-800);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--border)}
+    tbody td{padding:10px 14px;color:var(--text-secondary);border-bottom:1px solid var(--border);vertical-align:top}
+    tbody tr:last-child td{border-bottom:none}
+    tbody tr:nth-child(even) td{background:#FAFCFA}
+    .callout{background:var(--surface-mint);border-left:3px solid var(--brand-600);border-radius:0 8px 8px 0;padding:14px 16px;margin:12px 0 16px;font-size:14px;color:var(--text-secondary)}
+    .callout strong{color:var(--brand-800)}
+    .section-divider{border:none;border-top:1px solid var(--border);margin:32px 0}
+    .site-footer{background:var(--surface);border-top:1px solid var(--border);padding:24px;text-align:center;font-size:13px;color:var(--text-tertiary)}
+    .site-footer a{color:var(--brand-700)}
+    .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:8px;flex-wrap:wrap}
+    [data-loc]{display:none}
+    html[data-lang="zh"] [data-loc="zh"],html[data-lang="zh-Hant"] [data-loc="zh-Hant"],html[data-lang="en"] [data-loc="en"],html[data-lang="ja"] [data-loc="ja"],html[data-lang="ko"] [data-loc="ko"]{display:block}
+    @media(max-width:480px){.page-container{padding:24px 16px 48px}.page-title-block h1{font-size:22px}.doc-section h2{font-size:16px}}
   </style>
 </head>
 <body>
@@ -237,147 +58,119 @@
   <header class="site-header">
     <div class="logo-icon">🌿</div>
     <span class="brand">花迹 Floriary</span>
-    <span class="page-type">法律文件</span>
+    <div class="lang-switch">
+      <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">🌐 <span id="langLabel">简体中文</span> ▾</button>
+      <ul class="lang-menu" id="langMenu" hidden>
+        <li><button data-set-lang="zh">简体中文</button></li>
+        <li><button data-set-lang="zh-Hant">繁體中文</button></li>
+        <li><button data-set-lang="en">English</button></li>
+        <li><button data-set-lang="ja">日本語</button></li>
+        <li><button data-set-lang="ko">한국어</button></li>
+      </ul>
+    </div>
   </header>
 
   <main class="page-container">
-    <div class="page-title-block">
-      <h1>隐私政策</h1>
-      <div class="meta">
-        <span>生效日期：2026 年 6 月 16 日</span>
-        <span>最后更新：2026 年 6 月 16 日</span>
+
+    <!-- ===================== 简体中文 ===================== -->
+    <article data-loc="zh">
+      <div class="page-title-block">
+        <h1>隐私政策</h1>
+        <div class="meta"><span>生效日期：2026 年 6 月 16 日</span><span>最后更新：2026 年 6 月 16 日</span></div>
       </div>
-    </div>
+      <nav class="toc">
+        <div class="toc-title">目录</div>
+        <ol>
+          <li><a href="#zh-s1">我们收集哪些信息</a></li>
+          <li><a href="#zh-s2">信息的用途</a></li>
+          <li><a href="#zh-s3">信息存储与保留</a></li>
+          <li><a href="#zh-s4">信息共享与对外披露</a></li>
+          <li><a href="#zh-s5">数据安全</a></li>
+          <li><a href="#zh-s6">你的权利</a></li>
+          <li><a href="#zh-s7">未成年人</a></li>
+          <li><a href="#zh-s8">政策变更</a></li>
+          <li><a href="#zh-s9">联系我们</a></li>
+        </ol>
+      </nav>
+      <div class="callout">本隐私政策说明「花迹 Floriary」（以下简称「本应用」或「花迹」）如何收集、使用、存储和保护你的个人信息。<strong>在使用本应用前，请仔细阅读本政策。</strong><br><br>本应用由独立开发者 <strong>Eric Liu</strong> 开发和运营，联系邮箱：<strong>simplord@163.com</strong>。</div>
 
-    <nav class="toc">
-      <div class="toc-title">目录</div>
-      <ol>
-        <li><a href="#s1">我们收集哪些信息</a></li>
-        <li><a href="#s2">信息的用途</a></li>
-        <li><a href="#s3">信息存储与保留</a></li>
-        <li><a href="#s4">信息共享与对外披露</a></li>
-        <li><a href="#s5">数据安全</a></li>
-        <li><a href="#s6">你的权利</a></li>
-        <li><a href="#s7">未成年人</a></li>
-        <li><a href="#s8">政策变更</a></li>
-        <li><a href="#s9">联系我们</a></li>
-      </ol>
-    </nav>
-
-    <div class="callout">
-      本隐私政策说明「花迹 Floriary」（以下简称「本应用」或「花迹」）如何收集、使用、存储和保护你的个人信息。<strong>在使用本应用前，请仔细阅读本政策。</strong><br><br>
-      本应用由独立开发者 <strong>Eric Liu</strong> 开发和运营，联系邮箱：<strong>simplord@163.com</strong>。
-    </div>
-
-    <!-- Section 1 -->
-    <section class="doc-section" id="s1">
-      <h2>一、我们收集哪些信息</h2>
-
-      <h3>1.1 你主动提供的信息</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>信息类型</th><th>具体内容</th><th>何时收集</th></tr>
-          </thead>
+      <section class="doc-section" id="zh-s1">
+        <h2>一、我们收集哪些信息</h2>
+        <h3>1.1 你主动提供的信息</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>信息类型</th><th>具体内容</th><th>何时收集</th></tr></thead>
           <tbody>
             <tr><td>账号信息</td><td>邮箱地址、经过哈希处理的密码</td><td>邮箱注册/登录时</td></tr>
             <tr><td>Apple 账号标识</td><td>Apple 分配的唯一用户标识符</td><td>使用「Sign in with Apple」登录时</td></tr>
-            <tr><td>用户创建内容</td><td>花园名称、植株名称与品种、成长记录文字备注、养护类型配置、养护提醒间隔设置、<strong>植株标签（名称与颜色）</strong>、<strong>绿植资产信息（入手日期、入手价格）</strong></td><td>你在应用内创建、编辑记录时</td></tr>
-            <tr><td>图片</td><td>你拍摄或选择的植物照片（成长记录照片、植株封面、识图照片）</td><td>添加记录、设置封面、使用识图时（详见第 1.3、1.4 节）</td></tr>
+            <tr><td>用户创建内容</td><td>花园名称、植株名称与品种、成长记录文字备注、养护类型配置、养护提醒间隔设置、植株标签（名称与颜色）、绿植资产信息（入手日期、入手价格）</td><td>你在应用内创建、编辑记录时</td></tr>
+            <tr><td>图片</td><td>你拍摄或选择的植物照片（成长记录照片、植株封面、识图照片）</td><td>添加记录、设置封面、使用识图时（详见 1.3、1.4）</td></tr>
             <tr><td>反馈信息</td><td>你提交的应用反馈或物种纠错内容（文字说明、可选附图）；提交应用反馈时附带的应用版本、设备平台与系统版本</td><td>你在「设置 → 反馈与评价」或物种纠错入口提交时</td></tr>
             <tr><td>个人资料</td><td>昵称（可选）</td><td>修改个人资料时</td></tr>
           </tbody>
-        </table>
-      </div>
-
-      <h3>1.2 自动生成的信息</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>信息类型</th><th>具体内容</th><th>用途</th></tr>
-          </thead>
+        </table></div>
+        <h3>1.2 自动生成的信息</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>信息类型</th><th>具体内容</th><th>用途</th></tr></thead>
           <tbody>
             <tr><td>推送通知令牌</td><td>设备 APNs Token</td><td>发送养护到期提醒</td></tr>
             <tr><td>订阅标识符</td><td>Apple App Store 原始交易 ID、会员产品 ID</td><td>验证和管理会员状态</td></tr>
-            <tr><td>会话凭证</td><td>加密存储在本机的 JWT access token / refresh token</td><td>维持登录态、跨设备数据同步</td></tr>
+            <tr><td>会话凭证</td><td>加密存储在本机的 JWT access/refresh token</td><td>维持登录态、跨设备数据同步</td></tr>
             <tr><td>Apple 授权令牌</td><td>加密存储在服务端的 Apple refresh token（仅 Sign in with Apple 用户）</td><td>账号注销时依 Apple 要求执行 token revoke</td></tr>
           </tbody>
-        </table>
-      </div>
-
-      <h3>1.3 图片的存储方式（重要说明）</h3>
-      <p>你的成长记录照片与植株封面图<strong>不会被上传到花迹自有服务器作为云端相册</strong>。具体存储方式由你是否为付费会员决定：</p>
-      <ul>
-        <li><strong>免费用户</strong>：图片<strong>仅保存在你的设备本地</strong>（App Documents 目录，受 iOS 整机 iCloud 备份保护），不上传至花迹服务器，也不逐张跨设备同步。换新设备或重装后，结构化数据会从花迹服务器恢复，但照片不会自动跟随。</li>
-        <li><strong>付费会员</strong>：图片保存在你设备的 <strong>iCloud 容器</strong>，由 iOS 通过<strong>你自己的 Apple ID 和 iCloud 配额</strong>自动跨设备同步、换机自动恢复。<strong>该同步过程由 Apple iCloud 完成，照片不经过花迹服务器。</strong></li>
-        <li>与图片关联的<strong>结构化数据</strong>（花园/植株/记录文字、标签、提醒配置等）会正常同步到花迹服务器；图片本体不在此同步范围内。</li>
-      </ul>
-      <div class="callout">
-        <strong>仅在以下两种情形，图片会上传到花迹服务器：</strong>① 你<strong>主动提交反馈</strong>时附带的图片；② 你<strong>同意识图训练数据采集后</strong>采集的识图照片（详见第 1.4 节）。这些图片与你的私人相册分开存储。
-      </div>
-
-      <h3>1.4 识图功能的信息处理</h3>
-      <p>当你使用「识图（拍照认植物）」功能时：</p>
-      <ul>
-        <li>你选择的照片会先在本机压缩，并在上传前<strong>剥除 EXIF 元数据（含 GPS 位置等）进行隐私脱敏</strong>。</li>
-        <li>脱敏后的照片会<strong>临时传输给第三方植物识别服务</strong>（该服务可能位于中国境外）以完成识别；识别完成后该临时图像即被清理，不作为云端相册长期保留。</li>
-        <li>识别记录（候选物种结果、图片哈希、你最终确认或选择的物种）会保存在花迹服务器，用于改进识别质量并完善植物库。</li>
-        <li><strong>首次使用识图需经你明确同意</strong>，同意内容包括：① 照片将传输给第三方识别服务以完成识别；② 花迹会保存你的识图照片与识别/确认结果，用于改进花迹自有的植物识别模型。<strong>未同意则无法使用识图功能。</strong>同意行为会记录版本与时间戳以备审计。</li>
-        <li>用于改进模型的识图照片在入库前同样经 <strong>EXIF 脱敏</strong>后存储；你注销账号时，相关识图照片与识别记录会一并清理。</li>
-      </ul>
-
-      <h3>1.5 我们不收集的信息</h3>
-      <p>本应用<strong>不收集</strong>以下信息：</p>
-      <ul>
-        <li>位置信息（不申请系统定位权限；照片 EXIF 中的 GPS 信息在上传识别前已被剥除）</li>
-        <li>通讯录</li>
-        <li>麦克风音频</li>
-        <li>面部识别数据</li>
-        <li>第三方广告追踪标识符（IDFA）</li>
-      </ul>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 2 -->
-    <section class="doc-section" id="s2">
-      <h2>二、信息的用途</h2>
-      <p>我们收集上述信息仅用于以下目的：</p>
-      <ul>
-        <li><strong>提供账号服务</strong>：注册、登录、维持登录状态、跨设备数据同步。</li>
-        <li><strong>保存和展示你的内容</strong>：将你的花园、植株、成长记录、标签、资产等结构化数据存储在服务器，让你在多设备上访问和查看。</li>
-        <li><strong>识图识别</strong>：将脱敏后的照片临时传输给第三方识别引擎完成植物识别，返回候选物种供你确认。</li>
-        <li><strong>改进识别能力</strong>：在你同意后，使用识图照片与你的确认结果改进花迹自有的植物识别模型，并据此完善植物库。</li>
-        <li><strong>处理反馈</strong>：回复你的反馈、修复问题，并根据你的物种纠错建议完善植物库内容。</li>
-        <li><strong>发送养护提醒</strong>：根据你设置的养护间隔，通过 APNs 向你的设备发送推送通知。</li>
-        <li><strong>验证订阅状态</strong>：向 Apple 服务器查询订阅收据，确认你的会员是否有效，并据此开放相应功能权限。</li>
-        <li><strong>账号安全与注销</strong>：二次验证身份、执行冷静期删除流程，以及在你注销账号时依 Apple 要求吊销 Sign in with Apple 授权令牌。</li>
-      </ul>
-      <div class="callout">
-        <strong>我们不会将你的个人信息用于商业广告投放、出售给第三方，或用于本政策未列明的目的。</strong>
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 3 -->
-    <section class="doc-section" id="s3">
-      <h2>三、信息存储与保留</h2>
-
-      <h3>3.1 存储位置</h3>
-      <ul>
-        <li><strong>结构化数据</strong>（账号信息、花园/植株/记录文字、标签、资产信息、识别记录、订阅状态等）：存储在花迹自建服务器（国内区：腾讯云云服务器 + 云数据库）。</li>
-        <li><strong>成长记录照片与植株封面</strong>：免费用户仅存储在设备本地（App Documents）；付费会员存储在<strong>你自己的 iCloud 容器</strong>——这两种情形照片均<strong>不经过花迹服务器</strong>。</li>
-        <li><strong>反馈附图、识图训练照片（仅在你同意后）</strong>：经脱敏后存储在花迹对象存储服务（国内区：腾讯云 COS）。</li>
-        <li><strong>本地 token</strong>：仅存储在你的设备本地，不经过花迹服务器。</li>
-      </ul>
-
-      <h3>3.2 保留期限</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>数据类型</th><th>保留规则</th></tr>
-          </thead>
+        </table></div>
+        <h3>1.3 图片的存储方式（重要说明）</h3>
+        <p>你的成长记录照片与植株封面图<strong>不会被上传到花迹自有服务器作为云端相册</strong>。具体存储方式由你是否为付费会员决定：</p>
+        <ul>
+          <li><strong>免费用户</strong>：图片<strong>仅保存在你的设备本地</strong>（App Documents 目录，受 iOS 整机 iCloud 备份保护），不上传至花迹服务器，也不逐张跨设备同步。换新设备或重装后，结构化数据会从花迹服务器恢复，但照片不会自动跟随。</li>
+          <li><strong>付费会员</strong>：图片保存在你设备的 <strong>iCloud 容器</strong>，由 iOS 通过<strong>你自己的 Apple ID 和 iCloud 配额</strong>自动跨设备同步、换机自动恢复。<strong>该同步过程由 Apple iCloud 完成，照片不经过花迹服务器。</strong></li>
+          <li>与图片关联的<strong>结构化数据</strong>（花园/植株/记录文字、标签、提醒配置等）会正常同步到花迹服务器；图片本体不在此同步范围内。</li>
+        </ul>
+        <div class="callout"><strong>仅在以下两种情形，图片会上传到花迹服务器：</strong>① 你<strong>主动提交反馈</strong>时附带的图片；② 你<strong>同意识图训练数据采集后</strong>采集的识图照片（详见 1.4）。这些图片与你的私人相册分开存储。</div>
+        <h3>1.4 识图功能的信息处理</h3>
+        <p>当你使用「识图（拍照认植物）」功能时：</p>
+        <ul>
+          <li>你选择的照片会先在本机压缩，并在上传前<strong>剥除 EXIF 元数据（含 GPS 位置等）进行隐私脱敏</strong>。</li>
+          <li>脱敏后的照片会<strong>临时传输给第三方植物识别服务</strong>（该服务可能位于中国境外）以完成识别；识别完成后该临时图像即被清理，不作为云端相册长期保留。</li>
+          <li>识别记录（候选物种结果、图片哈希、你最终确认或选择的物种）会保存在花迹服务器，用于改进识别质量并完善植物库。</li>
+          <li><strong>首次使用识图需经你明确同意</strong>：① 照片将传输给第三方识别服务以完成识别；② 花迹会保存你的识图照片与识别/确认结果，用于改进花迹自有的植物识别模型。<strong>未同意则无法使用识图功能。</strong>同意行为会记录版本与时间戳以备审计。</li>
+          <li>用于改进模型的识图照片在入库前同样经 <strong>EXIF 脱敏</strong>后存储；你注销账号时，相关识图照片与识别记录会一并清理。</li>
+        </ul>
+        <h3>1.5 我们不收集的信息</h3>
+        <p>本应用<strong>不收集</strong>以下信息：</p>
+        <ul>
+          <li>位置信息（不申请系统定位权限；照片 EXIF 中的 GPS 信息在上传识别前已被剥除）</li>
+          <li>通讯录</li><li>麦克风音频</li><li>面部识别数据</li><li>第三方广告追踪标识符（IDFA）</li>
+        </ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s2">
+        <h2>二、信息的用途</h2>
+        <p>我们收集上述信息仅用于以下目的：</p>
+        <ul>
+          <li><strong>提供账号服务</strong>：注册、登录、维持登录状态、跨设备数据同步。</li>
+          <li><strong>保存和展示你的内容</strong>：将你的花园、植株、成长记录、标签、资产等结构化数据存储在服务器，让你在多设备上访问和查看。</li>
+          <li><strong>识图识别</strong>：将脱敏后的照片临时传输给第三方识别引擎完成植物识别，返回候选物种供你确认。</li>
+          <li><strong>改进识别能力</strong>：在你同意后，使用识图照片与你的确认结果改进花迹自有的植物识别模型，并据此完善植物库。</li>
+          <li><strong>处理反馈</strong>：回复你的反馈、修复问题，并根据你的物种纠错建议完善植物库内容。</li>
+          <li><strong>发送养护提醒</strong>：根据你设置的养护间隔，通过 APNs 向你的设备发送推送通知。</li>
+          <li><strong>验证订阅状态</strong>：向 Apple 服务器查询订阅收据，确认你的会员是否有效，并据此开放相应功能权限。</li>
+          <li><strong>账号安全与注销</strong>：二次验证身份、执行冷静期删除流程，以及在你注销账号时依 Apple 要求吊销 Sign in with Apple 授权令牌。</li>
+        </ul>
+        <div class="callout"><strong>我们不会将你的个人信息用于商业广告投放、出售给第三方，或用于本政策未列明的目的。</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s3">
+        <h2>三、信息存储与保留</h2>
+        <h3>3.1 存储位置</h3>
+        <ul>
+          <li><strong>结构化数据</strong>（账号信息、花园/植株/记录文字、标签、资产信息、识别记录、订阅状态等）：存储在花迹自建服务器（国内区：腾讯云云服务器 + 云数据库）。</li>
+          <li><strong>成长记录照片与植株封面</strong>：免费用户仅存储在设备本地（App Documents）；付费会员存储在<strong>你自己的 iCloud 容器</strong>——这两种情形照片均<strong>不经过花迹服务器</strong>。</li>
+          <li><strong>反馈附图、识图训练照片（仅在你同意后）</strong>：经脱敏后存储在花迹对象存储服务（国内区：腾讯云 COS）。</li>
+          <li><strong>本地 token</strong>：仅存储在你的设备本地，不经过花迹服务器。</li>
+        </ul>
+        <h3>3.2 保留期限</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>数据类型</th><th>保留规则</th></tr></thead>
           <tbody>
             <tr><td>正常账号数据</td><td>账号有效期间持续保留</td></tr>
             <tr><td>申请注销后</td><td>进入 7 天冷静期；冷静期结束后对数据进行软删除和匿名化处理（花园/植株/记录/标签等与真实用户身份解除关联，邮箱等可识别信息从用户记录中清除）</td></tr>
@@ -385,64 +178,47 @@
             <tr><td>反馈数据</td><td>处理完成后按问题追溯需要保留合理期限</td></tr>
             <tr><td>你手动删除的记录</td><td>关联的服务器图片（如反馈附图）标记为待清理，由定期任务处理；本机本地照片由设备本地清除；存入 iCloud 的照片由你的 iCloud 管理</td></tr>
           </tbody>
-        </table>
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 4 -->
-    <section class="doc-section" id="s4">
-      <h2>四、信息共享与对外披露</h2>
-      <p>我不会出售你的个人信息。仅在以下必要情形下，信息可能流转至第三方：</p>
-
-      <h3>4.1 Apple</h3>
-      <ul>
-        <li><strong>IAP 收据验证</strong>：向 Apple App Store 服务器核查你的订阅收据，以确认订阅有效性。Apple 的隐私实践详见 <a href="https://www.apple.com/legal/privacy/zh-cn/" target="_blank" rel="noopener">Apple 隐私政策</a>。</li>
-        <li><strong>App Store Server Notifications</strong>：接收 Apple 主动推送的订阅状态变更通知（续费、到期、退款等）。</li>
-        <li><strong>Sign in with Apple</strong>：使用该登录方式时，Apple 会向花迹提供你的唯一标识符和（可选的）邮箱地址，相关处理遵循 Apple 的规定。</li>
-        <li><strong>iCloud 图片同步</strong>：付费会员的照片由 Apple iCloud 在你自己的 Apple ID 下同步，花迹不参与该过程、也无法读取你 iCloud 中的照片。</li>
-      </ul>
-
-      <h3>4.2 云基础设施提供商</h3>
-      <p>花迹将服务器数据存储在<strong>腾讯云（国内）</strong>的服务器上。该服务商作为数据处理者，仅在花迹的指令下处理数据，不独立使用你的数据，其服务受其隐私协议约束。</p>
-
-      <h3>4.3 第三方植物识别服务（识图）</h3>
-      <p>使用识图功能时，经脱敏的照片会<strong>临时传输</strong>给第三方植物识别服务（该服务可能位于中国境外）用于识别，处理完毕后临时图像即被清除。这是识图功能的必要运作机制，<strong>首次使用识图时会就此向你单独征得同意</strong>；未同意则不会传输、识图功能不可用。识别服务商如有变更，将更新本政策。</p>
-
-      <h3>4.4 法律要求</h3>
-      <p>如法律法规、法院命令或政府机构强制要求，我们可能依法披露必要信息。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 5 -->
-    <section class="doc-section" id="s5">
-      <h2>五、数据安全</h2>
-      <p>我们采取以下措施保护你的数据安全：</p>
-      <ul>
-        <li>账号密码在存储前经过单向哈希（bcrypt）处理，我们无法还原你的原始密码。</li>
-        <li>数据传输全程使用 HTTPS/TLS 加密。</li>
-        <li>服务端 JWT refresh token 使用唯一标识符，一旦吊销即立即失效，防止重放攻击。</li>
-        <li>Apple refresh token（Sign in with Apple 用户）以加密形式存储在服务器，仅在账号注销时读取调用。</li>
-        <li>第三方 AI 识别服务的访问密钥以加密形式存储在服务器，不随代码或日志泄露。</li>
-        <li>识图照片在传输与入库前剥除 EXIF（含 GPS）元数据，做隐私脱敏。</li>
-        <li>服务器对象（反馈附图、植物库图鉴等）通过预签名 URL 方式访问，每次 URL 均有时效限制。</li>
-      </ul>
-      <p>尽管如此，任何网络服务均无法保证 100% 的安全性。如遇数据安全事件，我将在合理时间内通过应用内通知或邮件告知受影响的用户。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 6 -->
-    <section class="doc-section" id="s6">
-      <h2>六、你的权利</h2>
-      <p>根据中华人民共和国《个人信息保护法》及相关法规，你享有以下权利：</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>权利</th><th>如何行使</th></tr>
-          </thead>
+        </table></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s4">
+        <h2>四、信息共享与对外披露</h2>
+        <p>我不会出售你的个人信息。仅在以下必要情形下，信息可能流转至第三方：</p>
+        <h3>4.1 Apple</h3>
+        <ul>
+          <li><strong>IAP 收据验证</strong>：向 Apple App Store 服务器核查你的订阅收据，以确认订阅有效性。Apple 的隐私实践详见 <a href="https://www.apple.com/legal/privacy/zh-cn/" target="_blank" rel="noopener">Apple 隐私政策</a>。</li>
+          <li><strong>App Store Server Notifications</strong>：接收 Apple 主动推送的订阅状态变更通知（续费、到期、退款等）。</li>
+          <li><strong>Sign in with Apple</strong>：使用该登录方式时，Apple 会向花迹提供你的唯一标识符和（可选的）邮箱地址。</li>
+          <li><strong>iCloud 图片同步</strong>：付费会员的照片由 Apple iCloud 在你自己的 Apple ID 下同步，花迹不参与该过程、也无法读取你 iCloud 中的照片。</li>
+        </ul>
+        <h3>4.2 云基础设施提供商</h3>
+        <p>花迹将服务器数据存储在<strong>腾讯云（国内）</strong>的服务器上。该服务商作为数据处理者，仅在花迹的指令下处理数据，不独立使用你的数据。</p>
+        <h3>4.3 第三方植物识别服务（识图）</h3>
+        <p>使用识图功能时，经脱敏的照片会<strong>临时传输</strong>给第三方植物识别服务（该服务可能位于中国境外）用于识别，处理完毕后临时图像即被清除。<strong>首次使用识图时会就此向你单独征得同意</strong>；未同意则不会传输、识图功能不可用。</p>
+        <h3>4.4 法律要求</h3>
+        <p>如法律法规、法院命令或政府机构强制要求，我们可能依法披露必要信息。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s5">
+        <h2>五、数据安全</h2>
+        <p>我们采取以下措施保护你的数据安全：</p>
+        <ul>
+          <li>账号密码在存储前经过单向哈希（bcrypt）处理，我们无法还原你的原始密码。</li>
+          <li>数据传输全程使用 HTTPS/TLS 加密。</li>
+          <li>服务端 JWT refresh token 使用唯一标识符，一旦吊销即立即失效，防止重放攻击。</li>
+          <li>Apple refresh token 以加密形式存储在服务器，仅在账号注销时读取调用。</li>
+          <li>第三方 AI 识别服务的访问密钥以加密形式存储在服务器，不随代码或日志泄露。</li>
+          <li>识图照片在传输与入库前剥除 EXIF（含 GPS）元数据，做隐私脱敏。</li>
+          <li>服务器对象（反馈附图、植物库图鉴等）通过预签名 URL 方式访问，每次 URL 均有时效限制。</li>
+        </ul>
+        <p>尽管如此，任何网络服务均无法保证 100% 的安全性。如遇数据安全事件，我将在合理时间内通过应用内通知或邮件告知受影响的用户。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s6">
+        <h2>六、你的权利</h2>
+        <p>根据中华人民共和国《个人信息保护法》及相关法规，你享有以下权利：</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>权利</th><th>如何行使</th></tr></thead>
           <tbody>
             <tr><td><strong>查阅和复制</strong>自己的数据</td><td>应用内直接查看；如需导出数据请联系开发者邮箱</td></tr>
             <tr><td><strong>更正</strong>错误信息</td><td>在「我的 → 个人资料」中自行修改，或联系我们协助处理</td></tr>
@@ -450,57 +226,803 @@
             <tr><td><strong>撤回</strong>推送通知授权</td><td>在 iPhone「设置 → 通知 → 花迹」中关闭</td></tr>
             <tr><td>就隐私事项<strong>提出询问或投诉</strong></td><td>发送邮件至：simplord@163.com</td></tr>
           </tbody>
-        </table>
+        </table></div>
+        <p>我们将在收到请求后 <strong>15 个工作日</strong>内回复。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s7">
+        <h2>七、未成年人</h2>
+        <p>本应用不面向 14 周岁以下的未成年人提供服务。如你未满 14 周岁，请在监护人陪同下使用，并由监护人阅读并同意本政策。如我们发现已收集未满 14 周岁未成年人的个人信息且未取得监护人同意，将及时删除相关信息。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s8">
+        <h2>八、政策变更</h2>
+        <p>本政策如有重大变更，我们将通过以下方式提前告知：</p>
+        <ul><li>在应用内显示更新通知；</li><li>更新本页面顶部的「生效日期」。</li></ul>
+        <p>非重大调整（如文字纠错、章节调整）将直接更新本页面，不单独通知。继续使用本应用即视为接受更新后的政策。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="zh-s9">
+        <h2>九、联系我们</h2>
+        <p>如对本隐私政策有任何疑问，请联系：</p>
+        <ul>
+          <li><strong>开发者</strong>：Eric Liu</li>
+          <li><strong>邮箱</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li>
+        </ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">本政策以中文版本为准。</p>
+      </section>
+    </article>
+
+    <!-- ===================== English ===================== -->
+    <article data-loc="en">
+      <div class="page-title-block">
+        <h1>Privacy Policy</h1>
+        <div class="meta"><span>Effective: June 16, 2026</span><span>Last updated: June 16, 2026</span></div>
       </div>
-      <p>我们将在收到请求后 <strong>15 个工作日</strong>内回复。</p>
-    </section>
+      <nav class="toc">
+        <div class="toc-title">Contents</div>
+        <ol>
+          <li><a href="#en-s1">What we collect</a></li>
+          <li><a href="#en-s2">How we use it</a></li>
+          <li><a href="#en-s3">Storage & retention</a></li>
+          <li><a href="#en-s4">Sharing & disclosure</a></li>
+          <li><a href="#en-s5">Data security</a></li>
+          <li><a href="#en-s6">Your rights</a></li>
+          <li><a href="#en-s7">Minors</a></li>
+          <li><a href="#en-s8">Changes</a></li>
+          <li><a href="#en-s9">Contact</a></li>
+        </ol>
+      </nav>
+      <div class="callout">This Privacy Policy explains how "Floriary" (the "App") collects, uses, stores and protects your personal information. <strong>Please read it carefully before using the App.</strong><br><br>The App is developed and operated by independent developer <strong>Eric Liu</strong>. Contact: <strong>simplord@163.com</strong>.</div>
 
-    <hr class="section-divider">
+      <section class="doc-section" id="en-s1">
+        <h2>1. What information we collect</h2>
+        <h3>1.1 Information you provide</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Type</th><th>Details</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td>Account</td><td>Email address, hashed password</td><td>Email sign-up / sign-in</td></tr>
+            <tr><td>Apple account ID</td><td>The unique user identifier issued by Apple</td><td>When using "Sign in with Apple"</td></tr>
+            <tr><td>Content you create</td><td>Garden names, plant names and species, growth-log notes, care-type settings, reminder intervals, plant tags (name and color), plant asset info (acquired date, price)</td><td>When you create or edit records</td></tr>
+            <tr><td>Images</td><td>Plant photos you take or pick (growth photos, plant covers, identification photos)</td><td>When adding records, setting covers, or using identification (see 1.3, 1.4)</td></tr>
+            <tr><td>Feedback</td><td>App feedback or species corrections (text, optional images); for app feedback, the app version, platform and OS version</td><td>When you submit via "Settings → Feedback" or species correction</td></tr>
+            <tr><td>Profile</td><td>Nickname (optional)</td><td>When editing your profile</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.2 Information generated automatically</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Type</th><th>Details</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Push token</td><td>Device APNs token</td><td>Send care-due reminders</td></tr>
+            <tr><td>Subscription IDs</td><td>Apple App Store original transaction ID, membership product ID</td><td>Verify and manage membership</td></tr>
+            <tr><td>Session credentials</td><td>JWT access/refresh tokens stored encrypted on device</td><td>Keep you signed in; cross-device sync</td></tr>
+            <tr><td>Apple authorization token</td><td>Apple refresh token stored encrypted on the server (Sign in with Apple users only)</td><td>Token revoke on account deletion, as Apple requires</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.3 How images are stored (important)</h3>
+        <p>Your growth photos and plant covers are <strong>not uploaded to Floriary's own servers as a cloud album</strong>. Storage depends on whether you are a paid member:</p>
+        <ul>
+          <li><strong>Free users</strong>: images are <strong>stored only on your device</strong> (App Documents, protected by iOS device iCloud Backup). They are not uploaded to Floriary servers nor synced per-file across devices. After switching or reinstalling, structured data is restored from Floriary's server, but photos do not follow automatically.</li>
+          <li><strong>Paid members</strong>: images are stored in your device's <strong>iCloud container</strong> and synced across devices / restored on a new phone by iOS using <strong>your own Apple ID and iCloud quota</strong>. <strong>This sync is handled by Apple iCloud; photos do not pass through Floriary servers.</strong></li>
+          <li>The associated <strong>structured data</strong> (gardens/plants/notes, tags, reminder settings) does sync to Floriary's server; the image files themselves do not.</li>
+        </ul>
+        <div class="callout"><strong>Images are uploaded to Floriary servers only in two cases:</strong> ① images attached when you <strong>submit feedback</strong>; ② identification photos collected <strong>after you consent</strong> to identification training-data collection (see 1.4). These are stored separately from your private album.</div>
+        <h3>1.4 Identification feature</h3>
+        <p>When you use "Identify (photograph a plant)":</p>
+        <ul>
+          <li>Your selected photos are first compressed on-device and <strong>have EXIF metadata (including GPS) stripped for privacy</strong> before upload.</li>
+          <li>The de-identified photos are <strong>temporarily transmitted to a third-party plant recognition service</strong> (which may be located outside mainland China) to perform recognition; the temporary image is cleared afterward and not kept as a long-term cloud album.</li>
+          <li>Recognition records (candidate species, image hash, the species you finally confirm/select) are stored on Floriary's server to improve recognition quality and the plant library.</li>
+          <li><strong>First use of Identify requires your explicit consent</strong>: ① photos will be sent to a third-party service for recognition; ② Floriary will keep your identification photos and recognition/confirmation results to improve its own plant recognition model. <strong>Without consent, Identify cannot be used.</strong> Consent is logged with version and timestamp.</li>
+          <li>Identification photos used for model improvement are also <strong>EXIF-stripped</strong> before storage; when you delete your account, the related photos and records are removed.</li>
+        </ul>
+        <h3>1.5 What we do NOT collect</h3>
+        <p>The App does <strong>not</strong> collect:</p>
+        <ul>
+          <li>Location (no system location permission requested; GPS in photo EXIF is stripped before upload)</li>
+          <li>Contacts</li><li>Microphone audio</li><li>Face recognition data</li><li>Third-party ad tracking identifiers (IDFA)</li>
+        </ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s2">
+        <h2>2. How we use your information</h2>
+        <p>We use the information solely for:</p>
+        <ul>
+          <li><strong>Account services</strong>: registration, sign-in, keeping you signed in, cross-device sync.</li>
+          <li><strong>Storing and showing your content</strong>: keeping your gardens, plants, growth logs, tags and assets on the server so you can access them on multiple devices.</li>
+          <li><strong>Identification</strong>: temporarily sending de-identified photos to a third-party engine and returning candidate species for you to confirm.</li>
+          <li><strong>Improving recognition</strong>: with your consent, using identification photos and your confirmations to improve Floriary's own model and the plant library.</li>
+          <li><strong>Handling feedback</strong>: replying, fixing issues, and improving the plant library from your species corrections.</li>
+          <li><strong>Care reminders</strong>: sending push notifications via APNs based on your care intervals.</li>
+          <li><strong>Verifying subscriptions</strong>: checking receipts with Apple to confirm membership and unlock features.</li>
+          <li><strong>Account security & deletion</strong>: identity re-verification, the grace-period deletion flow, and revoking the Sign in with Apple token on deletion as Apple requires.</li>
+        </ul>
+        <div class="callout"><strong>We do not use your personal information for advertising, sell it to third parties, or use it for purposes not stated in this policy.</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s3">
+        <h2>3. Storage & retention</h2>
+        <h3>3.1 Where data is stored</h3>
+        <ul>
+          <li><strong>Structured data</strong> (account, gardens/plants/notes, tags, assets, recognition records, subscription status): on Floriary's servers (China region: Tencent Cloud servers + database).</li>
+          <li><strong>Growth photos and plant covers</strong>: free users — device-local only (App Documents); paid members — your own iCloud container. In both cases photos <strong>do not pass through Floriary servers</strong>.</li>
+          <li><strong>Feedback images and identification training photos (only after your consent)</strong>: de-identified and stored in Floriary's object storage (China region: Tencent COS).</li>
+          <li><strong>Local tokens</strong>: stored only on your device.</li>
+        </ul>
+        <h3>3.2 Retention</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Data type</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>Active account data</td><td>Retained while the account is active</td></tr>
+            <tr><td>After deletion request</td><td>Enters a 7-day grace period; after it ends, data is soft-deleted and anonymized (gardens/plants/logs/tags decoupled from your identity; email and other identifiers cleared from the user record)</td></tr>
+            <tr><td>Identification photos & records (after deletion)</td><td>Cleared together with the deletion flow</td></tr>
+            <tr><td>Feedback data</td><td>Kept for a reasonable period for issue traceability</td></tr>
+            <tr><td>Records you delete manually</td><td>Associated server images (e.g. feedback) are marked for cleanup and handled by scheduled tasks; device-local photos are removed by the device; iCloud photos are managed by your iCloud</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s4">
+        <h2>4. Sharing & disclosure</h2>
+        <p>We do not sell your personal information. It may go to third parties only where necessary:</p>
+        <h3>4.1 Apple</h3>
+        <ul>
+          <li><strong>IAP receipt validation</strong>: checking receipts with Apple App Store servers. See the <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</li>
+          <li><strong>App Store Server Notifications</strong>: receiving subscription status changes (renewal, expiry, refund).</li>
+          <li><strong>Sign in with Apple</strong>: Apple provides your unique identifier and (optionally) your email.</li>
+          <li><strong>iCloud photo sync</strong>: paid members' photos are synced by Apple iCloud under your own Apple ID; Floriary is not involved and cannot read your iCloud photos.</li>
+        </ul>
+        <h3>4.2 Cloud infrastructure providers</h3>
+        <p>Floriary stores server data on <strong>Tencent Cloud (China)</strong>. The provider acts as a data processor, only on Floriary's instructions, and does not use your data independently.</p>
+        <h3>4.3 Third-party plant recognition (Identify)</h3>
+        <p>When you use Identify, de-identified photos are <strong>temporarily transmitted</strong> to a third-party recognition service (which may be outside mainland China) and the temporary image is cleared afterward. <strong>Your separate consent is obtained on first use</strong>; without consent, no transmission occurs and Identify is unavailable.</p>
+        <h3>4.4 Legal requirements</h3>
+        <p>We may disclose necessary information where required by law, court order, or government authority.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s5">
+        <h2>5. Data security</h2>
+        <p>We take the following measures:</p>
+        <ul>
+          <li>Passwords are one-way hashed (bcrypt) before storage; we cannot recover your original password.</li>
+          <li>All data transmission uses HTTPS/TLS.</li>
+          <li>Server JWT refresh tokens use unique identifiers and are invalidated immediately on revoke, preventing replay.</li>
+          <li>Apple refresh tokens are stored encrypted and read only during account deletion.</li>
+          <li>Third-party AI service keys are stored encrypted and never leak via code or logs.</li>
+          <li>Identification photos are EXIF-stripped (incl. GPS) before transmission and storage.</li>
+          <li>Server objects (feedback images, plant library images) are accessed via time-limited pre-signed URLs.</li>
+        </ul>
+        <p>That said, no online service can guarantee 100% security. In a data incident, we will notify affected users within a reasonable time via in-app notice or email.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s6">
+        <h2>6. Your rights</h2>
+        <p>Under China's Personal Information Protection Law (PIPL) and related regulations, you have the right to:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Right</th><th>How to exercise</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Access & copy</strong> your data</td><td>View in-app; email the developer for an export</td></tr>
+            <tr><td><strong>Correct</strong> inaccurate info</td><td>Edit in "My → Profile", or contact us</td></tr>
+            <tr><td><strong>Delete</strong> account & data (incl. identification photos, records, feedback)</td><td>"My → Account → Delete account", after a 7-day grace period</td></tr>
+            <tr><td><strong>Withdraw</strong> push permission</td><td>Turn off in iPhone Settings → Notifications → Floriary</td></tr>
+            <tr><td><strong>Ask or complain</strong> about privacy</td><td>Email: simplord@163.com</td></tr>
+          </tbody>
+        </table></div>
+        <p>We will respond within <strong>15 business days</strong>.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s7">
+        <h2>7. Minors</h2>
+        <p>The App is not directed to children under 14. If you are under 14, please use it with a guardian who has read and agreed to this policy. If we find we have collected personal information from a child under 14 without guardian consent, we will delete it promptly.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s8">
+        <h2>8. Changes</h2>
+        <p>For material changes we will notify you in advance by:</p>
+        <ul><li>showing an in-app update notice;</li><li>updating the "Effective" date at the top of this page.</li></ul>
+        <p>Minor changes (typos, restructuring) update this page without separate notice. Continued use means you accept the updated policy.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="en-s9">
+        <h2>9. Contact</h2>
+        <p>For any questions about this Privacy Policy:</p>
+        <ul>
+          <li><strong>Developer</strong>: Eric Liu</li>
+          <li><strong>Email</strong>: <a href="mailto:simplord@163.com">simplord@163.com</a></li>
+        </ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">In case of any discrepancy, the Chinese version of this policy prevails.</p>
+      </section>
+    </article>
 
-    <!-- Section 7 -->
-    <section class="doc-section" id="s7">
-      <h2>七、未成年人</h2>
-      <p>本应用不面向 14 周岁以下的未成年人提供服务。如你未满 14 周岁，请在监护人陪同下使用，并由监护人阅读并同意本政策。如我们发现已收集未满 14 周岁未成年人的个人信息且未取得监护人同意，将及时删除相关信息。</p>
-    </section>
+    <!-- ===================== 繁體中文 ===================== -->
+    <article data-loc="zh-Hant">
+      <div class="page-title-block">
+        <h1>隱私政策</h1>
+        <div class="meta"><span>生效日期：2026 年 6 月 16 日</span><span>最後更新：2026 年 6 月 16 日</span></div>
+      </div>
+      <nav class="toc">
+        <div class="toc-title">目錄</div>
+        <ol>
+          <li><a href="#tw-s1">我們收集哪些資訊</a></li>
+          <li><a href="#tw-s2">資訊的用途</a></li>
+          <li><a href="#tw-s3">資訊儲存與保留</a></li>
+          <li><a href="#tw-s4">資訊共享與對外揭露</a></li>
+          <li><a href="#tw-s5">資料安全</a></li>
+          <li><a href="#tw-s6">你的權利</a></li>
+          <li><a href="#tw-s7">未成年人</a></li>
+          <li><a href="#tw-s8">政策變更</a></li>
+          <li><a href="#tw-s9">聯絡我們</a></li>
+        </ol>
+      </nav>
+      <div class="callout">本隱私政策說明「花迹 Floriary」（以下簡稱「本應用」或「花迹」）如何收集、使用、儲存與保護你的個人資訊。<strong>在使用本應用前，請仔細閱讀本政策。</strong><br><br>本應用由獨立開發者 <strong>Eric Liu</strong> 開發與營運，聯絡信箱：<strong>simplord@163.com</strong>。</div>
 
-    <hr class="section-divider">
+      <section class="doc-section" id="tw-s1">
+        <h2>一、我們收集哪些資訊</h2>
+        <h3>1.1 你主動提供的資訊</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>資訊類型</th><th>具體內容</th><th>何時收集</th></tr></thead>
+          <tbody>
+            <tr><td>帳號資訊</td><td>電子郵件地址、經雜湊處理的密碼</td><td>電子郵件註冊／登入時</td></tr>
+            <tr><td>Apple 帳號識別碼</td><td>Apple 配發的唯一使用者識別碼</td><td>使用「Sign in with Apple」登入時</td></tr>
+            <tr><td>使用者建立內容</td><td>花園名稱、植株名稱與品種、成長記錄文字備註、養護類型設定、養護提醒間隔、植株標籤（名稱與顏色）、綠植資產資訊（入手日期、入手價格）</td><td>你在應用內建立、編輯記錄時</td></tr>
+            <tr><td>圖片</td><td>你拍攝或選擇的植物照片（成長記錄照片、植株封面、辨識照片）</td><td>新增記錄、設定封面、使用辨識時（詳見 1.3、1.4）</td></tr>
+            <tr><td>意見回饋</td><td>你提交的應用回饋或品種勘誤內容（文字、可選附圖）；提交應用回饋時附帶的應用版本、裝置平台與系統版本</td><td>你在「設定 → 意見回饋」或品種勘誤入口提交時</td></tr>
+            <tr><td>個人資料</td><td>暱稱（選填）</td><td>修改個人資料時</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.2 自動產生的資訊</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>資訊類型</th><th>具體內容</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td>推播權杖</td><td>裝置 APNs Token</td><td>傳送養護到期提醒</td></tr>
+            <tr><td>訂閱識別碼</td><td>Apple App Store 原始交易 ID、會員產品 ID</td><td>驗證與管理會員狀態</td></tr>
+            <tr><td>工作階段憑證</td><td>加密儲存於本機的 JWT access/refresh token</td><td>維持登入狀態、跨裝置同步</td></tr>
+            <tr><td>Apple 授權權杖</td><td>加密儲存於伺服器的 Apple refresh token（僅 Sign in with Apple 使用者）</td><td>帳號註銷時依 Apple 要求執行 token revoke</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.3 圖片的儲存方式（重要說明）</h3>
+        <p>你的成長記錄照片與植株封面圖<strong>不會被上傳到花迹自有伺服器作為雲端相簿</strong>。具體儲存方式由你是否為付費會員決定：</p>
+        <ul>
+          <li><strong>免費使用者</strong>：圖片<strong>僅儲存在你的裝置本機</strong>（App Documents 目錄，受 iOS 整機 iCloud 備份保護），不上傳至花迹伺服器，也不逐張跨裝置同步。換新裝置或重新安裝後，結構化資料會從花迹伺服器還原，但照片不會自動跟隨。</li>
+          <li><strong>付費會員</strong>：圖片儲存在你裝置的 <strong>iCloud 容器</strong>，由 iOS 透過<strong>你自己的 Apple ID 與 iCloud 容量</strong>自動跨裝置同步、換機自動還原。<strong>該同步過程由 Apple iCloud 完成，照片不經過花迹伺服器。</strong></li>
+          <li>與圖片關聯的<strong>結構化資料</strong>（花園/植株/記錄文字、標籤、提醒設定等）會正常同步到花迹伺服器；圖片本體不在此同步範圍內。</li>
+        </ul>
+        <div class="callout"><strong>僅在以下兩種情形，圖片會上傳到花迹伺服器：</strong>① 你<strong>主動提交回饋</strong>時附帶的圖片；② 你<strong>同意辨識訓練資料採集後</strong>採集的辨識照片（詳見 1.4）。這些圖片與你的私人相簿分開儲存。</div>
+        <h3>1.4 辨識功能的資訊處理</h3>
+        <p>當你使用「辨識（拍照認植物）」功能時：</p>
+        <ul>
+          <li>你選擇的照片會先在本機壓縮，並在上傳前<strong>移除 EXIF 中繼資料（含 GPS 位置等）進行隱私去識別化</strong>。</li>
+          <li>去識別化後的照片會<strong>暫時傳輸給第三方植物辨識服務</strong>（該服務可能位於中國境外）以完成辨識；辨識完成後該暫時影像即被清除，不作為雲端相簿長期保留。</li>
+          <li>辨識記錄（候選物種結果、圖片雜湊、你最終確認或選擇的物種）會儲存在花迹伺服器，用於改進辨識品質並完善植物庫。</li>
+          <li><strong>首次使用辨識需經你明確同意</strong>：① 照片將傳輸給第三方辨識服務以完成辨識；② 花迹會儲存你的辨識照片與辨識/確認結果，用於改進花迹自有的植物辨識模型。<strong>未同意則無法使用辨識功能。</strong>同意行為會記錄版本與時間戳記以備稽核。</li>
+          <li>用於改進模型的辨識照片在入庫前同樣經 <strong>EXIF 去識別化</strong>後儲存；你註銷帳號時，相關辨識照片與辨識記錄會一併清除。</li>
+        </ul>
+        <h3>1.5 我們不收集的資訊</h3>
+        <p>本應用<strong>不收集</strong>以下資訊：</p>
+        <ul>
+          <li>位置資訊（不申請系統定位權限；照片 EXIF 中的 GPS 資訊在上傳辨識前已被移除）</li>
+          <li>通訊錄</li><li>麥克風音訊</li><li>臉部辨識資料</li><li>第三方廣告追蹤識別碼（IDFA）</li>
+        </ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s2">
+        <h2>二、資訊的用途</h2>
+        <p>我們收集上述資訊僅用於以下目的：</p>
+        <ul>
+          <li><strong>提供帳號服務</strong>：註冊、登入、維持登入狀態、跨裝置資料同步。</li>
+          <li><strong>儲存與顯示你的內容</strong>：將你的花園、植株、成長記錄、標籤、資產等結構化資料儲存在伺服器，讓你在多裝置上存取與檢視。</li>
+          <li><strong>辨識</strong>：將去識別化後的照片暫時傳輸給第三方辨識引擎完成植物辨識，回傳候選物種供你確認。</li>
+          <li><strong>改進辨識能力</strong>：在你同意後，使用辨識照片與你的確認結果改進花迹自有的植物辨識模型，並完善植物庫。</li>
+          <li><strong>處理回饋</strong>：回覆你的回饋、修復問題，並依你的品種勘誤建議完善植物庫內容。</li>
+          <li><strong>傳送養護提醒</strong>：依你設定的養護間隔，透過 APNs 向你的裝置傳送推播通知。</li>
+          <li><strong>驗證訂閱狀態</strong>：向 Apple 伺服器查詢訂閱收據，確認你的會員是否有效，並據此開放對應功能權限。</li>
+          <li><strong>帳號安全與註銷</strong>：二次驗證身分、執行冷靜期刪除流程，以及在你註銷帳號時依 Apple 要求撤銷 Sign in with Apple 授權權杖。</li>
+        </ul>
+        <div class="callout"><strong>我們不會將你的個人資訊用於商業廣告投放、出售給第三方，或用於本政策未列明的目的。</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s3">
+        <h2>三、資訊儲存與保留</h2>
+        <h3>3.1 儲存位置</h3>
+        <ul>
+          <li><strong>結構化資料</strong>（帳號資訊、花園/植株/記錄文字、標籤、資產資訊、辨識記錄、訂閱狀態等）：儲存在花迹自建伺服器（國內區：騰訊雲雲伺服器 + 雲資料庫）。</li>
+          <li><strong>成長記錄照片與植株封面</strong>：免費使用者僅儲存在裝置本機（App Documents）；付費會員儲存在<strong>你自己的 iCloud 容器</strong>——這兩種情形照片均<strong>不經過花迹伺服器</strong>。</li>
+          <li><strong>回饋附圖、辨識訓練照片（僅在你同意後）</strong>：經去識別化後儲存在花迹物件儲存服務（國內區：騰訊 COS）。</li>
+          <li><strong>本機 token</strong>：僅儲存在你的裝置本機，不經過花迹伺服器。</li>
+        </ul>
+        <h3>3.2 保留期限</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>資料類型</th><th>保留規則</th></tr></thead>
+          <tbody>
+            <tr><td>正常帳號資料</td><td>帳號有效期間持續保留</td></tr>
+            <tr><td>申請註銷後</td><td>進入 7 天冷靜期；冷靜期結束後對資料進行軟刪除與匿名化處理（花園/植株/記錄/標籤等與真實使用者身分解除關聯，電子郵件等可識別資訊從使用者記錄中清除）</td></tr>
+            <tr><td>辨識照片與辨識記錄（註銷後）</td><td>隨帳號註銷流程一併清除</td></tr>
+            <tr><td>回饋資料</td><td>處理完成後依問題追溯需要保留合理期限</td></tr>
+            <tr><td>你手動刪除的記錄</td><td>關聯的伺服器圖片（如回饋附圖）標記為待清除，由定期工作處理；本機本機照片由裝置清除；存入 iCloud 的照片由你的 iCloud 管理</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s4">
+        <h2>四、資訊共享與對外揭露</h2>
+        <p>我不會出售你的個人資訊。僅在以下必要情形下，資訊可能流轉至第三方：</p>
+        <h3>4.1 Apple</h3>
+        <ul>
+          <li><strong>IAP 收據驗證</strong>：向 Apple App Store 伺服器核對你的訂閱收據。Apple 的隱私實務詳見 <a href="https://www.apple.com/legal/privacy/zh-tw/" target="_blank" rel="noopener">Apple 隱私政策</a>。</li>
+          <li><strong>App Store Server Notifications</strong>：接收 Apple 主動推送的訂閱狀態變更通知（續訂、到期、退款等）。</li>
+          <li><strong>Sign in with Apple</strong>：使用該登入方式時，Apple 會向花迹提供你的唯一識別碼與（可選的）電子郵件地址。</li>
+          <li><strong>iCloud 圖片同步</strong>：付費會員的照片由 Apple iCloud 在你自己的 Apple ID 下同步，花迹不參與該過程、也無法讀取你 iCloud 中的照片。</li>
+        </ul>
+        <h3>4.2 雲端基礎設施提供商</h3>
+        <p>花迹將伺服器資料儲存在<strong>騰訊雲（國內）</strong>的伺服器上。該服務商作為資料處理者，僅在花迹的指示下處理資料，不獨立使用你的資料。</p>
+        <h3>4.3 第三方植物辨識服務（辨識）</h3>
+        <p>使用辨識功能時，經去識別化的照片會<strong>暫時傳輸</strong>給第三方植物辨識服務（該服務可能位於中國境外）用於辨識，處理完畢後暫時影像即被清除。<strong>首次使用辨識時會就此向你單獨徵得同意</strong>；未同意則不會傳輸、辨識功能無法使用。</p>
+        <h3>4.4 法律要求</h3>
+        <p>如法律法規、法院命令或政府機關強制要求，我們可能依法揭露必要資訊。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s5">
+        <h2>五、資料安全</h2>
+        <p>我們採取以下措施保護你的資料安全：</p>
+        <ul>
+          <li>帳號密碼在儲存前經過單向雜湊（bcrypt）處理，我們無法還原你的原始密碼。</li>
+          <li>資料傳輸全程使用 HTTPS/TLS 加密。</li>
+          <li>伺服器端 JWT refresh token 使用唯一識別碼，一旦撤銷即立即失效，防止重放攻擊。</li>
+          <li>Apple refresh token 以加密形式儲存在伺服器，僅在帳號註銷時讀取呼叫。</li>
+          <li>第三方 AI 辨識服務的存取金鑰以加密形式儲存在伺服器，不隨程式碼或日誌外洩。</li>
+          <li>辨識照片在傳輸與入庫前移除 EXIF（含 GPS）中繼資料，做隱私去識別化。</li>
+          <li>伺服器物件（回饋附圖、植物庫圖鑑等）透過預簽章 URL 方式存取，每次 URL 均有時效限制。</li>
+        </ul>
+        <p>儘管如此，任何網路服務均無法保證 100% 的安全性。如遇資料安全事件，我將在合理時間內透過應用內通知或電子郵件告知受影響的使用者。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s6">
+        <h2>六、你的權利</h2>
+        <p>依中華人民共和國《個人資訊保護法》及相關法規，你享有以下權利：</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>權利</th><th>如何行使</th></tr></thead>
+          <tbody>
+            <tr><td><strong>查閱與複製</strong>自己的資料</td><td>應用內直接檢視；如需匯出資料請聯絡開發者信箱</td></tr>
+            <tr><td><strong>更正</strong>錯誤資訊</td><td>在「我的 → 個人資料」中自行修改，或聯絡我們協助處理</td></tr>
+            <tr><td><strong>刪除</strong>帳號及資料（含辨識照片、辨識記錄、回饋資料）</td><td>「我的 → 帳號與安全 → 註銷帳號」，7 天冷靜期後執行</td></tr>
+            <tr><td><strong>撤回</strong>推播通知授權</td><td>在 iPhone「設定 → 通知 → 花迹」中關閉</td></tr>
+            <tr><td>就隱私事項<strong>提出詢問或申訴</strong></td><td>寄送電子郵件至：simplord@163.com</td></tr>
+          </tbody>
+        </table></div>
+        <p>我們將在收到請求後 <strong>15 個工作日</strong>內回覆。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s7">
+        <h2>七、未成年人</h2>
+        <p>本應用不面向 14 周歲以下的未成年人提供服務。如你未滿 14 周歲，請在監護人陪同下使用，並由監護人閱讀並同意本政策。如我們發現已收集未滿 14 周歲未成年人的個人資訊且未取得監護人同意，將及時刪除相關資訊。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s8">
+        <h2>八、政策變更</h2>
+        <p>本政策如有重大變更，我們將透過以下方式提前告知：</p>
+        <ul><li>在應用內顯示更新通知；</li><li>更新本頁面頂部的「生效日期」。</li></ul>
+        <p>非重大調整（如文字勘誤、章節調整）將直接更新本頁面，不另行通知。繼續使用本應用即視為接受更新後的政策。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="tw-s9">
+        <h2>九、聯絡我們</h2>
+        <p>如對本隱私政策有任何疑問，請聯絡：</p>
+        <ul>
+          <li><strong>開發者</strong>：Eric Liu</li>
+          <li><strong>電子郵件</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li>
+        </ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">本政策以中文版本為準。</p>
+      </section>
+    </article>
 
-    <!-- Section 8 -->
-    <section class="doc-section" id="s8">
-      <h2>八、政策变更</h2>
-      <p>本政策如有重大变更，我们将通过以下方式提前告知：</p>
-      <ul>
-        <li>在应用内显示更新通知；</li>
-        <li>更新本页面顶部的「生效日期」。</li>
-      </ul>
-      <p>非重大调整（如文字纠错、章节调整）将直接更新本页面，不单独通知。继续使用本应用即视为接受更新后的政策。</p>
-    </section>
+    <!-- ===================== 日本語 ===================== -->
+    <article data-loc="ja">
+      <div class="page-title-block">
+        <h1>プライバシーポリシー</h1>
+        <div class="meta"><span>発効日：2026年6月16日</span><span>最終更新：2026年6月16日</span></div>
+      </div>
+      <nav class="toc">
+        <div class="toc-title">目次</div>
+        <ol>
+          <li><a href="#ja-s1">収集する情報</a></li>
+          <li><a href="#ja-s2">情報の利用目的</a></li>
+          <li><a href="#ja-s3">保存と保持</a></li>
+          <li><a href="#ja-s4">共有と開示</a></li>
+          <li><a href="#ja-s5">データセキュリティ</a></li>
+          <li><a href="#ja-s6">あなたの権利</a></li>
+          <li><a href="#ja-s7">未成年者</a></li>
+          <li><a href="#ja-s8">変更について</a></li>
+          <li><a href="#ja-s9">お問い合わせ</a></li>
+        </ol>
+      </nav>
+      <div class="callout">本プライバシーポリシーは、「Floriary（花迹）」（以下「本アプリ」）があなたの個人情報をどのように収集・利用・保存・保護するかを説明します。<strong>本アプリをご利用になる前に、必ずお読みください。</strong><br><br>本アプリは個人開発者 <strong>Eric Liu</strong> が開発・運営しています。連絡先：<strong>simplord@163.com</strong>。</div>
 
-    <hr class="section-divider">
+      <section class="doc-section" id="ja-s1">
+        <h2>1. 収集する情報</h2>
+        <h3>1.1 あなたが提供する情報</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>種類</th><th>内容</th><th>収集時点</th></tr></thead>
+          <tbody>
+            <tr><td>アカウント情報</td><td>メールアドレス、ハッシュ化されたパスワード</td><td>メール登録／ログイン時</td></tr>
+            <tr><td>Apple アカウント識別子</td><td>Apple が割り当てる一意のユーザー識別子</td><td>「Sign in with Apple」利用時</td></tr>
+            <tr><td>あなたが作成した内容</td><td>庭名、植物名と品種、成長記録のメモ、お手入れ種別の設定、リマインダー間隔、植物タグ（名前と色）、植物アセット情報（入手日・価格）</td><td>アプリ内で作成・編集時</td></tr>
+            <tr><td>画像</td><td>撮影または選択した植物写真（成長記録・カバー・識別用写真）</td><td>記録追加・カバー設定・識別利用時（1.3、1.4 参照）</td></tr>
+            <tr><td>フィードバック</td><td>アプリへのフィードバックや品種訂正（テキスト、任意の画像）；アプリのバージョン・プラットフォーム・OS バージョン</td><td>「設定 → フィードバック」や品種訂正から送信時</td></tr>
+            <tr><td>プロフィール</td><td>ニックネーム（任意）</td><td>プロフィール編集時</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.2 自動的に生成される情報</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>種類</th><th>内容</th><th>目的</th></tr></thead>
+          <tbody>
+            <tr><td>プッシュトークン</td><td>デバイスの APNs トークン</td><td>お手入れ期限の通知送信</td></tr>
+            <tr><td>サブスク識別子</td><td>Apple App Store のオリジナル取引 ID、会員プロダクト ID</td><td>会員状態の検証・管理</td></tr>
+            <tr><td>セッション認証情報</td><td>端末に暗号化保存される JWT access/refresh トークン</td><td>ログイン維持・端末間同期</td></tr>
+            <tr><td>Apple 認可トークン</td><td>サーバーに暗号化保存される Apple refresh トークン（Sign in with Apple 利用者のみ）</td><td>アカウント削除時に Apple の要件に従い revoke</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.3 画像の保存方法（重要）</h3>
+        <p>あなたの成長記録写真や植物カバー画像は、<strong>クラウドアルバムとして Floriary 自社サーバーにアップロードされることはありません</strong>。保存方法は有料会員かどうかで決まります：</p>
+        <ul>
+          <li><strong>無料ユーザー</strong>：画像は<strong>端末内のみに保存</strong>されます（App Documents、iOS の端末 iCloud バックアップで保護）。Floriary サーバーへのアップロードや端末間の個別同期は行いません。機種変更・再インストール後、構造化データはサーバーから復元されますが、写真は自動的には引き継がれません。</li>
+          <li><strong>有料会員</strong>：画像は端末の <strong>iCloud コンテナ</strong>に保存され、iOS が<strong>あなた自身の Apple ID と iCloud 容量</strong>で端末間同期・機種変更時に復元します。<strong>この同期は Apple iCloud により行われ、写真は Floriary サーバーを経由しません。</strong></li>
+          <li>画像に紐づく<strong>構造化データ</strong>（庭・植物・メモ、タグ、リマインダー設定など）は Floriary サーバーへ同期されますが、画像本体は対象外です。</li>
+        </ul>
+        <div class="callout"><strong>画像が Floriary サーバーへアップロードされるのは次の2つの場合のみです：</strong>① <strong>フィードバック送信</strong>時に添付した画像；② 識別の訓練データ収集に<strong>同意した後</strong>に収集される識別写真（1.4 参照）。これらは個人アルバムとは別に保存されます。</div>
+        <h3>1.4 識別機能における情報処理</h3>
+        <p>「識別（写真で植物を判定）」機能の利用時：</p>
+        <ul>
+          <li>選択した写真は端末上で圧縮され、アップロード前に<strong>EXIF メタデータ（GPS 等を含む）を除去して匿名化</strong>します。</li>
+          <li>匿名化された写真は識別のため<strong>第三者の植物識別サービスへ一時的に送信</strong>されます（当該サービスは中国国外にある場合があります）。識別後、一時画像は消去され、長期的なクラウドアルバムとしては保持しません。</li>
+          <li>識別記録（候補種、画像ハッシュ、最終的に確認・選択した種）は識別品質の改善と植物図鑑の充実のため Floriary サーバーに保存されます。</li>
+          <li><strong>識別の初回利用にはあなたの明確な同意が必要です</strong>：① 写真は識別のため第三者サービスへ送信されます；② Floriary は自社の植物識別モデル改善のため、あなたの識別写真と識別/確認結果を保存します。<strong>同意しない場合、識別機能は利用できません。</strong>同意はバージョンと時刻を記録します。</li>
+          <li>モデル改善に用いる識別写真も保存前に <strong>EXIF を除去</strong>します。アカウント削除時、関連する写真と記録は併せて消去されます。</li>
+        </ul>
+        <h3>1.5 収集しない情報</h3>
+        <p>本アプリは以下を<strong>収集しません</strong>：</p>
+        <ul>
+          <li>位置情報（システム位置情報の権限は要求しません。写真 EXIF の GPS はアップロード前に除去）</li>
+          <li>連絡先</li><li>マイク音声</li><li>顔認識データ</li><li>第三者の広告トラッキング識別子（IDFA）</li>
+        </ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s2">
+        <h2>2. 情報の利用目的</h2>
+        <p>収集した情報は次の目的のみに利用します：</p>
+        <ul>
+          <li><strong>アカウントサービスの提供</strong>：登録・ログイン・ログイン維持・端末間同期。</li>
+          <li><strong>あなたの内容の保存・表示</strong>：庭・植物・成長記録・タグ・アセットなどの構造化データをサーバーに保存し、複数端末で閲覧できるようにします。</li>
+          <li><strong>識別</strong>：匿名化した写真を第三者エンジンへ一時送信して識別し、候補種を返します。</li>
+          <li><strong>識別精度の改善</strong>：同意の上、識別写真とあなたの確認結果を用いて自社モデルと植物図鑑を改善します。</li>
+          <li><strong>フィードバック対応</strong>：返信・不具合修正、品種訂正に基づく図鑑の改善。</li>
+          <li><strong>お手入れ通知</strong>：設定した間隔に基づき APNs で通知を送信します。</li>
+          <li><strong>サブスク検証</strong>：Apple にレシートを照会し会員の有効性を確認、機能を解放します。</li>
+          <li><strong>アカウントの安全・削除</strong>：本人確認、猶予期間の削除フロー、削除時の Sign in with Apple トークン revoke。</li>
+        </ul>
+        <div class="callout"><strong>あなたの個人情報を広告配信に利用したり、第三者へ販売したり、本ポリシーに記載のない目的に利用することはありません。</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s3">
+        <h2>3. 保存と保持</h2>
+        <h3>3.1 保存場所</h3>
+        <ul>
+          <li><strong>構造化データ</strong>（アカウント、庭・植物・メモ、タグ、アセット、識別記録、サブスク状態など）：Floriary の自社サーバー（中国区：Tencent Cloud サーバー＋データベース）。</li>
+          <li><strong>成長記録写真・植物カバー</strong>：無料ユーザーは端末内のみ（App Documents）；有料会員は<strong>あなた自身の iCloud コンテナ</strong>。いずれも写真は<strong>Floriary サーバーを経由しません</strong>。</li>
+          <li><strong>フィードバック画像・識別訓練写真（同意した場合のみ）</strong>：匿名化後、Floriary のオブジェクトストレージ（中国区：Tencent COS）に保存。</li>
+          <li><strong>ローカルトークン</strong>：端末内のみに保存。</li>
+        </ul>
+        <h3>3.2 保持期間</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>データ種別</th><th>ルール</th></tr></thead>
+          <tbody>
+            <tr><td>有効なアカウントデータ</td><td>アカウント有効期間中は保持</td></tr>
+            <tr><td>削除申請後</td><td>7日間の猶予期間に入り、終了後にソフト削除・匿名化（庭/植物/記録/タグ等を本人と切り離し、メール等の識別情報を削除）</td></tr>
+            <tr><td>識別写真・記録（削除後）</td><td>削除フローで併せて消去</td></tr>
+            <tr><td>フィードバックデータ</td><td>追跡の必要に応じ合理的期間保持</td></tr>
+            <tr><td>手動削除した記録</td><td>関連サーバー画像（フィードバック等）は消去待ちとして定期処理；端末内写真は端末が削除；iCloud の写真はあなたの iCloud が管理</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s4">
+        <h2>4. 共有と開示</h2>
+        <p>個人情報を販売することはありません。必要な場合のみ第三者へ移転されます：</p>
+        <h3>4.1 Apple</h3>
+        <ul>
+          <li><strong>IAP レシート検証</strong>：Apple App Store サーバーでレシートを確認。<a href="https://www.apple.com/legal/privacy/ja/" target="_blank" rel="noopener">Apple プライバシーポリシー</a>参照。</li>
+          <li><strong>App Store Server Notifications</strong>：サブスク状態の変更（更新・期限切れ・返金）を受信。</li>
+          <li><strong>Sign in with Apple</strong>：一意の識別子と（任意で）メールアドレスが Floriary に提供されます。</li>
+          <li><strong>iCloud 写真同期</strong>：有料会員の写真はあなた自身の Apple ID 下で Apple iCloud が同期。Floriary は関与せず、iCloud 内の写真を読み取れません。</li>
+        </ul>
+        <h3>4.2 クラウド基盤事業者</h3>
+        <p>Floriary はサーバーデータを <strong>Tencent Cloud（中国）</strong>に保存します。当該事業者はデータ処理者として Floriary の指示の下でのみ処理し、データを独自に利用しません。</p>
+        <h3>4.3 第三者の植物識別サービス（識別）</h3>
+        <p>識別利用時、匿名化された写真は識別のため第三者サービス（中国国外の場合あり）へ<strong>一時送信</strong>され、処理後に消去されます。<strong>初回利用時に別途同意</strong>を得ます。同意しない場合は送信されず、識別機能は利用できません。</p>
+        <h3>4.4 法的要求</h3>
+        <p>法令・裁判所命令・政府当局の要求がある場合、必要な情報を法に従い開示することがあります。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s5">
+        <h2>5. データセキュリティ</h2>
+        <p>次の措置を講じます：</p>
+        <ul>
+          <li>パスワードは保存前に一方向ハッシュ（bcrypt）化し、原文は復元できません。</li>
+          <li>すべての通信は HTTPS/TLS で暗号化します。</li>
+          <li>サーバーの JWT refresh トークンは一意の識別子を持ち、revoke 後ただちに無効化されます。</li>
+          <li>Apple refresh トークンは暗号化保存し、アカウント削除時のみ読み出します。</li>
+          <li>第三者 AI サービスのアクセスキーは暗号化保存し、コードやログから漏えいしません。</li>
+          <li>識別写真は送信・保存前に EXIF（GPS 含む）を除去します。</li>
+          <li>サーバーオブジェクト（フィードバック画像・図鑑画像等）は有効期限付きの署名 URL で参照します。</li>
+        </ul>
+        <p>ただし、いかなるオンラインサービスも 100% の安全は保証できません。データ事故が発生した場合、影響を受けるユーザーに合理的な期間内にアプリ内通知またはメールで連絡します。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s6">
+        <h2>6. あなたの権利</h2>
+        <p>中華人民共和国「個人情報保護法（PIPL）」等に基づき、次の権利があります：</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>権利</th><th>行使方法</th></tr></thead>
+          <tbody>
+            <tr><td>データの<strong>閲覧・コピー</strong></td><td>アプリ内で閲覧；エクスポートは開発者メールへ</td></tr>
+            <tr><td>誤った情報の<strong>訂正</strong></td><td>「マイ → プロフィール」で編集、または連絡</td></tr>
+            <tr><td>アカウント・データの<strong>削除</strong>（識別写真・記録・フィードバック含む）</td><td>「マイ → アカウント → 削除」、7日間の猶予後に実行</td></tr>
+            <tr><td>プッシュ許可の<strong>撤回</strong></td><td>iPhone 設定 → 通知 → 花迹 でオフ</td></tr>
+            <tr><td>プライバシーに関する<strong>問い合わせ・苦情</strong></td><td>メール：simplord@163.com</td></tr>
+          </tbody>
+        </table></div>
+        <p>リクエスト受領後 <strong>15 営業日</strong>以内に回答します。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s7">
+        <h2>7. 未成年者</h2>
+        <p>本アプリは 14 歳未満の方を対象としていません。14 歳未満の場合は、本ポリシーを読み同意した保護者の同伴のもとでご利用ください。保護者の同意なく 14 歳未満の個人情報を収集していたと判明した場合、速やかに削除します。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s8">
+        <h2>8. 変更について</h2>
+        <p>重要な変更がある場合は、事前に次の方法でお知らせします：</p>
+        <ul><li>アプリ内に更新通知を表示；</li><li>本ページ上部の「発効日」を更新。</li></ul>
+        <p>軽微な変更（誤記修正・章構成の調整）は本ページを直接更新し、個別の通知は行いません。継続利用をもって更新後のポリシーに同意したものとみなします。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ja-s9">
+        <h2>9. お問い合わせ</h2>
+        <p>本プライバシーポリシーに関するご質問は：</p>
+        <ul>
+          <li><strong>開発者</strong>：Eric Liu</li>
+          <li><strong>メール</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li>
+        </ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">本ポリシーに齟齬がある場合、中国語版が優先します。</p>
+      </section>
+    </article>
 
-    <!-- Section 9 -->
-    <section class="doc-section" id="s9">
-      <h2>九、联系我们</h2>
-      <p>如对本隐私政策有任何疑问，请联系：</p>
-      <ul>
-        <li><strong>开发者</strong>：Eric Liu</li>
-        <li><strong>邮箱</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li>
-        <li><strong>隐私政策页面</strong>：<a href="https://ericliulang.github.io/floriary-legal/privacy.html">https://ericliulang.github.io/floriary-legal/privacy.html</a></li>
-      </ul>
-      <p style="color: var(--text-tertiary); font-size: 13px; margin-top: 16px;">本政策以中文版本为准。</p>
-    </section>
+    <!-- ===================== 한국어 ===================== -->
+    <article data-loc="ko">
+      <div class="page-title-block">
+        <h1>개인정보 처리방침</h1>
+        <div class="meta"><span>시행일: 2026년 6월 16일</span><span>최종 업데이트: 2026년 6월 16일</span></div>
+      </div>
+      <nav class="toc">
+        <div class="toc-title">목차</div>
+        <ol>
+          <li><a href="#ko-s1">수집하는 정보</a></li>
+          <li><a href="#ko-s2">정보의 이용</a></li>
+          <li><a href="#ko-s3">저장과 보관</a></li>
+          <li><a href="#ko-s4">공유와 제공</a></li>
+          <li><a href="#ko-s5">데이터 보안</a></li>
+          <li><a href="#ko-s6">이용자의 권리</a></li>
+          <li><a href="#ko-s7">미성년자</a></li>
+          <li><a href="#ko-s8">방침 변경</a></li>
+          <li><a href="#ko-s9">문의</a></li>
+        </ol>
+      </nav>
+      <div class="callout">본 개인정보 처리방침은 ‘Floriary(花迹)’(이하 ‘본 앱’)가 이용자의 개인정보를 어떻게 수집·이용·저장·보호하는지 설명합니다. <strong>본 앱을 사용하기 전에 반드시 읽어 주세요.</strong><br><br>본 앱은 개인 개발자 <strong>Eric Liu</strong>가 개발·운영합니다. 연락처: <strong>simplord@163.com</strong>.</div>
+
+      <section class="doc-section" id="ko-s1">
+        <h2>1. 수집하는 정보</h2>
+        <h3>1.1 이용자가 제공하는 정보</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>유형</th><th>내용</th><th>수집 시점</th></tr></thead>
+          <tbody>
+            <tr><td>계정 정보</td><td>이메일 주소, 해시 처리된 비밀번호</td><td>이메일 가입/로그인 시</td></tr>
+            <tr><td>Apple 계정 식별자</td><td>Apple이 부여한 고유 사용자 식별자</td><td>‘Sign in with Apple’ 로그인 시</td></tr>
+            <tr><td>이용자 생성 콘텐츠</td><td>정원 이름, 식물 이름과 품종, 성장 기록 메모, 케어 유형 설정, 알림 주기, 식물 태그(이름·색상), 식물 자산 정보(입수일·가격)</td><td>앱에서 생성·편집 시</td></tr>
+            <tr><td>이미지</td><td>촬영·선택한 식물 사진(성장 기록·커버·식별용 사진)</td><td>기록 추가·커버 설정·식별 사용 시(1.3, 1.4 참조)</td></tr>
+            <tr><td>피드백</td><td>앱 피드백 또는 품종 정정(텍스트, 선택 이미지); 앱 버전·플랫폼·OS 버전</td><td>‘설정 → 피드백’ 또는 품종 정정에서 제출 시</td></tr>
+            <tr><td>프로필</td><td>닉네임(선택)</td><td>프로필 수정 시</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.2 자동으로 생성되는 정보</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>유형</th><th>내용</th><th>목적</th></tr></thead>
+          <tbody>
+            <tr><td>푸시 토큰</td><td>기기 APNs 토큰</td><td>케어 알림 발송</td></tr>
+            <tr><td>구독 식별자</td><td>Apple App Store 원본 거래 ID, 멤버십 상품 ID</td><td>멤버십 상태 확인·관리</td></tr>
+            <tr><td>세션 자격 증명</td><td>기기에 암호화 저장되는 JWT access/refresh 토큰</td><td>로그인 유지·기기 간 동기화</td></tr>
+            <tr><td>Apple 인가 토큰</td><td>서버에 암호화 저장되는 Apple refresh 토큰(Sign in with Apple 사용자만)</td><td>계정 삭제 시 Apple 요구에 따라 revoke</td></tr>
+          </tbody>
+        </table></div>
+        <h3>1.3 이미지 저장 방식(중요)</h3>
+        <p>성장 기록 사진과 식물 커버 이미지는 <strong>클라우드 앨범으로 Floriary 자체 서버에 업로드되지 않습니다</strong>. 저장 방식은 유료 회원 여부에 따라 결정됩니다:</p>
+        <ul>
+          <li><strong>무료 사용자</strong>: 이미지는 <strong>기기에만 저장</strong>됩니다(App Documents, iOS 기기 iCloud 백업으로 보호). Floriary 서버 업로드나 기기 간 개별 동기화를 하지 않습니다. 기기 변경·재설치 후 구조화 데이터는 서버에서 복원되지만 사진은 자동으로 따라오지 않습니다.</li>
+          <li><strong>유료 회원</strong>: 이미지는 기기의 <strong>iCloud 컨테이너</strong>에 저장되며, iOS가 <strong>본인의 Apple ID와 iCloud 용량</strong>으로 기기 간 동기화·기기 변경 시 복원합니다. <strong>이 동기화는 Apple iCloud가 수행하며 사진은 Floriary 서버를 거치지 않습니다.</strong></li>
+          <li>이미지에 연결된 <strong>구조화 데이터</strong>(정원/식물/메모, 태그, 알림 설정 등)는 Floriary 서버로 동기화되지만 이미지 자체는 대상이 아닙니다.</li>
+        </ul>
+        <div class="callout"><strong>이미지가 Floriary 서버에 업로드되는 경우는 다음 두 가지뿐입니다:</strong> ① <strong>피드백 제출</strong> 시 첨부한 이미지; ② 식별 학습 데이터 수집에 <strong>동의한 후</strong> 수집되는 식별 사진(1.4 참조). 이는 개인 앨범과 분리 저장됩니다.</div>
+        <h3>1.4 식별 기능의 정보 처리</h3>
+        <p>‘식별(사진으로 식물 인식)’ 기능 사용 시:</p>
+        <ul>
+          <li>선택한 사진은 기기에서 압축되고, 업로드 전에 <strong>EXIF 메타데이터(GPS 등 포함)를 제거하여 비식별화</strong>합니다.</li>
+          <li>비식별화된 사진은 식별을 위해 <strong>제3자 식물 인식 서비스로 일시 전송</strong>됩니다(해당 서비스는 중국 외에 있을 수 있음). 식별 후 임시 이미지는 삭제되며 장기 클라우드 앨범으로 보관하지 않습니다.</li>
+          <li>인식 기록(후보 종, 이미지 해시, 최종 확인·선택한 종)은 인식 품질 개선과 식물 도감 보완을 위해 Floriary 서버에 저장됩니다.</li>
+          <li><strong>식별 최초 사용에는 명시적 동의가 필요합니다</strong>: ① 사진이 인식을 위해 제3자 서비스로 전송됨; ② Floriary가 자체 식물 인식 모델 개선을 위해 식별 사진과 인식/확인 결과를 저장함. <strong>동의하지 않으면 식별 기능을 사용할 수 없습니다.</strong> 동의는 버전과 시각이 기록됩니다.</li>
+          <li>모델 개선에 사용되는 식별 사진도 저장 전 <strong>EXIF가 제거</strong>됩니다. 계정 삭제 시 관련 사진과 기록은 함께 삭제됩니다.</li>
+        </ul>
+        <h3>1.5 수집하지 않는 정보</h3>
+        <p>본 앱은 다음을 <strong>수집하지 않습니다</strong>:</p>
+        <ul>
+          <li>위치 정보(시스템 위치 권한을 요청하지 않음; 사진 EXIF의 GPS는 업로드 전 제거)</li>
+          <li>연락처</li><li>마이크 오디오</li><li>얼굴 인식 데이터</li><li>제3자 광고 추적 식별자(IDFA)</li>
+        </ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s2">
+        <h2>2. 정보의 이용</h2>
+        <p>수집한 정보는 다음 목적으로만 이용합니다:</p>
+        <ul>
+          <li><strong>계정 서비스 제공</strong>: 가입·로그인·로그인 유지·기기 간 동기화.</li>
+          <li><strong>콘텐츠 저장·표시</strong>: 정원·식물·성장 기록·태그·자산 등 구조화 데이터를 서버에 저장하여 여러 기기에서 열람.</li>
+          <li><strong>식별</strong>: 비식별화된 사진을 제3자 엔진에 일시 전송하여 식별, 후보 종을 반환.</li>
+          <li><strong>인식 개선</strong>: 동의 시 식별 사진과 확인 결과로 자체 모델과 도감을 개선.</li>
+          <li><strong>피드백 처리</strong>: 답변·문제 수정, 품종 정정에 따른 도감 보완.</li>
+          <li><strong>케어 알림</strong>: 설정한 주기에 따라 APNs로 푸시 발송.</li>
+          <li><strong>구독 확인</strong>: Apple에 영수증을 조회하여 멤버십 유효성을 확인하고 기능 해제.</li>
+          <li><strong>계정 보안·삭제</strong>: 본인 재확인, 유예 기간 삭제 절차, 삭제 시 Sign in with Apple 토큰 revoke.</li>
+        </ul>
+        <div class="callout"><strong>개인정보를 광고에 이용하거나 제3자에 판매하거나 본 방침에 명시되지 않은 목적으로 이용하지 않습니다.</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s3">
+        <h2>3. 저장과 보관</h2>
+        <h3>3.1 저장 위치</h3>
+        <ul>
+          <li><strong>구조화 데이터</strong>(계정, 정원/식물/메모, 태그, 자산, 인식 기록, 구독 상태 등): Floriary 자체 서버(중국 리전: Tencent Cloud 서버+DB).</li>
+          <li><strong>성장 기록 사진·식물 커버</strong>: 무료 사용자는 기기에만(App Documents); 유료 회원은 <strong>본인의 iCloud 컨테이너</strong>. 두 경우 모두 사진은 <strong>Floriary 서버를 거치지 않습니다</strong>.</li>
+          <li><strong>피드백 이미지·식별 학습 사진(동의 시에만)</strong>: 비식별화 후 Floriary 오브젝트 스토리지(중국 리전: Tencent COS)에 저장.</li>
+          <li><strong>로컬 토큰</strong>: 기기에만 저장.</li>
+        </ul>
+        <h3>3.2 보관 기간</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>데이터 유형</th><th>규칙</th></tr></thead>
+          <tbody>
+            <tr><td>활성 계정 데이터</td><td>계정 유효 기간 동안 보관</td></tr>
+            <tr><td>삭제 신청 후</td><td>7일 유예 기간 진입, 종료 후 소프트 삭제·익명화(정원/식물/기록/태그 등을 본인과 분리, 이메일 등 식별 정보 삭제)</td></tr>
+            <tr><td>식별 사진·기록(삭제 후)</td><td>삭제 절차와 함께 삭제</td></tr>
+            <tr><td>피드백 데이터</td><td>문제 추적 필요에 따라 합리적 기간 보관</td></tr>
+            <tr><td>수동 삭제한 기록</td><td>연결된 서버 이미지(피드백 등)는 삭제 대기로 정기 처리; 기기 사진은 기기가 삭제; iCloud 사진은 본인 iCloud가 관리</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s4">
+        <h2>4. 공유와 제공</h2>
+        <p>개인정보를 판매하지 않습니다. 필요한 경우에만 제3자에 제공될 수 있습니다:</p>
+        <h3>4.1 Apple</h3>
+        <ul>
+          <li><strong>IAP 영수증 검증</strong>: Apple App Store 서버에서 영수증 확인. <a href="https://www.apple.com/legal/privacy/ko/" target="_blank" rel="noopener">Apple 개인정보 처리방침</a> 참조.</li>
+          <li><strong>App Store Server Notifications</strong>: 구독 상태 변경(갱신·만료·환불) 수신.</li>
+          <li><strong>Sign in with Apple</strong>: 고유 식별자와 (선택적) 이메일을 Floriary에 제공.</li>
+          <li><strong>iCloud 사진 동기화</strong>: 유료 회원 사진은 본인 Apple ID에서 Apple iCloud가 동기화하며, Floriary는 관여하지 않고 iCloud 사진을 읽을 수 없습니다.</li>
+        </ul>
+        <h3>4.2 클라우드 인프라 제공자</h3>
+        <p>Floriary는 서버 데이터를 <strong>Tencent Cloud(중국)</strong>에 저장합니다. 해당 제공자는 처리자로서 Floriary의 지시에 따라서만 처리하며 데이터를 독자적으로 이용하지 않습니다.</p>
+        <h3>4.3 제3자 식물 인식 서비스(식별)</h3>
+        <p>식별 사용 시 비식별화된 사진이 인식을 위해 제3자 서비스(중국 외 가능)로 <strong>일시 전송</strong>되며 처리 후 삭제됩니다. <strong>최초 사용 시 별도 동의</strong>를 받습니다. 동의하지 않으면 전송되지 않으며 식별 기능을 사용할 수 없습니다.</p>
+        <h3>4.4 법적 요구</h3>
+        <p>법령·법원 명령·정부 기관의 요구가 있는 경우 필요한 정보를 법에 따라 제공할 수 있습니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s5">
+        <h2>5. 데이터 보안</h2>
+        <p>다음 조치를 취합니다:</p>
+        <ul>
+          <li>비밀번호는 저장 전 단방향 해시(bcrypt) 처리되어 원문을 복원할 수 없습니다.</li>
+          <li>모든 전송은 HTTPS/TLS로 암호화합니다.</li>
+          <li>서버 JWT refresh 토큰은 고유 식별자를 사용하며 revoke 즉시 무효화되어 재생 공격을 방지합니다.</li>
+          <li>Apple refresh 토큰은 암호화 저장되어 계정 삭제 시에만 읽습니다.</li>
+          <li>제3자 AI 서비스 접근 키는 암호화 저장되어 코드·로그로 유출되지 않습니다.</li>
+          <li>식별 사진은 전송·저장 전 EXIF(GPS 포함)를 제거합니다.</li>
+          <li>서버 오브젝트(피드백 이미지·도감 이미지 등)는 유효 기간이 있는 사전 서명 URL로 접근합니다.</li>
+        </ul>
+        <p>다만 어떤 온라인 서비스도 100% 보안을 보장할 수 없습니다. 데이터 사고 발생 시 영향을 받는 이용자에게 합리적 기간 내에 앱 알림 또는 이메일로 알립니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s6">
+        <h2>6. 이용자의 권리</h2>
+        <p>중화인민공화국 ‘개인정보 보호법(PIPL)’ 등에 따라 다음 권리를 갖습니다:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>권리</th><th>행사 방법</th></tr></thead>
+          <tbody>
+            <tr><td>데이터 <strong>열람·복사</strong></td><td>앱에서 열람; 내보내기는 개발자 이메일로 요청</td></tr>
+            <tr><td>잘못된 정보 <strong>정정</strong></td><td>‘마이 → 프로필’에서 수정 또는 문의</td></tr>
+            <tr><td>계정·데이터 <strong>삭제</strong>(식별 사진·기록·피드백 포함)</td><td>‘마이 → 계정 → 계정 삭제’, 7일 유예 후 실행</td></tr>
+            <tr><td>푸시 권한 <strong>철회</strong></td><td>iPhone 설정 → 알림 → 花迹에서 끄기</td></tr>
+            <tr><td>개인정보 관련 <strong>문의·민원</strong></td><td>이메일: simplord@163.com</td></tr>
+          </tbody>
+        </table></div>
+        <p>요청 접수 후 <strong>15영업일</strong> 이내에 답변합니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s7">
+        <h2>7. 미성년자</h2>
+        <p>본 앱은 만 14세 미만을 대상으로 하지 않습니다. 만 14세 미만인 경우 본 방침을 읽고 동의한 보호자와 함께 사용하세요. 보호자 동의 없이 만 14세 미만의 개인정보를 수집한 사실이 확인되면 신속히 삭제합니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s8">
+        <h2>8. 방침 변경</h2>
+        <p>중요한 변경이 있는 경우 사전에 다음 방법으로 알립니다:</p>
+        <ul><li>앱 내 업데이트 알림 표시;</li><li>본 페이지 상단의 ‘시행일’ 업데이트.</li></ul>
+        <p>경미한 변경(오탈자 수정, 구성 조정)은 본 페이지를 직접 업데이트하며 별도 통지하지 않습니다. 계속 사용하면 업데이트된 방침에 동의한 것으로 간주합니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section" id="ko-s9">
+        <h2>9. 문의</h2>
+        <p>본 개인정보 처리방침에 관한 문의는:</p>
+        <ul>
+          <li><strong>개발자</strong>: Eric Liu</li>
+          <li><strong>이메일</strong>: <a href="mailto:simplord@163.com">simplord@163.com</a></li>
+        </ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">본 방침은 해석상 차이가 있을 경우 중국어판이 우선합니다.</p>
+      </section>
+    </article>
+
+    <!-- INSERT-LANGS -->
 
   </main>
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="index.html">首页</a>
-      <a href="privacy.html">隐私政策</a>
-      <a href="terms.html">用户协议</a>
-      <a href="mailto:simplord@163.com">联系我们</a>
+      <a href="index.html" data-i18n="nav.home"></a>
+      <a href="privacy.html" data-i18n="nav.privacy"></a>
+      <a href="terms.html" data-i18n="nav.terms"></a>
+      <a href="support.html" data-i18n="nav.support"></a>
+      <a href="mailto:simplord@163.com" data-i18n="nav.contact"></a>
     </div>
     <p>© 2026 花迹 Floriary · Eric Liu · All rights reserved.</p>
   </footer>
+
+  <script>
+  (function(){
+    var LABELS={zh:'简体中文','zh-Hant':'繁體中文',en:'English',ja:'日本語',ko:'한국어'};
+    var NAV={
+      zh:{'nav.home':'首页','nav.privacy':'隐私政策','nav.terms':'用户协议','nav.support':'技术支持','nav.contact':'联系我们'},
+      'zh-Hant':{'nav.home':'首頁','nav.privacy':'隱私政策','nav.terms':'使用者協議','nav.support':'技術支援','nav.contact':'聯絡我們'},
+      en:{'nav.home':'Home','nav.privacy':'Privacy','nav.terms':'Terms','nav.support':'Support','nav.contact':'Contact'},
+      ja:{'nav.home':'ホーム','nav.privacy':'プライバシー','nav.terms':'利用規約','nav.support':'サポート','nav.contact':'お問い合わせ'},
+      ko:{'nav.home':'홈','nav.privacy':'개인정보','nav.terms':'이용약관','nav.support':'지원','nav.contact':'문의'}
+    };
+    var TITLES={zh:'隐私政策 — 花迹 Floriary','zh-Hant':'隱私政策 — 花迹 Floriary',en:'Privacy Policy — Floriary',ja:'プライバシーポリシー — 花迹 Floriary',ko:'개인정보 처리방침 — 花迹 Floriary'};
+    var HTMLLANG={zh:'zh-CN','zh-Hant':'zh-Hant',en:'en',ja:'ja',ko:'ko'};
+    function apply(lang){
+      var nav=NAV[lang]||NAV.zh;
+      document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(nav[k]!=null)el.textContent=nav[k];});
+      document.documentElement.setAttribute('data-lang',lang);
+      document.documentElement.setAttribute('lang',HTMLLANG[lang]||'zh-CN');
+      document.title=TITLES[lang]||TITLES.zh;
+      var lbl=document.getElementById('langLabel');if(lbl)lbl.textContent=LABELS[lang];
+      try{localStorage.setItem('floriary_lang',lang);}catch(e){}
+    }
+    function initial(){var s;try{s=localStorage.getItem('floriary_lang');}catch(e){}return (s&&LABELS[s])?s:'zh';}
+    document.addEventListener('DOMContentLoaded',function(){
+      apply(initial());
+      var btn=document.getElementById('langBtn'),menu=document.getElementById('langMenu');
+      btn.addEventListener('click',function(e){e.stopPropagation();var h=menu.hidden;menu.hidden=!h;btn.setAttribute('aria-expanded',String(h));});
+      document.addEventListener('click',function(){menu.hidden=true;btn.setAttribute('aria-expanded','false');});
+      menu.querySelectorAll('[data-set-lang]').forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-set-lang'));menu.hidden=true;});});
+    });
+  })();
+  </script>
 
 </body>
 </html>
