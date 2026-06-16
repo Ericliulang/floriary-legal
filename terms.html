@@ -1,106 +1,56 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>用户协议 — 花迹 Floriary</title>
   <style>
-    :root {
-      --brand-800: #2D5A3D;
-      --brand-700: #3E6B4F;
-      --brand-600: #5FAE6E;
-      --brand-400: #8FC79A;
-      --surface-mint: #EEF6F0;
-      --bg: #FAFCFA;
-      --surface: #FFFFFF;
-      --text-primary: #212B26;
-      --text-secondary: #5F6B63;
-      --text-tertiary: #9AA5A0;
-      --border: #E2EAE4;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
-                   "Microsoft YaHei", "Helvetica Neue", sans-serif;
-      background: var(--bg);
-      color: var(--text-primary);
-      font-size: 15px;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--brand-700); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .site-header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--surface-mint);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-    .site-header .brand { font-size: 15px; font-weight: 600; color: var(--brand-800); }
-    .site-header .page-type { font-size: 13px; color: var(--text-tertiary); margin-left: auto; }
-
-    .page-container { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
-
-    .page-title-block { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-    .page-title-block h1 { font-size: 26px; font-weight: 700; color: var(--brand-800); margin-bottom: 8px; }
-    .meta { font-size: 13px; color: var(--text-tertiary); display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .toc { background: var(--surface-mint); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; }
-    .toc-title { font-size: 13px; font-weight: 600; color: var(--brand-700); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
-    .toc ol { padding-left: 20px; }
-    .toc li { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; }
-    .toc li a { color: var(--text-secondary); }
-    .toc li a:hover { color: var(--brand-700); }
-
-    .doc-section { margin-bottom: 36px; }
-    .doc-section h2 { font-size: 18px; font-weight: 700; color: var(--brand-800); margin-bottom: 16px; padding-top: 8px; display: flex; align-items: center; gap: 8px; }
-    .doc-section h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: var(--brand-600); border-radius: 2px; flex-shrink: 0; }
-    .doc-section h3 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 20px 0 10px; }
-    .doc-section p { color: var(--text-secondary); margin-bottom: 12px; }
-    .doc-section ul { padding-left: 20px; margin-bottom: 12px; }
-    .doc-section ul li { color: var(--text-secondary); margin-bottom: 6px; }
-
-    .table-wrap { overflow-x: auto; margin: 12px 0 16px; }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    thead th { background: var(--surface-mint); color: var(--brand-800); font-weight: 600; text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
-    tbody td { padding: 10px 14px; color: var(--text-secondary); border-bottom: 1px solid var(--border); vertical-align: top; }
-    tbody tr:last-child td { border-bottom: none; }
-    tbody tr:nth-child(even) td { background: #FAFCFA; }
-
-    .callout { background: var(--surface-mint); border-left: 3px solid var(--brand-600); border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0 16px; font-size: 14px; color: var(--text-secondary); }
-    .callout strong { color: var(--brand-800); }
-
-    .callout-warning { background: #FFF8E7; border-left: 3px solid #E08F4C; border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 12px 0 16px; font-size: 14px; color: #5F6B63; }
-    .callout-warning strong { color: #B45309; }
-
-    .section-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
-
-    .site-footer { background: var(--surface); border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 13px; color: var(--text-tertiary); }
-    .site-footer a { color: var(--brand-700); }
-    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 8px; flex-wrap: wrap; }
-
-    @media (max-width: 480px) {
-      .page-container { padding: 24px 16px 48px; }
-      .page-title-block h1 { font-size: 22px; }
-      .doc-section h2 { font-size: 16px; }
-    }
+    :root{--brand-800:#2D5A3D;--brand-700:#3E6B4F;--brand-600:#5FAE6E;--brand-400:#8FC79A;--surface-mint:#EEF6F0;--bg:#FAFCFA;--surface:#FFFFFF;--text-primary:#212B26;--text-secondary:#5F6B63;--text-tertiary:#9AA5A0;--border:#E2EAE4}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif;background:var(--bg);color:var(--text-primary);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand-700);text-decoration:none}a:hover{text-decoration:underline}
+    .site-header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:20}
+    .logo-icon{width:32px;height:32px;background:var(--surface-mint);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+    .site-header .brand{font-size:15px;font-weight:600;color:var(--brand-800)}
+    .lang-switch{margin-left:auto;position:relative}
+    .lang-btn{font:inherit;font-size:13px;color:var(--text-secondary);background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 12px;cursor:pointer;display:flex;align-items:center;gap:6px}
+    .lang-btn:hover{border-color:var(--brand-400)}
+    .lang-menu{position:absolute;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.10);padding:6px;min-width:148px;list-style:none;z-index:30}
+    .lang-menu[hidden]{display:none}
+    .lang-menu button{width:100%;text-align:left;font:inherit;font-size:14px;color:var(--text-primary);background:none;border:none;border-radius:8px;padding:9px 12px;cursor:pointer}
+    .lang-menu button:hover{background:var(--surface-mint)}
+    .page-container{max-width:720px;margin:0 auto;padding:32px 24px 64px}
+    .page-title-block{margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+    .page-title-block h1{font-size:26px;font-weight:700;color:var(--brand-800);margin-bottom:8px}
+    .meta{font-size:13px;color:var(--text-tertiary);display:flex;gap:16px;flex-wrap:wrap}
+    .toc{background:var(--surface-mint);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:32px}
+    .toc-title{font-size:13px;font-weight:600;color:var(--brand-700);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+    .toc ol{padding-left:20px}
+    .toc li{font-size:14px;color:var(--text-secondary);margin-bottom:4px}
+    .toc li a{color:var(--text-secondary)}.toc li a:hover{color:var(--brand-700)}
+    .doc-section{margin-bottom:36px}
+    .doc-section h2{font-size:18px;font-weight:700;color:var(--brand-800);margin-bottom:16px;padding-top:8px;display:flex;align-items:center;gap:8px}
+    .doc-section h2::before{content:'';display:inline-block;width:4px;height:18px;background:var(--brand-600);border-radius:2px;flex-shrink:0}
+    .doc-section h3{font-size:15px;font-weight:600;color:var(--text-primary);margin:20px 0 10px}
+    .doc-section p{color:var(--text-secondary);margin-bottom:12px}
+    .doc-section ul,.doc-section ol{padding-left:20px;margin-bottom:12px}
+    .doc-section li{color:var(--text-secondary);margin-bottom:6px}
+    .table-wrap{overflow-x:auto;margin:12px 0 16px}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    thead th{background:var(--surface-mint);color:var(--brand-800);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--border)}
+    tbody td{padding:10px 14px;color:var(--text-secondary);border-bottom:1px solid var(--border);vertical-align:top}
+    tbody tr:last-child td{border-bottom:none}
+    tbody tr:nth-child(even) td{background:#FAFCFA}
+    .callout{background:var(--surface-mint);border-left:3px solid var(--brand-600);border-radius:0 8px 8px 0;padding:14px 16px;margin:12px 0 16px;font-size:14px;color:var(--text-secondary)}
+    .callout strong{color:var(--brand-800)}
+    .section-divider{border:none;border-top:1px solid var(--border);margin:32px 0}
+    .site-footer{background:var(--surface);border-top:1px solid var(--border);padding:24px;text-align:center;font-size:13px;color:var(--text-tertiary)}
+    .site-footer a{color:var(--brand-700)}
+    .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:8px;flex-wrap:wrap}
+    [data-loc]{display:none}
+    html[data-lang="zh"] [data-loc="zh"],html[data-lang="zh-Hant"] [data-loc="zh-Hant"],html[data-lang="en"] [data-loc="en"],html[data-lang="ja"] [data-loc="ja"],html[data-lang="ko"] [data-loc="ko"]{display:block}
+    @media(max-width:480px){.page-container{padding:24px 16px 48px}.page-title-block h1{font-size:22px}.doc-section h2{font-size:16px}}
   </style>
 </head>
 <body>
@@ -108,307 +58,617 @@
   <header class="site-header">
     <div class="logo-icon">🌿</div>
     <span class="brand">花迹 Floriary</span>
-    <span class="page-type">法律文件</span>
+    <div class="lang-switch">
+      <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">🌐 <span id="langLabel">简体中文</span> ▾</button>
+      <ul class="lang-menu" id="langMenu" hidden>
+        <li><button data-set-lang="zh">简体中文</button></li>
+        <li><button data-set-lang="zh-Hant">繁體中文</button></li>
+        <li><button data-set-lang="en">English</button></li>
+        <li><button data-set-lang="ja">日本語</button></li>
+        <li><button data-set-lang="ko">한국어</button></li>
+      </ul>
+    </div>
   </header>
 
   <main class="page-container">
-    <div class="page-title-block">
-      <h1>用户协议</h1>
-      <div class="meta">
-        <span>生效日期：2026 年 6 月 16 日</span>
-        <span>最后更新：2026 年 6 月 16 日</span>
+
+    <!-- ===================== 简体中文 ===================== -->
+    <article data-loc="zh">
+      <div class="page-title-block">
+        <h1>用户协议</h1>
+        <div class="meta"><span>生效日期：2026 年 6 月 16 日</span><span>最后更新：2026 年 6 月 16 日</span></div>
       </div>
-    </div>
+      <div class="callout">欢迎使用「花迹 Floriary」。本协议是你与开发者 <strong>Eric Liu</strong>（以下简称「我」或「开发者」）之间关于使用花迹应用的法律协议。<strong>安装、注册或使用本应用，即表示你已阅读、理解并同意本协议的全部条款。</strong><br><br>如不同意本协议，请立即停止使用并从你的设备上卸载本应用。</div>
 
-    <nav class="toc">
-      <div class="toc-title">目录</div>
-      <ol>
-        <li><a href="#s1">服务说明</a></li>
-        <li><a href="#s2">账号注册与使用</a></li>
-        <li><a href="#s3">你的内容</a></li>
-        <li><a href="#s4">付费服务</a></li>
-        <li><a href="#s5">免费版限制</a></li>
-        <li><a href="#s6">账号注销</a></li>
-        <li><a href="#s7">禁止行为</a></li>
-        <li><a href="#s8">服务变更与终止</a></li>
-        <li><a href="#s9">知识产权</a></li>
-        <li><a href="#s10">免责声明</a></li>
-        <li><a href="#s11">适用法律与争议解决</a></li>
-        <li><a href="#s12">协议更新</a></li>
-      </ol>
-    </nav>
+      <section class="doc-section"><h2>一、服务说明</h2>
+        <p>花迹是一款植物成长记录应用，提供以下功能：</p>
+        <ul><li>花园与植株档案管理</li><li>成长记录（文字备注、照片、养护标签）</li><li>植株标签（自定义、带颜色、可按标签筛选）</li><li>绿植资产统计（入手日期 / 价格 / 价值）</li><li>养护提醒与养护中心</li><li>数据统计、热力图与成长洞察</li><li>成长档案 / 纪念册导出</li><li>AI 识图（拍照认植物）与物种纠错</li><li>结构化数据跨设备云同步（所有账号用户均包含）</li><li>反馈与评价</li><li>会员增值功能（详见第四节）</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>二、账号注册与使用</h2>
+        <h3>2.1 注册要求</h3>
+        <ul><li>你必须提供真实、有效的信息（如邮箱地址），并确保信息准确。</li><li>每个邮箱地址或第三方账号（Apple ID 等）只能注册一个花迹账号。</li><li>你须年满 14 周岁（或在监护人指导下，根据所在地法律规定）方可注册使用。</li></ul>
+        <h3>2.2 账号安全</h3>
+        <ul><li>你负责保管账号凭证（邮箱密码、登录设备），不得将账号转让、出借或共享给他人。</li><li>如发现账号被盗用，请立即通过「忘记密码」功能重置凭证，并联系开发者邮箱。</li><li>因账号凭证泄露导致的损失，由账号持有人自行承担，但若因我方服务本身的安全漏洞导致的除外。</li></ul>
+        <h3>2.3 多种登录方式</h3>
+        <p>你可以在「我的 → 账号与安全」中为同一账号绑定多种登录方式（邮箱、Apple ID 等）。每种绑定均需经过验证，同一邮箱/Apple ID 不可同时绑定多个花迹账号。账号必须保留至少一种有效的登录方式，不可全部解绑。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>三、你的内容</h2>
+        <h3>3.1 内容归属</h3>
+        <p>你在花迹中创建的花园、植株、成长记录、照片、植株标签、资产信息等内容（统称「用户内容」）的知识产权归属于你。</p>
+        <h3>3.2 授权</h3>
+        <p>为向你提供服务（包括数据存储与跨设备同步），你授权我在技术上必要的范围内处理、存储和传输你的内容。其中，付费会员的照片同步通过你自己的 iCloud 由 Apple 完成，花迹不持有该等照片。此授权不涉及任何商业用途，不向第三方转授。</p>
+        <h3>3.3 内容责任</h3>
+        <p>你对自己上传或创建的内容承担责任，并保证：</p>
+        <ul><li>内容不侵犯他人知识产权、隐私权或其他合法权益；</li><li>内容不违反中华人民共和国及你所在地的法律法规；</li><li>不利用本应用存储、传播违法、有害或侵权内容。</li></ul>
+        <h3>3.4 反馈、物种纠错与识图贡献</h3>
+        <ul><li>当你提交反馈或物种纠错建议（如品种名称、养护信息、配图修正等）时，你授予花迹免费、非独占地使用该等内容以改进产品与完善植物库的权利。</li><li>当你同意识图训练数据采集后，你的识图照片与最终确认结果可用于改进花迹自有的植物识别模型（详见《隐私政策》）。</li><li>上述使用均经去标识化处理，不公开你的账号身份；你注销账号时，相关贡献数据将按《隐私政策》清理。</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>四、付费服务</h2>
+        <p>花迹提供「会员」付费增值服务，解锁一系列高级权益。</p>
+        <h3>4.1 会员权益</h3>
+        <p>会员解锁以下功能权限：</p>
+        <ul><li><strong>无限花园数量</strong>（免费版上限 3 个）</li><li><strong>每个花园无限植株数量</strong>（免费版每园上限 20 株活跃植株）</li><li><strong>绿植图片 iCloud 同步</strong>——照片存入你自己的 iCloud 容器，跨设备同步、换机自动恢复（免费用户图片仅保存在本机本地）</li><li><strong>完整统计历史与数据洞察</strong>（免费版仅展示近 1 个月热力图）</li><li><strong>成长档案 / 纪念册导出</strong>（无水印、全量、高清长图 / PDF）</li><li><strong>识图永久无限次</strong>（免费用户为限时免费，推广期结束后回落为有限次数）</li><li><strong>养护任务批量完成</strong></li><li><strong>无限植株标签</strong></li></ul>
+        <div class="table-wrap"><table><thead><tr><th>套餐</th><th>计费方式</th><th>试用</th></tr></thead><tbody>
+          <tr><td>月度会员</td><td>自动续费订阅，每月收费</td><td>含 7 天免费试用期</td></tr>
+          <tr><td>年度会员</td><td>自动续费订阅，每年收费</td><td>含 7 天免费试用期</td></tr>
+          <tr><td>永久会员</td><td>一次性买断，无需续费</td><td>无试用期</td></tr>
+        </tbody></table></div>
+        <div class="callout"><strong>关于图片存储：</strong>会员的「绿植图片 iCloud 同步」使用的是<strong>你自己的 iCloud 配额与 Apple 基础设施</strong>，照片不上传到花迹服务器，作为会员权益一并提供。</div>
+        <h3>4.2 自动续费说明</h3>
+        <ul><li>自动续费订阅将在当前订阅周期结束前 24 小时内自动通过你的 Apple ID 账户扣费续订，续费后订阅期顺延。</li><li>你可以随时前往「iPhone 设置 → [你的名字] → 订阅」管理或关闭自动续费。</li><li>关闭自动续费后，订阅权益在当前已付费周期结束前仍然有效，到期后不再续订。</li><li>含免费试用期的订阅：试用期结束后，如未在试用期内取消，将自动扣费续订。</li></ul>
+        <h3>4.3 退款</h3>
+        <p>所有购买均通过 Apple App Store 完成结算，退款事项请直接联系 Apple（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>）。开发者不直接处理退款。</p>
+        <h3>4.4 价格变更</h3>
+        <p>开发者保留调整订阅价格的权利。价格调整将提前在应用内告知，且不影响当前已付费订阅周期内的费用；下一个计费周期起按新价格执行。</p>
+        <h3>4.5 会员到期与超限策略</h3>
+        <p><strong>会员到期（未续费）：</strong></p>
+        <ul><li>超出免费版额度的花园/植株/记录数据保留，但进入只读状态（无法新增或编辑超限部分，已有数据可查看）。</li><li>完整统计历史、数据洞察、纪念册导出、批量养护、识图无限、无限标签等会员功能回退到免费版能力范围。</li><li><strong>已存入 iCloud 的历史照片保留可读</strong>；到期后新照片回落本机本地，不会突然删除你任何照片。重新订阅会员后，高级功能权限与 iCloud 同步即时恢复。</li></ul>
+        <div class="callout"><strong>重要：到期不会立即删除你的数据；数据保留，仅限制新增/编辑操作。</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>五、免费版限制</h2>
+        <div class="table-wrap"><table><thead><tr><th>功能</th><th>免费版上限</th></tr></thead><tbody>
+          <tr><td>花园数量</td><td>最多 3 个</td></tr>
+          <tr><td>每个花园活跃植株数量</td><td>最多 20 株</td></tr>
+          <tr><td>统计热力图历史</td><td>近 1 个月</td></tr>
+          <tr><td>数据洞察 / 纪念册导出 / 批量养护</td><td>不支持（会员功能）</td></tr>
+          <tr><td>AI 识图额度</td><td>限时免费（推广期结束后回落为有限次数）</td></tr>
+          <tr><td>绿植图片 iCloud 同步</td><td>不支持（图片仅保存在本机本地）</td></tr>
+          <tr><td>植株标签</td><td>不支持（会员功能）</td></tr>
+        </tbody></table></div>
+        <p>免费版的成长记录（文字）和结构化数据（花园/植株/标签/提醒等）享有与付费用户相同的<strong>云端同步</strong>服务，无限制。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>六、账号注销</h2>
+        <p>你可以随时通过「我的 → 账号与安全 → 注销账号」申请注销。</p>
+        <ol><li><strong>订阅提醒</strong>：注销账号<strong>不会自动取消你的 Apple 会员订阅扣费</strong>。应用会在注销前明确提示，并提供跳转「App Store 订阅管理」的入口，请按需自行前往取消。</li><li><strong>二次验证</strong>：需输入当前密码（或其他已绑定的验证方式）确认是本人操作。</li><li><strong>冷静期</strong>：提交注销申请后，账号进入 <strong>7 天冷静期</strong>。冷静期内你仍可登录并撤销申请。</li><li><strong>数据处理</strong>：冷静期结束后，你的账号数据将被软删除和匿名化；识图照片、识别记录、反馈数据及服务器上的关联图片进入清理流程；本机本地照片由设备本地清除；存入 iCloud 的照片由你的 iCloud 管理（注销不会代你删除 iCloud 中的照片）。</li><li><strong>不可恢复</strong>：冷静期结束、数据删除后，数据无法恢复。</li></ol>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>七、禁止行为</h2>
+        <p>你在使用本应用时不得：</p>
+        <ul><li>破解、反编译、逆向工程本应用；</li><li>绕过付费限制（如冒用他人账号或伪造收据等）；</li><li>利用本应用存储、传播违法内容（含色情、暴力、涉政敏感内容等）；</li><li>对服务器发起 DoS/DDoS 攻击或其他干扰服务的行为；</li><li>爬取、批量下载其他用户的数据；</li><li>以任何方式滥用识图 AI 服务（含上传与植物识别无关的有害内容）；</li><li>提交虚假或恶意的反馈 / 物种纠错信息以干扰运营。</li></ul>
+        <p>违反上述规定的，我有权终止你的账号服务，情节严重的将依法追究法律责任。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>八、服务变更与终止</h2>
+        <h3>8.1 服务变更</h3><p>我保留对本应用功能、界面、付费方案进行调整的权利，重大变更将提前在应用内通知。</p>
+        <h3>8.2 服务终止</h3><p>若本应用决定永久停止运营，将至少提前 <strong>30 天</strong>在应用内和本页面公告，并说明你的数据如何处理（包括数据导出渠道或清除时间表）。在此期间，你可选择导出或备份你的内容。</p>
+        <h3>8.3 账号封禁</h3><p>如你严重违反本协议，我保留在不预先通知的情况下封禁账号的权利。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>九、知识产权</h2>
+        <p>本应用的代码、设计、图标、文案及「花迹」「Floriary」品牌名称，其知识产权归开发者所有。你不得在未获授权的情况下使用、复制或传播上述内容。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>十、免责声明</h2>
+        <ul><li><strong>服务可用性</strong>：本应用按「现状」提供服务，不承诺服务永不中断或无故障。因不可抗力、第三方服务商故障（如 Apple、云服务商、识别服务商）、网络问题等导致的服务中断，不承担赔偿责任，但会尽合理努力恢复服务。</li><li><strong>数据备份</strong>：免费用户的图片仅保存在本地设备；会员的图片同步依赖你自己的 iCloud 与 Apple 服务（设备未登录 Apple ID 或 iCloud 不可用时会降级为仅本机本地）。设备丢失、损坏或系统重置可能导致未备份的数据丢失，请自行做好备份。</li><li><strong>识图准确性</strong>：AI 识图结果仅供参考，不构成专业植物学鉴定意见。如用于判断植物是否有毒、可否食用等安全用途，请务必咨询相关专业人士。</li><li><strong>第三方链接</strong>：应用内可能包含跳转至 Apple 订阅管理等第三方页面的链接，该等页面的内容和隐私实践由对应第三方负责，与本应用无关。</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>十一、适用法律与争议解决</h2>
+        <p>本协议的订立、执行和解释，以及由本协议引起的或与本协议有关的一切争议，均适用<strong>中华人民共和国法律</strong>。</p>
+        <p>发生争议时，双方应首先尝试友好协商解决。协商不成的，任何一方均可提交至<strong>被告住所地有管辖权的人民法院</strong>诉讼解决。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>十二、协议更新</h2>
+        <p>本协议如有重大变更，我将在生效前至少 <strong>7 天</strong>通过应用内通知或邮件告知。继续使用本应用即表示你接受更新后的协议。</p>
+        <p>如不接受更新后的条款，你应在变更生效前停止使用本应用并注销账号。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>联系方式</h2>
+        <ul><li><strong>开发者</strong>：Eric Liu</li><li><strong>邮箱</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li></ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">本协议以中文版本为准。</p>
+      </section>
+    </article>
 
-    <div class="callout">
-      欢迎使用「花迹 Floriary」。本协议是你与开发者 <strong>Eric Liu</strong>（以下简称「我」或「开发者」）之间关于使用花迹应用的法律协议。<strong>安装、注册或使用本应用，即表示你已阅读、理解并同意本协议的全部条款。</strong><br><br>
-      如不同意本协议，请立即停止使用并从你的设备上卸载本应用。
-    </div>
-
-    <!-- Section 1 -->
-    <section class="doc-section" id="s1">
-      <h2>一、服务说明</h2>
-      <p>花迹是一款植物成长记录应用，提供以下功能：</p>
-      <ul>
-        <li>花园与植株档案管理</li>
-        <li>成长记录（文字备注、照片、养护标签）</li>
-        <li>植株标签（自定义、带颜色、可按标签筛选）</li>
-        <li>绿植资产统计（入手日期 / 价格 / 价值）</li>
-        <li>养护提醒与养护中心</li>
-        <li>数据统计、热力图与成长洞察</li>
-        <li>成长档案 / 纪念册导出</li>
-        <li>AI 识图（拍照认植物）与物种纠错</li>
-        <li>结构化数据跨设备云同步（所有账号用户均包含）</li>
-        <li>反馈与评价</li>
-        <li>会员增值功能（详见第四节）</li>
-      </ul>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 2 -->
-    <section class="doc-section" id="s2">
-      <h2>二、账号注册与使用</h2>
-
-      <h3>2.1 注册要求</h3>
-      <ul>
-        <li>你必须提供真实、有效的信息（如邮箱地址），并确保信息准确。</li>
-        <li>每个邮箱地址或第三方账号（Apple ID 等）只能注册一个花迹账号。</li>
-        <li>你须年满 14 周岁（或在监护人指导下，根据所在地法律规定）方可注册使用。</li>
-      </ul>
-
-      <h3>2.2 账号安全</h3>
-      <ul>
-        <li>你负责保管账号凭证（邮箱密码、登录设备），不得将账号转让、出借或共享给他人。</li>
-        <li>如发现账号被盗用，请立即通过「忘记密码」功能重置凭证，并联系开发者邮箱。</li>
-        <li>因账号凭证泄露导致的损失，由账号持有人自行承担，但若因我方服务本身的安全漏洞导致的除外。</li>
-      </ul>
-
-      <h3>2.3 多种登录方式</h3>
-      <p>你可以在「我的 → 账号与安全」中为同一账号绑定多种登录方式（邮箱、Apple ID 等）。每种绑定均需经过验证，同一邮箱/Apple ID 不可同时绑定多个花迹账号。账号必须保留至少一种有效的登录方式，不可全部解绑。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 3 -->
-    <section class="doc-section" id="s3">
-      <h2>三、你的内容</h2>
-
-      <h3>3.1 内容归属</h3>
-      <p>你在花迹中创建的花园、植株、成长记录、照片、植株标签、资产信息等内容（统称「用户内容」）的知识产权归属于你。</p>
-
-      <h3>3.2 授权</h3>
-      <p>为向你提供服务（包括数据存储与跨设备同步），你授权我在技术上必要的范围内处理、存储和传输你的内容。其中，付费会员的照片同步通过你自己的 iCloud 由 Apple 完成，花迹不持有该等照片。此授权不涉及任何商业用途，不向第三方转授。</p>
-
-      <h3>3.3 内容责任</h3>
-      <p>你对自己上传或创建的内容承担责任，并保证：</p>
-      <ul>
-        <li>内容不侵犯他人知识产权、隐私权或其他合法权益；</li>
-        <li>内容不违反中华人民共和国及你所在地的法律法规；</li>
-        <li>不利用本应用存储、传播违法、有害或侵权内容。</li>
-      </ul>
-
-      <h3>3.4 反馈、物种纠错与识图贡献</h3>
-      <ul>
-        <li>当你提交反馈或物种纠错建议（如品种名称、养护信息、配图修正等）时，你授予花迹免费、非独占地使用该等内容以改进产品与完善植物库的权利。</li>
-        <li>当你同意识图训练数据采集后，你的识图照片与最终确认结果可用于改进花迹自有的植物识别模型（详见《隐私政策》）。</li>
-        <li>上述使用均经去标识化处理，不公开你的账号身份；你注销账号时，相关贡献数据将按《隐私政策》清理。</li>
-      </ul>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 4 -->
-    <section class="doc-section" id="s4">
-      <h2>四、付费服务</h2>
-      <p>花迹提供「会员」付费增值服务，解锁一系列高级权益。</p>
-
-      <h3>4.1 会员权益</h3>
-      <p>会员解锁以下功能权限：</p>
-      <ul>
-        <li><strong>无限花园数量</strong>（免费版上限 3 个）</li>
-        <li><strong>每个花园无限植株数量</strong>（免费版每园上限 20 株活跃植株）</li>
-        <li><strong>绿植图片 iCloud 同步</strong>——照片存入你自己的 iCloud 容器，跨设备同步、换机自动恢复（免费用户图片仅保存在本机本地）</li>
-        <li><strong>完整统计历史与数据洞察</strong>（免费版仅展示近 1 个月热力图）</li>
-        <li><strong>成长档案 / 纪念册导出</strong>（无水印、全量、高清长图 / PDF）</li>
-        <li><strong>识图永久无限次</strong>（免费用户为限时免费，推广期结束后回落为有限次数）</li>
-        <li><strong>养护任务批量完成</strong>（一键批量完成养护待办）</li>
-        <li><strong>无限植株标签</strong>（自定义带色标签、可按标签筛选）</li>
-      </ul>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>套餐</th><th>计费方式</th><th>试用</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>月度会员</td><td>自动续费订阅，每月收费</td><td>含 7 天免费试用期</td></tr>
-            <tr><td>年度会员</td><td>自动续费订阅，每年收费</td><td>含 7 天免费试用期</td></tr>
-            <tr><td>永久会员</td><td>一次性买断，无需续费</td><td>无试用期</td></tr>
-          </tbody>
-        </table>
+    <!-- ===================== English ===================== -->
+    <article data-loc="en">
+      <div class="page-title-block">
+        <h1>Terms of Service</h1>
+        <div class="meta"><span>Effective: June 16, 2026</span><span>Last updated: June 16, 2026</span></div>
       </div>
-      <div class="callout">
-        <strong>关于图片存储：</strong>会员的「绿植图片 iCloud 同步」使用的是<strong>你自己的 iCloud 配额与 Apple 基础设施</strong>，照片不上传到花迹服务器，作为会员权益一并提供。
+      <div class="callout">Welcome to "Floriary". This Agreement is a legal agreement between you and the developer <strong>Eric Liu</strong> ("I" or "the developer") regarding your use of the Floriary app. <strong>By installing, registering or using the App, you confirm that you have read, understood and agreed to all of these terms.</strong><br><br>If you do not agree, please stop using the App and uninstall it from your device.</div>
+
+      <section class="doc-section"><h2>1. Service description</h2>
+        <p>Floriary is a plant growth journal offering:</p>
+        <ul><li>Garden and plant profile management</li><li>Growth logs (notes, photos, care tags)</li><li>Plant tags (custom, colored, filterable)</li><li>Plant asset stats (acquired date / price / value)</li><li>Care reminders and a Care center</li><li>Stats, heatmaps and growth insights</li><li>Growth archive / keepsake export</li><li>AI identification (photograph a plant) and species correction</li><li>Cross-device sync of structured data (all accounts)</li><li>Feedback and rating</li><li>Premium features (see Section 4)</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>2. Account registration and use</h2>
+        <h3>2.1 Registration</h3>
+        <ul><li>You must provide true, valid and accurate information (e.g. email).</li><li>Each email or third-party account (Apple ID, etc.) may register only one Floriary account.</li><li>You must be at least 14 (or under guardian guidance, per your local law) to register.</li></ul>
+        <h3>2.2 Account security</h3>
+        <ul><li>You are responsible for safeguarding your credentials and may not transfer, lend or share your account.</li><li>If your account is compromised, reset credentials via "Forgot password" immediately and contact the developer.</li><li>Losses from credential leakage are borne by the account holder, except where caused by a security flaw in our own service.</li></ul>
+        <h3>2.3 Multiple sign-in methods</h3>
+        <p>In "My → Account & Security" you may bind multiple sign-in methods (email, Apple ID) to one account. Each binding is verified; the same email/Apple ID cannot bind to multiple Floriary accounts. At least one valid sign-in method must remain.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>3. Your content</h2>
+        <h3>3.1 Ownership</h3>
+        <p>The intellectual property of content you create in Floriary (gardens, plants, growth logs, photos, tags, asset info — "User Content") belongs to you.</p>
+        <h3>3.2 License</h3>
+        <p>To provide the service (including storage and cross-device sync), you grant me the technically necessary rights to process, store and transmit your content. Paid members' photo sync is done by Apple via your own iCloud; Floriary does not hold those photos. This license is not for any commercial use and is not sublicensed to third parties.</p>
+        <h3>3.3 Content responsibility</h3>
+        <p>You are responsible for content you upload or create, and warrant that:</p>
+        <ul><li>it does not infringe others' IP, privacy or other lawful rights;</li><li>it does not violate the laws of the PRC or your jurisdiction;</li><li>you do not use the App to store or spread illegal, harmful or infringing content.</li></ul>
+        <h3>3.4 Feedback, species corrections and identification contributions</h3>
+        <ul><li>When you submit feedback or species corrections (names, care info, image fixes, etc.), you grant Floriary a free, non-exclusive right to use them to improve the product and plant library.</li><li>After you consent to identification training-data collection, your identification photos and final confirmations may be used to improve Floriary's own model (see the Privacy Policy).</li><li>The above uses are de-identified and do not reveal your account identity; on account deletion, related contribution data is cleaned per the Privacy Policy.</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>4. Paid services</h2>
+        <p>Floriary offers "Membership" premium services that unlock a range of advanced benefits.</p>
+        <h3>4.1 Member benefits</h3>
+        <ul><li><strong>Unlimited gardens</strong> (free: up to 3)</li><li><strong>Unlimited plants per garden</strong> (free: up to 20 active plants per garden)</li><li><strong>Plant photo iCloud sync</strong> — photos stored in your own iCloud container, synced and restored across devices (free users' photos stay device-local)</li><li><strong>Full stats history & insights</strong> (free: 1-month heatmap only)</li><li><strong>Growth archive / keepsake export</strong> (no watermark, full, high-res long image / PDF)</li><li><strong>Unlimited identification</strong> (free: limited-time free, then a limited quota)</li><li><strong>Batch-complete care tasks</strong></li><li><strong>Unlimited plant tags</strong></li></ul>
+        <div class="table-wrap"><table><thead><tr><th>Plan</th><th>Billing</th><th>Trial</th></tr></thead><tbody>
+          <tr><td>Monthly</td><td>Auto-renewable, billed monthly</td><td>7-day free trial</td></tr>
+          <tr><td>Yearly</td><td>Auto-renewable, billed yearly</td><td>7-day free trial</td></tr>
+          <tr><td>Lifetime</td><td>One-time purchase, no renewal</td><td>No trial</td></tr>
+        </tbody></table></div>
+        <div class="callout"><strong>About photo storage:</strong> the member "photo iCloud sync" uses <strong>your own iCloud quota and Apple infrastructure</strong>; photos are not uploaded to Floriary servers and are provided as a member benefit.</div>
+        <h3>4.2 Auto-renewal</h3>
+        <ul><li>Auto-renewable subscriptions renew via your Apple ID within 24 hours before the period ends.</li><li>Manage or turn off auto-renew anytime in iPhone Settings → [your name] → Subscriptions.</li><li>After turning off auto-renew, benefits remain until the current paid period ends, then stop.</li><li>For trials: if not canceled during the trial, billing starts automatically when it ends.</li></ul>
+        <h3>4.3 Refunds</h3>
+        <p>All purchases are settled through Apple App Store; for refunds, contact Apple (<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>). The developer does not process refunds directly.</p>
+        <h3>4.4 Price changes</h3>
+        <p>The developer may adjust subscription prices. Changes are announced in-app in advance and do not affect the current paid period; new prices apply from the next billing cycle.</p>
+        <h3>4.5 Expiry & over-limit policy</h3>
+        <p><strong>When membership expires (not renewed):</strong></p>
+        <ul><li>Gardens/plants/records beyond the free limits are retained but read-only (you can view existing data but not add/edit beyond the limits).</li><li>Full history, insights, keepsake export, batch care, unlimited identification and unlimited tags revert to the free tier.</li><li><strong>Photos already in iCloud remain readable</strong>; new photos fall back to device-local. No photos are suddenly deleted. Re-subscribing instantly restores advanced features and iCloud sync.</li></ul>
+        <div class="callout"><strong>Important: expiry does not delete your data; data is retained, only add/edit is restricted.</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>5. Free tier limits</h2>
+        <div class="table-wrap"><table><thead><tr><th>Feature</th><th>Free limit</th></tr></thead><tbody>
+          <tr><td>Gardens</td><td>Up to 3</td></tr>
+          <tr><td>Active plants per garden</td><td>Up to 20</td></tr>
+          <tr><td>Heatmap history</td><td>Last 1 month</td></tr>
+          <tr><td>Insights / keepsake export / batch care</td><td>Not available (member feature)</td></tr>
+          <tr><td>AI identification quota</td><td>Limited-time free (then a limited quota)</td></tr>
+          <tr><td>Photo iCloud sync</td><td>Not available (photos stay device-local)</td></tr>
+          <tr><td>Plant tags</td><td>Not available (member feature)</td></tr>
+        </tbody></table></div>
+        <p>Free users' growth notes (text) and structured data (gardens/plants/tags/reminders) get the same <strong>cloud sync</strong> as paid users, without limits.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>6. Account deletion</h2>
+        <p>You may request deletion anytime via "My → Account & Security → Delete account".</p>
+        <ol><li><strong>Subscription notice</strong>: deleting your account <strong>does not automatically cancel your Apple subscription</strong>. The app clearly warns before deletion and links to App Store subscription management; please cancel there as needed.</li><li><strong>Re-verification</strong>: you must enter your current password (or another bound method) to confirm.</li><li><strong>Grace period</strong>: after submitting, the account enters a <strong>7-day grace period</strong> during which you can sign in and cancel.</li><li><strong>Data handling</strong>: after the grace period, your data is soft-deleted and anonymized; identification photos, records, feedback and associated server images enter cleanup; device-local photos are removed by the device; iCloud photos are managed by your iCloud (deletion does not remove your iCloud photos for you).</li><li><strong>Irreversible</strong>: after the grace period and deletion, data cannot be recovered.</li></ol>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>7. Prohibited conduct</h2>
+        <p>When using the App you must not:</p>
+        <ul><li>crack, decompile or reverse-engineer the App;</li><li>bypass paid limits (e.g. impersonating accounts or forging receipts);</li><li>store or spread illegal content (pornographic, violent, politically sensitive, etc.);</li><li>launch DoS/DDoS or other service-disrupting attacks;</li><li>scrape or bulk-download other users' data;</li><li>abuse the identification AI service in any way (incl. uploading harmful content unrelated to plants);</li><li>submit false or malicious feedback / species corrections to disrupt operations.</li></ul>
+        <p>I may terminate your account for violations and pursue legal liability in serious cases.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>8. Changes & termination</h2>
+        <h3>8.1 Service changes</h3><p>I may adjust the App's features, UI and pricing; material changes will be announced in-app in advance.</p>
+        <h3>8.2 Service termination</h3><p>If the App is permanently discontinued, I will announce it in-app and on this page at least <strong>30 days</strong> in advance, explaining how your data will be handled (export channels or deletion schedule). You may export or back up your content during that time.</p>
+        <h3>8.3 Account suspension</h3><p>I may suspend accounts without prior notice for serious violations.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>9. Intellectual property</h2>
+        <p>The App's code, design, icons, copy and the "花迹" / "Floriary" brand names are the developer's IP. You may not use, copy or distribute them without authorization.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>10. Disclaimers</h2>
+        <ul><li><strong>Availability</strong>: the App is provided "as is" with no promise of uninterrupted or fault-free service. We are not liable for interruptions due to force majeure, third-party provider failures (Apple, cloud, recognition services), or network issues, but will make reasonable efforts to restore service.</li><li><strong>Backups</strong>: free users' photos stay on-device; members' photo sync relies on your own iCloud and Apple services (falling back to device-local if iCloud is unavailable). Loss, damage or reset of your device may cause loss of unbacked data — please keep your own backups.</li><li><strong>Identification accuracy</strong>: AI identification is for reference only and is not a professional botanical determination. For safety uses (toxicity, edibility), consult a professional.</li><li><strong>Third-party links</strong>: the App may link to third-party pages (e.g. Apple subscription management) whose content and privacy practices are their own responsibility.</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>11. Governing law & disputes</h2>
+        <p>The formation, performance and interpretation of this Agreement, and any dispute arising from or related to it, are governed by the <strong>laws of the People's Republic of China</strong>.</p>
+        <p>The parties shall first try to resolve disputes amicably. Failing that, either party may bring the matter before the <strong>competent People's Court at the defendant's domicile</strong>.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>12. Updates</h2>
+        <p>For material changes I will notify you at least <strong>7 days</strong> in advance via in-app notice or email. Continued use means you accept the updated Agreement.</p>
+        <p>If you do not accept the updated terms, you should stop using the App and delete your account before the changes take effect.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>Contact</h2>
+        <ul><li><strong>Developer</strong>: Eric Liu</li><li><strong>Email</strong>: <a href="mailto:simplord@163.com">simplord@163.com</a></li></ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">In case of any discrepancy, the Chinese version of this Agreement prevails.</p>
+      </section>
+    </article>
+
+    <!-- ===================== 繁體中文 ===================== -->
+    <article data-loc="zh-Hant">
+      <div class="page-title-block">
+        <h1>使用者協議</h1>
+        <div class="meta"><span>生效日期：2026 年 6 月 16 日</span><span>最後更新：2026 年 6 月 16 日</span></div>
       </div>
+      <div class="callout">歡迎使用「花迹 Floriary」。本協議是你與開發者 <strong>Eric Liu</strong>（以下簡稱「我」或「開發者」）之間關於使用花迹應用的法律協議。<strong>安裝、註冊或使用本應用，即表示你已閱讀、理解並同意本協議的全部條款。</strong><br><br>如不同意本協議，請立即停止使用並從你的裝置上解除安裝本應用。</div>
 
-      <h3>4.2 自动续费说明</h3>
-      <ul>
-        <li>自动续费订阅将在当前订阅周期结束前 24 小时内自动通过你的 Apple ID 账户扣费续订，续费后订阅期顺延。</li>
-        <li>你可以随时前往「iPhone 设置 → [你的名字] → 订阅」管理或关闭自动续费。</li>
-        <li>关闭自动续费后，订阅权益在当前已付费周期结束前仍然有效，到期后不再续订。</li>
-        <li>含免费试用期的订阅：试用期结束后，如未在试用期内取消，将自动扣费续订。</li>
-      </ul>
+      <section class="doc-section"><h2>一、服務說明</h2>
+        <p>花迹是一款植物成長記錄應用，提供以下功能：</p>
+        <ul><li>花園與植株檔案管理</li><li>成長記錄（文字備註、照片、養護標籤）</li><li>植株標籤（自訂、帶顏色、可依標籤篩選）</li><li>綠植資產統計（入手日期 / 價格 / 價值）</li><li>養護提醒與養護中心</li><li>數據統計、熱力圖與成長洞察</li><li>成長檔案 / 紀念冊匯出</li><li>AI 辨識（拍照認植物）與品種勘誤</li><li>結構化資料跨裝置雲端同步（所有帳號使用者均包含）</li><li>意見回饋與評價</li><li>會員加值功能（詳見第四節）</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>二、帳號註冊與使用</h2>
+        <h3>2.1 註冊要求</h3>
+        <ul><li>你必須提供真實、有效的資訊（如電子郵件地址），並確保資訊準確。</li><li>每個電子郵件地址或第三方帳號（Apple ID 等）只能註冊一個花迹帳號。</li><li>你須年滿 14 歲（或在監護人指導下，依所在地法律規定）方可註冊使用。</li></ul>
+        <h3>2.2 帳號安全</h3>
+        <ul><li>你負責保管帳號憑證（電子郵件密碼、登入裝置），不得將帳號轉讓、出借或共享給他人。</li><li>如發現帳號遭盜用，請立即透過「忘記密碼」功能重設憑證，並聯絡開發者信箱。</li><li>因帳號憑證外洩導致的損失，由帳號持有人自行承擔，但若因我方服務本身的安全漏洞導致的除外。</li></ul>
+        <h3>2.3 多種登入方式</h3>
+        <p>你可以在「我的 → 帳號與安全」中為同一帳號綁定多種登入方式（電子郵件、Apple ID 等）。每種綁定均需經過驗證，同一電子郵件/Apple ID 不可同時綁定多個花迹帳號。帳號必須保留至少一種有效的登入方式，不可全部解除綁定。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>三、你的內容</h2>
+        <h3>3.1 內容歸屬</h3>
+        <p>你在花迹中建立的花園、植株、成長記錄、照片、植株標籤、資產資訊等內容（統稱「使用者內容」）的智慧財產權歸屬於你。</p>
+        <h3>3.2 授權</h3>
+        <p>為向你提供服務（包括資料儲存與跨裝置同步），你授權我在技術上必要的範圍內處理、儲存與傳輸你的內容。其中，付費會員的照片同步透過你自己的 iCloud 由 Apple 完成，花迹不持有該等照片。此授權不涉及任何商業用途，不向第三方轉授。</p>
+        <h3>3.3 內容責任</h3>
+        <p>你對自己上傳或建立的內容承擔責任，並保證：</p>
+        <ul><li>內容不侵犯他人智慧財產權、隱私權或其他合法權益；</li><li>內容不違反中華人民共和國及你所在地的法律法規；</li><li>不利用本應用儲存、傳播違法、有害或侵權內容。</li></ul>
+        <h3>3.4 回饋、品種勘誤與辨識貢獻</h3>
+        <ul><li>當你提交回饋或品種勘誤建議（如品種名稱、養護資訊、配圖修正等）時，你授予花迹免費、非專屬地使用該等內容以改進產品與完善植物庫的權利。</li><li>當你同意辨識訓練資料採集後，你的辨識照片與最終確認結果可用於改進花迹自有的植物辨識模型（詳見《隱私政策》）。</li><li>上述使用均經去識別化處理，不公開你的帳號身分；你註銷帳號時，相關貢獻資料將依《隱私政策》清除。</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>四、付費服務</h2>
+        <p>花迹提供「會員」付費加值服務，解鎖一系列進階權益。</p>
+        <h3>4.1 會員權益</h3>
+        <ul><li><strong>無限花園數量</strong>（免費版上限 3 個）</li><li><strong>每個花園無限植株數量</strong>（免費版每園上限 20 株活躍植株）</li><li><strong>綠植圖片 iCloud 同步</strong>——照片存入你自己的 iCloud 容器，跨裝置同步、換機自動還原（免費使用者圖片僅保存在本機本機）</li><li><strong>完整統計歷史與數據洞察</strong>（免費版僅顯示近 1 個月熱力圖）</li><li><strong>成長檔案 / 紀念冊匯出</strong>（無浮水印、全量、高清長圖 / PDF）</li><li><strong>辨識永久無限次</strong>（免費使用者為限時免費，推廣期結束後回落為有限次數）</li><li><strong>養護任務批次完成</strong></li><li><strong>無限植株標籤</strong></li></ul>
+        <div class="table-wrap"><table><thead><tr><th>方案</th><th>計費方式</th><th>試用</th></tr></thead><tbody>
+          <tr><td>月度會員</td><td>自動續訂，每月收費</td><td>含 7 天免費試用期</td></tr>
+          <tr><td>年度會員</td><td>自動續訂，每年收費</td><td>含 7 天免費試用期</td></tr>
+          <tr><td>永久會員</td><td>一次性買斷，無需續訂</td><td>無試用期</td></tr>
+        </tbody></table></div>
+        <div class="callout"><strong>關於圖片儲存：</strong>會員的「綠植圖片 iCloud 同步」使用的是<strong>你自己的 iCloud 容量與 Apple 基礎設施</strong>，照片不上傳到花迹伺服器，作為會員權益一併提供。</div>
+        <h3>4.2 自動續訂說明</h3>
+        <ul><li>自動續訂將在目前訂閱週期結束前 24 小時內自動透過你的 Apple ID 帳戶扣款續訂，續訂後訂閱期順延。</li><li>你可以隨時前往「iPhone 設定 → [你的名字] → 訂閱」管理或關閉自動續訂。</li><li>關閉自動續訂後，訂閱權益在目前已付費週期結束前仍然有效，到期後不再續訂。</li><li>含免費試用期的訂閱：試用期結束後，如未在試用期內取消，將自動扣款續訂。</li></ul>
+        <h3>4.3 退款</h3>
+        <p>所有購買均透過 Apple App Store 完成結算，退款事項請直接聯絡 Apple（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>）。開發者不直接處理退款。</p>
+        <h3>4.4 價格變更</h3>
+        <p>開發者保留調整訂閱價格的權利。價格調整將提前在應用內告知，且不影響目前已付費訂閱週期內的費用；下一個計費週期起按新價格執行。</p>
+        <h3>4.5 會員到期與超限策略</h3>
+        <p><strong>會員到期（未續訂）：</strong></p>
+        <ul><li>超出免費版額度的花園/植株/記錄資料保留，但進入唯讀狀態（無法新增或編輯超限部分，已有資料可檢視）。</li><li>完整統計歷史、數據洞察、紀念冊匯出、批次養護、辨識無限、無限標籤等會員功能回落到免費版能力範圍。</li><li><strong>已存入 iCloud 的歷史照片保留可讀</strong>；到期後新照片回落本機本機，不會突然刪除你任何照片。重新訂閱會員後，進階功能權限與 iCloud 同步即時還原。</li></ul>
+        <div class="callout"><strong>重要：到期不會立即刪除你的資料；資料保留，僅限制新增/編輯操作。</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>五、免費版限制</h2>
+        <div class="table-wrap"><table><thead><tr><th>功能</th><th>免費版上限</th></tr></thead><tbody>
+          <tr><td>花園數量</td><td>最多 3 個</td></tr>
+          <tr><td>每個花園活躍植株數量</td><td>最多 20 株</td></tr>
+          <tr><td>統計熱力圖歷史</td><td>近 1 個月</td></tr>
+          <tr><td>數據洞察 / 紀念冊匯出 / 批次養護</td><td>不支援（會員功能）</td></tr>
+          <tr><td>AI 辨識額度</td><td>限時免費（推廣期結束後回落為有限次數）</td></tr>
+          <tr><td>綠植圖片 iCloud 同步</td><td>不支援（圖片僅保存在本機本機）</td></tr>
+          <tr><td>植株標籤</td><td>不支援（會員功能）</td></tr>
+        </tbody></table></div>
+        <p>免費版的成長記錄（文字）和結構化資料（花園/植株/標籤/提醒等）享有與付費使用者相同的<strong>雲端同步</strong>服務，無限制。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>六、帳號註銷</h2>
+        <p>你可以隨時透過「我的 → 帳號與安全 → 註銷帳號」申請註銷。</p>
+        <ol><li><strong>訂閱提醒</strong>：註銷帳號<strong>不會自動取消你的 Apple 會員訂閱扣款</strong>。應用會在註銷前明確提示，並提供跳轉「App Store 訂閱管理」的入口，請依需自行前往取消。</li><li><strong>二次驗證</strong>：需輸入目前密碼（或其他已綁定的驗證方式）確認是本人操作。</li><li><strong>冷靜期</strong>：提交註銷申請後，帳號進入 <strong>7 天冷靜期</strong>。冷靜期內你仍可登入並撤銷申請。</li><li><strong>資料處理</strong>：冷靜期結束後，你的帳號資料將被軟刪除與匿名化；辨識照片、辨識記錄、回饋資料及伺服器上的關聯圖片進入清除流程；本機本機照片由裝置清除；存入 iCloud 的照片由你的 iCloud 管理（註銷不會代你刪除 iCloud 中的照片）。</li><li><strong>不可還原</strong>：冷靜期結束、資料刪除後，資料無法還原。</li></ol>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>七、禁止行為</h2>
+        <p>你在使用本應用時不得：</p>
+        <ul><li>破解、反編譯、逆向工程本應用；</li><li>繞過付費限制（如冒用他人帳號或偽造收據等）；</li><li>利用本應用儲存、傳播違法內容（含色情、暴力、涉政敏感內容等）；</li><li>對伺服器發起 DoS/DDoS 攻擊或其他干擾服務的行為；</li><li>爬取、批量下載其他使用者的資料；</li><li>以任何方式濫用辨識 AI 服務（含上傳與植物辨識無關的有害內容）；</li><li>提交虛假或惡意的回饋 / 品種勘誤資訊以干擾營運。</li></ul>
+        <p>違反上述規定的，我有權終止你的帳號服務，情節嚴重的將依法追究法律責任。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>八、服務變更與終止</h2>
+        <h3>8.1 服務變更</h3><p>我保留對本應用功能、介面、付費方案進行調整的權利，重大變更將提前在應用內通知。</p>
+        <h3>8.2 服務終止</h3><p>若本應用決定永久停止營運，將至少提前 <strong>30 天</strong>在應用內和本頁面公告，並說明你的資料如何處理（包括資料匯出管道或清除時間表）。在此期間，你可選擇匯出或備份你的內容。</p>
+        <h3>8.3 帳號封禁</h3><p>如你嚴重違反本協議，我保留在不預先通知的情況下封禁帳號的權利。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>九、智慧財產權</h2>
+        <p>本應用的程式碼、設計、圖示、文案及「花迹」「Floriary」品牌名稱，其智慧財產權歸開發者所有。你不得在未獲授權的情況下使用、複製或傳播上述內容。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>十、免責聲明</h2>
+        <ul><li><strong>服務可用性</strong>：本應用按「現狀」提供服務，不承諾服務永不中斷或無故障。因不可抗力、第三方服務商故障（如 Apple、雲端服務商、辨識服務商）、網路問題等導致的服務中斷，不承擔賠償責任，但會盡合理努力恢復服務。</li><li><strong>資料備份</strong>：免費使用者的圖片僅保存在本機裝置；會員的圖片同步依賴你自己的 iCloud 與 Apple 服務（裝置未登入 Apple ID 或 iCloud 不可用時會降級為僅本機本機）。裝置遺失、損壞或系統重置可能導致未備份的資料遺失，請自行做好備份。</li><li><strong>辨識準確性</strong>：AI 辨識結果僅供參考，不構成專業植物學鑑定意見。如用於判斷植物是否有毒、可否食用等安全用途，請務必諮詢相關專業人士。</li><li><strong>第三方連結</strong>：應用內可能包含跳轉至 Apple 訂閱管理等第三方頁面的連結，該等頁面的內容和隱私實務由對應第三方負責，與本應用無關。</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>十一、適用法律與爭議解決</h2>
+        <p>本協議的訂立、執行和解釋，以及由本協議引起的或與本協議有關的一切爭議，均適用<strong>中華人民共和國法律</strong>。</p>
+        <p>發生爭議時，雙方應首先嘗試友好協商解決。協商不成的，任何一方均可提交至<strong>被告住所地有管轄權的人民法院</strong>訴訟解決。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>十二、協議更新</h2>
+        <p>本協議如有重大變更，我將在生效前至少 <strong>7 天</strong>透過應用內通知或電子郵件告知。繼續使用本應用即表示你接受更新後的協議。</p>
+        <p>如不接受更新後的條款，你應在變更生效前停止使用本應用並註銷帳號。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>聯絡方式</h2>
+        <ul><li><strong>開發者</strong>：Eric Liu</li><li><strong>電子郵件</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li></ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">本協議以中文版本為準。</p>
+      </section>
+    </article>
 
-      <h3>4.3 退款</h3>
-      <p>所有购买均通过 Apple App Store 完成结算，退款事项请直接联系 Apple（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>）。开发者不直接处理退款。</p>
-
-      <h3>4.4 价格变更</h3>
-      <p>开发者保留调整订阅价格的权利。价格调整将提前在应用内告知，且不影响当前已付费订阅周期内的费用；下一个计费周期起按新价格执行。</p>
-
-      <h3>4.5 会员到期与超限策略</h3>
-      <p><strong>会员到期（未续费）：</strong></p>
-      <ul>
-        <li>超出免费版额度的花园/植株/记录数据保留，但进入只读状态（无法新增或编辑超限部分，已有数据可查看）。</li>
-        <li>完整统计历史、数据洞察、纪念册导出、批量养护、识图无限、无限标签等会员功能回退到免费版能力范围。</li>
-        <li><strong>已存入 iCloud 的历史照片保留可读</strong>；到期后新照片回落本机本地，不会突然删除你任何照片。重新订阅会员后，高级功能权限与 iCloud 同步即时恢复。</li>
-      </ul>
-      <div class="callout">
-        <strong>重要：到期不会立即删除你的数据；数据保留，仅限制新增/编辑操作。</strong>
+    <!-- ===================== 日本語 ===================== -->
+    <article data-loc="ja">
+      <div class="page-title-block">
+        <h1>利用規約</h1>
+        <div class="meta"><span>発効日：2026年6月16日</span><span>最終更新：2026年6月16日</span></div>
       </div>
-    </section>
+      <div class="callout">「Floriary（花迹）」をご利用いただきありがとうございます。本規約は、Floriary アプリの利用に関する、あなたと開発者 <strong>Eric Liu</strong>（以下「私」または「開発者」）との間の法的合意です。<strong>本アプリをインストール・登録・利用した時点で、本規約のすべての条項を読み、理解し、同意したものとみなされます。</strong><br><br>同意されない場合は、ただちに利用を停止し、端末からアンインストールしてください。</div>
 
-    <hr class="section-divider">
+      <section class="doc-section"><h2>1. サービス内容</h2>
+        <p>Floriary は植物の成長記録アプリで、次の機能を提供します：</p>
+        <ul><li>庭と植物のプロフィール管理</li><li>成長記録（メモ・写真・お手入れタグ）</li><li>植物タグ（カスタム・色付き・絞り込み可）</li><li>植物アセット統計（入手日 / 価格 / 価値）</li><li>お手入れリマインダーとお手入れセンター</li><li>統計・ヒートマップ・成長インサイト</li><li>成長アーカイブ / 思い出アルバムの書き出し</li><li>AI 識別（写真で植物判定）と品種訂正</li><li>構造化データの端末間同期（全アカウント）</li><li>フィードバックと評価</li><li>プレミアム機能（第4条参照）</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>2. アカウントの登録と利用</h2>
+        <h3>2.1 登録要件</h3>
+        <ul><li>真実かつ有効で正確な情報（メールアドレス等）を提供してください。</li><li>各メールアドレスまたは第三者アカウント（Apple ID 等）につき、Floriary アカウントは1つのみ登録できます。</li><li>登録には満14歳以上（または保護者の指導の下、所在地の法律に従う）である必要があります。</li></ul>
+        <h3>2.2 アカウントの安全</h3>
+        <ul><li>認証情報（メールのパスワード、ログイン端末）の管理はあなたの責任であり、アカウントの譲渡・貸与・共有はできません。</li><li>不正利用が判明した場合は、ただちに「パスワードをお忘れですか」で再設定し、開発者へご連絡ください。</li><li>認証情報の漏えいによる損失はアカウント保持者の負担となります。ただし当方サービス自体の脆弱性に起因する場合を除きます。</li></ul>
+        <h3>2.3 複数のログイン方法</h3>
+        <p>「マイ → アカウントとセキュリティ」で、1つのアカウントに複数のログイン方法（メール、Apple ID 等）を紐付けできます。各紐付けは検証され、同一メール/Apple ID を複数の Floriary アカウントに紐付けることはできません。有効なログイン方法を少なくとも1つ残す必要があります。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>3. あなたのコンテンツ</h2>
+        <h3>3.1 帰属</h3>
+        <p>Floriary 内で作成したコンテンツ（庭・植物・成長記録・写真・タグ・アセット情報、総称「ユーザーコンテンツ」）の知的財産権はあなたに帰属します。</p>
+        <h3>3.2 ライセンス</h3>
+        <p>サービス提供（保存・端末間同期を含む）のため、技術的に必要な範囲であなたのコンテンツを処理・保存・送信する権利を私に許諾します。有料会員の写真同期はあなた自身の iCloud を介して Apple が行い、Floriary は当該写真を保有しません。本許諾は商用目的を含まず、第三者へ再許諾しません。</p>
+        <h3>3.3 コンテンツの責任</h3>
+        <p>アップロード・作成したコンテンツについて責任を負い、次を保証します：</p>
+        <ul><li>他者の知的財産権・プライバシー権その他の合法的権利を侵害しないこと；</li><li>中華人民共和国およびあなたの所在地の法令に違反しないこと；</li><li>違法・有害・権利侵害のコンテンツの保存・拡散に本アプリを利用しないこと。</li></ul>
+        <h3>3.4 フィードバック・品種訂正・識別への貢献</h3>
+        <ul><li>フィードバックや品種訂正（品種名・お手入れ情報・画像修正等）を送信すると、製品改善と植物図鑑充実のためにそれらを無償・非独占で利用する権利を Floriary に許諾します。</li><li>識別の訓練データ収集に同意した後、識別写真と最終確認結果が Floriary 自社モデルの改善に利用されることがあります（プライバシーポリシー参照）。</li><li>上記利用は匿名化され、アカウント身元は公開されません。アカウント削除時、関連する貢献データはプライバシーポリシーに従い消去されます。</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>4. 有料サービス</h2>
+        <p>Floriary は「メンバーシップ」有料サービスを提供し、各種の高度な特典を解放します。</p>
+        <h3>4.1 会員特典</h3>
+        <ul><li><strong>無制限の庭</strong>（無料は最大3つ）</li><li><strong>庭ごとに無制限の植物</strong>（無料は庭ごとにアクティブ20株まで）</li><li><strong>植物写真の iCloud 同期</strong>——写真はあなた自身の iCloud コンテナに保存され、端末間同期・機種変更時に復元（無料ユーザーの写真は端末内のみ）</li><li><strong>全統計履歴とデータ分析</strong>（無料は直近1か月のヒートマップのみ）</li><li><strong>成長アーカイブ / 思い出アルバムの書き出し</strong>（透かしなし・全量・高解像度の長尺画像 / PDF）</li><li><strong>識別の永久無制限</strong>（無料は期間限定無料、終了後は回数制限）</li><li><strong>お手入れタスクの一括完了</strong></li><li><strong>無制限の植物タグ</strong></li></ul>
+        <div class="table-wrap"><table><thead><tr><th>プラン</th><th>課金方式</th><th>トライアル</th></tr></thead><tbody>
+          <tr><td>月額会員</td><td>自動更新、毎月課金</td><td>7日間無料トライアル</td></tr>
+          <tr><td>年額会員</td><td>自動更新、毎年課金</td><td>7日間無料トライアル</td></tr>
+          <tr><td>買い切り会員</td><td>一括購入、更新不要</td><td>トライアルなし</td></tr>
+        </tbody></table></div>
+        <div class="callout"><strong>写真の保存について：</strong>会員の「写真 iCloud 同期」は<strong>あなた自身の iCloud 容量と Apple のインフラ</strong>を使用します。写真は Floriary サーバーへアップロードされず、会員特典として提供されます。</div>
+        <h3>4.2 自動更新について</h3>
+        <ul><li>自動更新サブスクは、現在の期間終了の24時間前までに Apple ID 経由で自動更新されます。</li><li>「iPhone 設定 → [あなたの名前] → サブスクリプション」でいつでも管理・解除できます。</li><li>自動更新を解除しても、現在の支払い済み期間の終了までは特典が有効で、終了後は更新されません。</li><li>トライアル付き：トライアル中に解約しない場合、終了時に自動課金されます。</li></ul>
+        <h3>4.3 返金</h3>
+        <p>すべての購入は Apple App Store で決済されます。返金は Apple へ直接ご連絡ください（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>）。開発者は返金を直接処理しません。</p>
+        <h3>4.4 価格変更</h3>
+        <p>開発者はサブスク価格を調整する権利を有します。変更は事前にアプリ内で告知し、現在の支払い済み期間には影響しません。次の課金サイクルから新価格が適用されます。</p>
+        <h3>4.5 期限切れと上限超過の方針</h3>
+        <p><strong>会員が期限切れ（未更新）の場合：</strong></p>
+        <ul><li>無料枠を超える庭/植物/記録は保持されますが読み取り専用になります（既存データは閲覧可、上限超過分の追加・編集は不可）。</li><li>全履歴・分析・アルバム書き出し・一括お手入れ・無制限識別・無制限タグなどの会員機能は無料枠に戻ります。</li><li><strong>iCloud に保存済みの写真は引き続き閲覧可能</strong>。期限切れ後の新規写真は端末内に戻り、写真が突然削除されることはありません。再購読で高度機能と iCloud 同期が即時復元されます。</li></ul>
+        <div class="callout"><strong>重要：期限切れでデータが即削除されることはありません。データは保持され、追加・編集のみ制限されます。</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>5. 無料版の制限</h2>
+        <div class="table-wrap"><table><thead><tr><th>機能</th><th>無料版の上限</th></tr></thead><tbody>
+          <tr><td>庭の数</td><td>最大3つ</td></tr>
+          <tr><td>庭ごとのアクティブ植物数</td><td>最大20株</td></tr>
+          <tr><td>ヒートマップ履歴</td><td>直近1か月</td></tr>
+          <tr><td>分析 / アルバム書き出し / 一括お手入れ</td><td>非対応（会員機能）</td></tr>
+          <tr><td>AI 識別の回数</td><td>期間限定無料（終了後は回数制限）</td></tr>
+          <tr><td>写真 iCloud 同期</td><td>非対応（写真は端末内のみ）</td></tr>
+          <tr><td>植物タグ</td><td>非対応（会員機能）</td></tr>
+        </tbody></table></div>
+        <p>無料版の成長記録（テキスト）と構造化データ（庭/植物/タグ/リマインダー等）は、有料ユーザーと同じ<strong>クラウド同期</strong>を制限なく利用できます。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>6. アカウント削除</h2>
+        <p>「マイ → アカウントとセキュリティ → アカウント削除」からいつでも削除を申請できます。</p>
+        <ol><li><strong>サブスクの注意</strong>：アカウント削除は<strong>Apple のサブスク課金を自動的には解約しません</strong>。削除前に明確に案内し、App Store のサブスク管理への導線を提供しますので、必要に応じてご自身で解約してください。</li><li><strong>二段階確認</strong>：現在のパスワード（または他の紐付け方法）の入力で本人確認します。</li><li><strong>猶予期間</strong>：申請後、アカウントは <strong>7日間の猶予期間</strong>に入ります。期間中はログインして申請を取り消せます。</li><li><strong>データ処理</strong>：猶予期間終了後、データはソフト削除・匿名化され、識別写真・記録・フィードバック・サーバー上の関連画像は消去フローに入ります。端末内写真は端末が削除し、iCloud の写真はあなたの iCloud が管理します（削除によって iCloud の写真が代わりに削除されることはありません）。</li><li><strong>復元不可</strong>：猶予期間終了・データ削除後は復元できません。</li></ol>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>7. 禁止行為</h2>
+        <p>本アプリの利用にあたり、次の行為を禁止します：</p>
+        <ul><li>本アプリのクラッキング・逆コンパイル・リバースエンジニアリング；</li><li>課金制限の回避（他人のアカウント詐称、レシート偽造等）；</li><li>違法コンテンツ（わいせつ・暴力・政治的に機微な内容等）の保存・拡散；</li><li>サーバーへの DoS/DDoS 等のサービス妨害行為；</li><li>他ユーザーのデータのスクレイピング・一括ダウンロード；</li><li>識別 AI サービスの濫用（植物識別と無関係な有害コンテンツのアップロード等）；</li><li>運営妨害を目的とする虚偽・悪意あるフィードバック / 品種訂正の送信。</li></ul>
+        <p>違反した場合、アカウントサービスを終了する権利を有し、重大な場合は法的責任を追及します。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>8. サービスの変更と終了</h2>
+        <h3>8.1 サービス変更</h3><p>本アプリの機能・UI・料金プランを調整する権利を有し、重大な変更は事前にアプリ内で通知します。</p>
+        <h3>8.2 サービス終了</h3><p>本アプリの運営を恒久的に停止する場合、少なくとも <strong>30日前</strong>にアプリ内および本ページで告知し、データの取り扱い（書き出し手段や削除スケジュール）を説明します。その間に内容を書き出し・バックアップできます。</p>
+        <h3>8.3 アカウント停止</h3><p>本規約の重大な違反があった場合、事前通知なくアカウントを停止する権利を有します。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>9. 知的財産権</h2>
+        <p>本アプリのコード・デザイン・アイコン・テキスト、および「花迹」「Floriary」のブランド名の知的財産権は開発者に帰属します。許可なく使用・複製・配布することはできません。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>10. 免責事項</h2>
+        <ul><li><strong>可用性</strong>：本アプリは「現状有姿」で提供され、無中断・無障害を保証しません。不可抗力、第三者提供者の障害（Apple、クラウド、識別サービス）、ネットワーク問題等による中断について賠償責任を負いませんが、合理的な努力で復旧します。</li><li><strong>バックアップ</strong>：無料ユーザーの写真は端末内のみ。会員の写真同期はあなた自身の iCloud と Apple サービスに依存します（iCloud 利用不可時は端末内のみに降格）。端末の紛失・破損・初期化により未バックアップのデータが失われる可能性があるため、各自でバックアップしてください。</li><li><strong>識別の正確性</strong>：AI 識別結果は参考用であり、専門的な植物鑑定ではありません。毒性・可食性等の安全用途には必ず専門家にご相談ください。</li><li><strong>第三者リンク</strong>：アプリ内に Apple サブスク管理等の第三者ページへのリンクが含まれる場合があり、その内容とプライバシー慣行は各第三者の責任です。</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>11. 準拠法と紛争解決</h2>
+        <p>本規約の成立・履行・解釈、および本規約に起因または関連する一切の紛争には、<strong>中華人民共和国法</strong>が適用されます。</p>
+        <p>紛争が生じた場合、当事者はまず友好的な協議による解決を試みます。協議が調わない場合、いずれの当事者も<strong>被告住所地を管轄する人民法院</strong>に提訴できます。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>12. 規約の更新</h2>
+        <p>重要な変更がある場合、発効の少なくとも <strong>7日前</strong>にアプリ内通知またはメールでお知らせします。継続利用をもって更新後の規約に同意したものとみなします。</p>
+        <p>更新後の条項に同意されない場合は、変更の発効前に利用を停止しアカウントを削除してください。</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>連絡先</h2>
+        <ul><li><strong>開発者</strong>：Eric Liu</li><li><strong>メール</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li></ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">本規約に齟齬がある場合、中国語版が優先します。</p>
+      </section>
+    </article>
 
-    <!-- Section 5 -->
-    <section class="doc-section" id="s5">
-      <h2>五、免费版限制</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>功能</th><th>免费版上限</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>花园数量</td><td>最多 3 个</td></tr>
-            <tr><td>每个花园活跃植株数量</td><td>最多 20 株</td></tr>
-            <tr><td>统计热力图历史</td><td>近 1 个月</td></tr>
-            <tr><td>数据洞察 / 纪念册导出 / 批量养护</td><td>不支持（会员功能）</td></tr>
-            <tr><td>AI 识图额度</td><td>限时免费（推广期结束后回落为有限次数）</td></tr>
-            <tr><td>绿植图片 iCloud 同步</td><td>不支持（图片仅保存在本机本地）</td></tr>
-            <tr><td>植株标签</td><td>不支持（会员功能）</td></tr>
-          </tbody>
-        </table>
+    <!-- ===================== 한국어 ===================== -->
+    <article data-loc="ko">
+      <div class="page-title-block">
+        <h1>이용약관</h1>
+        <div class="meta"><span>시행일: 2026년 6월 16일</span><span>최종 업데이트: 2026년 6월 16일</span></div>
       </div>
-      <p>免费版的成长记录（文字）和结构化数据（花园/植株/标签/提醒等）享有与付费用户相同的<strong>云端同步</strong>服务，无限制。</p>
-    </section>
+      <div class="callout">‘Floriary(花迹)’를 이용해 주셔서 감사합니다. 본 약관은 Floriary 앱 이용에 관하여 이용자와 개발자 <strong>Eric Liu</strong>(이하 ‘본인’ 또는 ‘개발자’) 사이의 법적 합의입니다. <strong>본 앱을 설치·가입·이용하면 본 약관의 모든 조항을 읽고 이해하고 동의한 것으로 봅니다.</strong><br><br>동의하지 않으시면 즉시 이용을 중단하고 기기에서 삭제해 주세요.</div>
 
-    <hr class="section-divider">
+      <section class="doc-section"><h2>1. 서비스 안내</h2>
+        <p>Floriary는 식물 성장 기록 앱으로 다음 기능을 제공합니다:</p>
+        <ul><li>정원과 식물 프로필 관리</li><li>성장 기록(메모·사진·케어 태그)</li><li>식물 태그(맞춤·색상·필터)</li><li>식물 자산 통계(입수일 / 가격 / 가치)</li><li>케어 알림과 케어 센터</li><li>통계·히트맵·성장 인사이트</li><li>성장 아카이브 / 기념 앨범 내보내기</li><li>AI 식별(사진으로 식물 인식)과 품종 정정</li><li>구조화 데이터의 기기 간 동기화(모든 계정)</li><li>피드백과 평가</li><li>프리미엄 기능(제4조 참조)</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>2. 계정 가입과 이용</h2>
+        <h3>2.1 가입 요건</h3>
+        <ul><li>진실하고 유효하며 정확한 정보(이메일 등)를 제공해야 합니다.</li><li>각 이메일 또는 제3자 계정(Apple ID 등)당 Floriary 계정은 하나만 가입할 수 있습니다.</li><li>가입에는 만 14세 이상(또는 보호자 지도 하에 거주지 법률에 따라)이어야 합니다.</li></ul>
+        <h3>2.2 계정 보안</h3>
+        <ul><li>자격 증명(이메일 비밀번호, 로그인 기기) 관리는 이용자 책임이며 계정 양도·대여·공유는 금지됩니다.</li><li>도용이 확인되면 즉시 ‘비밀번호 찾기’로 재설정하고 개발자에게 연락하세요.</li><li>자격 증명 유출로 인한 손실은 계정 보유자가 부담합니다. 단, 당사 서비스 자체의 보안 취약점으로 인한 경우는 제외합니다.</li></ul>
+        <h3>2.3 다중 로그인 방식</h3>
+        <p>‘마이 → 계정과 보안’에서 한 계정에 여러 로그인 방식(이메일, Apple ID 등)을 연결할 수 있습니다. 각 연결은 검증되며, 동일 이메일/Apple ID를 여러 Floriary 계정에 연결할 수 없습니다. 유효한 로그인 방식을 최소 하나는 남겨야 합니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>3. 이용자의 콘텐츠</h2>
+        <h3>3.1 귀속</h3>
+        <p>Floriary에서 생성한 콘텐츠(정원·식물·성장 기록·사진·태그·자산 정보, 통칭 ‘이용자 콘텐츠’)의 지식재산권은 이용자에게 귀속됩니다.</p>
+        <h3>3.2 라이선스</h3>
+        <p>서비스 제공(저장 및 기기 간 동기화 포함)을 위해 기술적으로 필요한 범위에서 콘텐츠를 처리·저장·전송할 권리를 본인에게 부여합니다. 유료 회원의 사진 동기화는 본인 iCloud를 통해 Apple이 수행하며 Floriary는 해당 사진을 보유하지 않습니다. 본 라이선스는 상업적 용도를 포함하지 않으며 제3자에 재허락하지 않습니다.</p>
+        <h3>3.3 콘텐츠 책임</h3>
+        <p>업로드·생성한 콘텐츠에 대해 책임을 지며 다음을 보증합니다:</p>
+        <ul><li>타인의 지식재산권·프라이버시 등 합법적 권리를 침해하지 않을 것;</li><li>중화인민공화국 및 거주지 법령을 위반하지 않을 것;</li><li>불법·유해·침해 콘텐츠의 저장·유포에 본 앱을 이용하지 않을 것.</li></ul>
+        <h3>3.4 피드백·품종 정정·식별 기여</h3>
+        <ul><li>피드백이나 품종 정정(품종명·케어 정보·이미지 수정 등)을 제출하면, 제품 개선과 식물 도감 보완을 위해 이를 무상·비독점으로 이용할 권리를 Floriary에 부여합니다.</li><li>식별 학습 데이터 수집에 동의한 후, 식별 사진과 최종 확인 결과가 Floriary 자체 모델 개선에 사용될 수 있습니다(개인정보 처리방침 참조).</li><li>위 이용은 비식별화되어 계정 신원을 공개하지 않습니다. 계정 삭제 시 관련 기여 데이터는 개인정보 처리방침에 따라 삭제됩니다.</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>4. 유료 서비스</h2>
+        <p>Floriary는 ‘멤버십’ 유료 서비스를 제공하여 다양한 고급 혜택을 해제합니다.</p>
+        <h3>4.1 회원 혜택</h3>
+        <ul><li><strong>무제한 정원</strong>(무료는 최대 3개)</li><li><strong>정원당 무제한 식물</strong>(무료는 정원당 활성 20그루)</li><li><strong>식물 사진 iCloud 동기화</strong>——사진은 본인 iCloud 컨테이너에 저장되어 기기 간 동기화·기기 변경 시 복원(무료 사용자 사진은 기기에만)</li><li><strong>전체 통계 기록과 데이터 인사이트</strong>(무료는 최근 1개월 히트맵만)</li><li><strong>성장 아카이브 / 기념 앨범 내보내기</strong>(워터마크 없음·전체·고해상도 긴 이미지 / PDF)</li><li><strong>식별 영구 무제한</strong>(무료는 한시 무료, 이후 제한 횟수)</li><li><strong>케어 작업 일괄 완료</strong></li><li><strong>무제한 식물 태그</strong></li></ul>
+        <div class="table-wrap"><table><thead><tr><th>플랜</th><th>청구 방식</th><th>체험</th></tr></thead><tbody>
+          <tr><td>월간 회원</td><td>자동 갱신, 매월 청구</td><td>7일 무료 체험</td></tr>
+          <tr><td>연간 회원</td><td>자동 갱신, 매년 청구</td><td>7일 무료 체험</td></tr>
+          <tr><td>평생 회원</td><td>일회성 구매, 갱신 불필요</td><td>체험 없음</td></tr>
+        </tbody></table></div>
+        <div class="callout"><strong>사진 저장 안내:</strong> 회원의 ‘사진 iCloud 동기화’는 <strong>본인의 iCloud 용량과 Apple 인프라</strong>를 사용합니다. 사진은 Floriary 서버에 업로드되지 않으며 회원 혜택으로 제공됩니다.</div>
+        <h3>4.2 자동 갱신 안내</h3>
+        <ul><li>자동 갱신 구독은 현재 기간 종료 24시간 전에 Apple ID로 자동 갱신됩니다.</li><li>‘iPhone 설정 → [이름] → 구독’에서 언제든 관리하거나 해제할 수 있습니다.</li><li>자동 갱신을 해제해도 현재 결제된 기간 종료까지는 혜택이 유효하며 이후 갱신되지 않습니다.</li><li>체험 포함 구독: 체험 중 취소하지 않으면 종료 시 자동 청구됩니다.</li></ul>
+        <h3>4.3 환불</h3>
+        <p>모든 구매는 Apple App Store에서 결제됩니다. 환불은 Apple에 직접 문의하세요(<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>). 개발자는 환불을 직접 처리하지 않습니다.</p>
+        <h3>4.4 가격 변경</h3>
+        <p>개발자는 구독 가격을 조정할 권리가 있습니다. 변경은 사전에 앱 내에서 안내되며 현재 결제된 기간에는 영향을 주지 않고 다음 청구 주기부터 새 가격이 적용됩니다.</p>
+        <h3>4.5 만료 및 초과 정책</h3>
+        <p><strong>회원 만료(미갱신) 시:</strong></p>
+        <ul><li>무료 한도를 초과한 정원/식물/기록 데이터는 보관되지만 읽기 전용이 됩니다(기존 데이터 열람 가능, 초과분 추가·편집 불가).</li><li>전체 기록·인사이트·앨범 내보내기·일괄 케어·무제한 식별·무제한 태그 등 회원 기능은 무료 범위로 돌아갑니다.</li><li><strong>iCloud에 저장된 사진은 계속 열람 가능</strong>하며, 만료 후 새 사진은 기기에만 저장되고 어떤 사진도 갑자기 삭제되지 않습니다. 재구독 시 고급 기능과 iCloud 동기화가 즉시 복원됩니다.</li></ul>
+        <div class="callout"><strong>중요: 만료 시 데이터가 즉시 삭제되지 않습니다. 데이터는 보관되며 추가·편집만 제한됩니다.</strong></div>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>5. 무료 버전 제한</h2>
+        <div class="table-wrap"><table><thead><tr><th>기능</th><th>무료 한도</th></tr></thead><tbody>
+          <tr><td>정원 수</td><td>최대 3개</td></tr>
+          <tr><td>정원당 활성 식물 수</td><td>최대 20그루</td></tr>
+          <tr><td>히트맵 기록</td><td>최근 1개월</td></tr>
+          <tr><td>인사이트 / 앨범 내보내기 / 일괄 케어</td><td>미지원(회원 기능)</td></tr>
+          <tr><td>AI 식별 횟수</td><td>한시 무료(이후 제한 횟수)</td></tr>
+          <tr><td>사진 iCloud 동기화</td><td>미지원(사진은 기기에만)</td></tr>
+          <tr><td>식물 태그</td><td>미지원(회원 기능)</td></tr>
+        </tbody></table></div>
+        <p>무료 버전의 성장 기록(텍스트)과 구조화 데이터(정원/식물/태그/알림 등)는 유료 사용자와 동일한 <strong>클라우드 동기화</strong>를 제한 없이 이용합니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>6. 계정 삭제</h2>
+        <p>‘마이 → 계정과 보안 → 계정 삭제’에서 언제든 삭제를 신청할 수 있습니다.</p>
+        <ol><li><strong>구독 안내</strong>: 계정 삭제는 <strong>Apple 구독 청구를 자동으로 취소하지 않습니다</strong>. 앱은 삭제 전에 명확히 안내하고 App Store 구독 관리로의 진입점을 제공하니 필요 시 직접 취소하세요.</li><li><strong>재확인</strong>: 현재 비밀번호(또는 다른 연결 방식) 입력으로 본인을 확인합니다.</li><li><strong>유예 기간</strong>: 신청 후 계정은 <strong>7일 유예 기간</strong>에 들어가며, 기간 중 로그인하여 취소할 수 있습니다.</li><li><strong>데이터 처리</strong>: 유예 기간 종료 후 데이터는 소프트 삭제·익명화되고, 식별 사진·기록·피드백 및 서버의 연결 이미지는 삭제 절차에 들어갑니다. 기기 사진은 기기가 삭제하고 iCloud 사진은 본인 iCloud가 관리합니다(삭제로 iCloud 사진이 대신 삭제되지 않습니다).</li><li><strong>복구 불가</strong>: 유예 기간 종료·데이터 삭제 후에는 복구할 수 없습니다.</li></ol>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>7. 금지 행위</h2>
+        <p>본 앱 이용 시 다음을 해서는 안 됩니다:</p>
+        <ul><li>본 앱의 크래킹·디컴파일·리버스 엔지니어링;</li><li>유료 제한 우회(타인 계정 사칭, 영수증 위조 등);</li><li>불법 콘텐츠(음란·폭력·정치적으로 민감한 내용 등)의 저장·유포;</li><li>서버에 대한 DoS/DDoS 등 서비스 방해 행위;</li><li>다른 사용자의 데이터 스크래핑·대량 다운로드;</li><li>식별 AI 서비스의 모든 형태의 남용(식물 식별과 무관한 유해 콘텐츠 업로드 등);</li><li>운영 방해를 위한 허위·악의적 피드백 / 품종 정정 제출.</li></ul>
+        <p>위반 시 계정 서비스를 종료할 권리가 있으며, 중대한 경우 법적 책임을 묻습니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>8. 서비스 변경과 종료</h2>
+        <h3>8.1 서비스 변경</h3><p>본 앱의 기능·UI·요금제를 조정할 권리가 있으며, 중대한 변경은 사전에 앱 내에서 통지합니다.</p>
+        <h3>8.2 서비스 종료</h3><p>본 앱 운영을 영구 중단하는 경우, 최소 <strong>30일 전</strong>에 앱 내와 본 페이지에 공지하고 데이터 처리 방법(내보내기 경로 또는 삭제 일정)을 설명합니다. 그 기간에 콘텐츠를 내보내거나 백업할 수 있습니다.</p>
+        <h3>8.3 계정 정지</h3><p>본 약관을 중대하게 위반하면 사전 통지 없이 계정을 정지할 권리가 있습니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>9. 지식재산권</h2>
+        <p>본 앱의 코드·디자인·아이콘·문구 및 ‘花迹’ ‘Floriary’ 브랜드명의 지식재산권은 개발자에게 있습니다. 허가 없이 사용·복제·배포할 수 없습니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>10. 면책 조항</h2>
+        <ul><li><strong>가용성</strong>: 본 앱은 ‘있는 그대로’ 제공되며 무중단·무결함을 보장하지 않습니다. 불가항력, 제3자 제공자 장애(Apple·클라우드·식별 서비스), 네트워크 문제 등으로 인한 중단에 대해 배상 책임을 지지 않으나 합리적으로 복구에 노력합니다.</li><li><strong>백업</strong>: 무료 사용자의 사진은 기기에만 저장됩니다. 회원의 사진 동기화는 본인 iCloud와 Apple 서비스에 의존합니다(iCloud 이용 불가 시 기기에만으로 강등). 기기 분실·손상·초기화로 백업되지 않은 데이터가 손실될 수 있으니 직접 백업하세요.</li><li><strong>식별 정확성</strong>: AI 식별 결과는 참고용이며 전문 식물 감정 의견이 아닙니다. 독성·식용 가능 여부 등 안전 용도에는 반드시 전문가와 상담하세요.</li><li><strong>제3자 링크</strong>: 앱 내에 Apple 구독 관리 등 제3자 페이지로의 링크가 포함될 수 있으며, 해당 페이지의 콘텐츠와 개인정보 처리는 각 제3자의 책임입니다.</li></ul>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>11. 준거법과 분쟁 해결</h2>
+        <p>본 약관의 성립·이행·해석 및 본 약관으로 인해 발생하거나 관련된 모든 분쟁에는 <strong>중화인민공화국 법률</strong>이 적용됩니다.</p>
+        <p>분쟁 발생 시 양 당사자는 먼저 우호적 협의로 해결을 시도합니다. 협의가 이루어지지 않으면 어느 당사자든 <strong>피고 주소지의 관할 인민법원</strong>에 소를 제기할 수 있습니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>12. 약관 업데이트</h2>
+        <p>중대한 변경이 있는 경우 시행 최소 <strong>7일 전</strong>에 앱 내 알림 또는 이메일로 알립니다. 계속 이용하면 업데이트된 약관에 동의한 것으로 봅니다.</p>
+        <p>업데이트된 조항에 동의하지 않으면 변경 시행 전에 이용을 중단하고 계정을 삭제해야 합니다.</p>
+      </section>
+      <hr class="section-divider">
+      <section class="doc-section"><h2>연락처</h2>
+        <ul><li><strong>개발자</strong>: Eric Liu</li><li><strong>이메일</strong>: <a href="mailto:simplord@163.com">simplord@163.com</a></li></ul>
+        <p style="color:var(--text-tertiary);font-size:13px;margin-top:16px">본 약관은 해석상 차이가 있을 경우 중국어판이 우선합니다.</p>
+      </section>
+    </article>
 
-    <!-- Section 6 -->
-    <section class="doc-section" id="s6">
-      <h2>六、账号注销</h2>
-      <p>你可以随时通过「我的 → 账号与安全 → 注销账号」申请注销。</p>
-      <ol style="padding-left: 20px; color: var(--text-secondary);">
-        <li style="margin-bottom: 8px;"><strong>订阅提醒</strong>：注销账号<strong>不会自动取消你的 Apple 会员订阅扣费</strong>。应用会在注销前明确提示，并提供跳转「App Store 订阅管理」的入口，请按需自行前往取消。</li>
-        <li style="margin-bottom: 8px;"><strong>二次验证</strong>：需输入当前密码（或其他已绑定的验证方式）确认是本人操作。</li>
-        <li style="margin-bottom: 8px;"><strong>冷静期</strong>：提交注销申请后，账号进入 <strong>7 天冷静期</strong>。冷静期内你仍可登录并撤销申请。</li>
-        <li style="margin-bottom: 8px;"><strong>数据处理</strong>：冷静期结束后，你的账号数据将被软删除和匿名化；识图照片、识别记录、反馈数据及服务器上的关联图片进入清理流程；本机本地照片由设备本地清除；存入 iCloud 的照片由你的 iCloud 管理（注销不会代你删除 iCloud 中的照片）。</li>
-        <li><strong>不可恢复</strong>：冷静期结束、数据删除后，数据无法恢复。</li>
-      </ol>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 7 -->
-    <section class="doc-section" id="s7">
-      <h2>七、禁止行为</h2>
-      <p>你在使用本应用时不得：</p>
-      <ul>
-        <li>破解、反编译、逆向工程本应用；</li>
-        <li>绕过付费限制（如冒用他人账号或伪造收据等）；</li>
-        <li>利用本应用存储、传播违法内容（含色情、暴力、涉政敏感内容等）；</li>
-        <li>对服务器发起 DoS/DDoS 攻击或其他干扰服务的行为；</li>
-        <li>爬取、批量下载其他用户的数据；</li>
-        <li>以任何方式滥用识图 AI 服务（含上传与植物识别无关的有害内容）；</li>
-        <li>提交虚假或恶意的反馈 / 物种纠错信息以干扰运营。</li>
-      </ul>
-      <p>违反上述规定的，我有权终止你的账号服务，情节严重的将依法追究法律责任。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 8 -->
-    <section class="doc-section" id="s8">
-      <h2>八、服务变更与终止</h2>
-
-      <h3>8.1 服务变更</h3>
-      <p>我保留对本应用功能、界面、付费方案进行调整的权利，重大变更将提前在应用内通知。</p>
-
-      <h3>8.2 服务终止</h3>
-      <p>若本应用决定永久停止运营，将至少提前 <strong>30 天</strong>在应用内和本页面公告，并说明你的数据如何处理（包括数据导出渠道或清除时间表）。在此期间，你可选择导出或备份你的内容。</p>
-
-      <h3>8.3 账号封禁</h3>
-      <p>如你严重违反本协议，我保留在不预先通知的情况下封禁账号的权利。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 9 -->
-    <section class="doc-section" id="s9">
-      <h2>九、知识产权</h2>
-      <p>本应用的代码、设计、图标、文案及「花迹」「Floriary」品牌名称，其知识产权归开发者所有。你不得在未获授权的情况下使用、复制或传播上述内容。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 10 -->
-    <section class="doc-section" id="s10">
-      <h2>十、免责声明</h2>
-      <ul>
-        <li style="margin-bottom: 10px;"><strong>服务可用性</strong>：本应用按「现状」提供服务，不承诺服务永不中断或无故障。因不可抗力、第三方服务商故障（如 Apple、云服务商、识别服务商）、网络问题等导致的服务中断，不承担赔偿责任，但会尽合理努力恢复服务。</li>
-        <li style="margin-bottom: 10px;"><strong>数据备份</strong>：免费用户的图片仅保存在本地设备；会员的图片同步依赖你自己的 iCloud 与 Apple 服务（设备未登录 Apple ID 或 iCloud 不可用时会降级为仅本机本地）。设备丢失、损坏或系统重置可能导致未备份的数据丢失，请自行做好备份。</li>
-        <li style="margin-bottom: 10px;"><strong>识图准确性</strong>：AI 识图结果仅供参考，不构成专业植物学鉴定意见。如用于判断植物是否有毒、可否食用等安全用途，请务必咨询相关专业人士。</li>
-        <li><strong>第三方链接</strong>：应用内可能包含跳转至 Apple 订阅管理等第三方页面的链接，该等页面的内容和隐私实践由对应第三方负责，与本应用无关。</li>
-      </ul>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 11 -->
-    <section class="doc-section" id="s11">
-      <h2>十一、适用法律与争议解决</h2>
-      <p>本协议的订立、执行和解释，以及由本协议引起的或与本协议有关的一切争议，均适用<strong>中华人民共和国法律</strong>。</p>
-      <p>发生争议时，双方应首先尝试友好协商解决。协商不成的，任何一方均可提交至<strong>被告住所地有管辖权的人民法院</strong>诉讼解决。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Section 12 -->
-    <section class="doc-section" id="s12">
-      <h2>十二、协议更新</h2>
-      <p>本协议如有重大变更，我将在生效前至少 <strong>7 天</strong>通过应用内通知或邮件告知。继续使用本应用即表示你接受更新后的协议。</p>
-      <p>如不接受更新后的条款，你应在变更生效前停止使用本应用并注销账号。</p>
-    </section>
-
-    <hr class="section-divider">
-
-    <section class="doc-section">
-      <h2>联系方式</h2>
-      <ul>
-        <li><strong>开发者</strong>：Eric Liu</li>
-        <li><strong>邮箱</strong>：<a href="mailto:simplord@163.com">simplord@163.com</a></li>
-      </ul>
-      <p style="color: var(--text-tertiary); font-size: 13px; margin-top: 16px;">本协议以中文版本为准。</p>
-    </section>
+    <!-- INSERT-LANGS -->
 
   </main>
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="index.html">首页</a>
-      <a href="privacy.html">隐私政策</a>
-      <a href="terms.html">用户协议</a>
-      <a href="mailto:simplord@163.com">联系我们</a>
+      <a href="index.html" data-i18n="nav.home"></a>
+      <a href="privacy.html" data-i18n="nav.privacy"></a>
+      <a href="terms.html" data-i18n="nav.terms"></a>
+      <a href="support.html" data-i18n="nav.support"></a>
+      <a href="mailto:simplord@163.com" data-i18n="nav.contact"></a>
     </div>
     <p>© 2026 花迹 Floriary · Eric Liu · All rights reserved.</p>
   </footer>
+
+  <script>
+  (function(){
+    var LABELS={zh:'简体中文','zh-Hant':'繁體中文',en:'English',ja:'日本語',ko:'한국어'};
+    var NAV={
+      zh:{'nav.home':'首页','nav.privacy':'隐私政策','nav.terms':'用户协议','nav.support':'技术支持','nav.contact':'联系我们'},
+      'zh-Hant':{'nav.home':'首頁','nav.privacy':'隱私政策','nav.terms':'使用者協議','nav.support':'技術支援','nav.contact':'聯絡我們'},
+      en:{'nav.home':'Home','nav.privacy':'Privacy','nav.terms':'Terms','nav.support':'Support','nav.contact':'Contact'},
+      ja:{'nav.home':'ホーム','nav.privacy':'プライバシー','nav.terms':'利用規約','nav.support':'サポート','nav.contact':'お問い合わせ'},
+      ko:{'nav.home':'홈','nav.privacy':'개인정보','nav.terms':'이용약관','nav.support':'지원','nav.contact':'문의'}
+    };
+    var TITLES={zh:'用户协议 — 花迹 Floriary','zh-Hant':'使用者協議 — 花迹 Floriary',en:'Terms of Service — Floriary',ja:'利用規約 — 花迹 Floriary',ko:'이용약관 — 花迹 Floriary'};
+    var HTMLLANG={zh:'zh-CN','zh-Hant':'zh-Hant',en:'en',ja:'ja',ko:'ko'};
+    function apply(lang){
+      var nav=NAV[lang]||NAV.zh;
+      document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(nav[k]!=null)el.textContent=nav[k];});
+      document.documentElement.setAttribute('data-lang',lang);
+      document.documentElement.setAttribute('lang',HTMLLANG[lang]||'zh-CN');
+      document.title=TITLES[lang]||TITLES.zh;
+      var lbl=document.getElementById('langLabel');if(lbl)lbl.textContent=LABELS[lang];
+      try{localStorage.setItem('floriary_lang',lang);}catch(e){}
+    }
+    function initial(){var s;try{s=localStorage.getItem('floriary_lang');}catch(e){}return (s&&LABELS[s])?s:'zh';}
+    document.addEventListener('DOMContentLoaded',function(){
+      apply(initial());
+      var btn=document.getElementById('langBtn'),menu=document.getElementById('langMenu');
+      btn.addEventListener('click',function(e){e.stopPropagation();var h=menu.hidden;menu.hidden=!h;btn.setAttribute('aria-expanded',String(h));});
+      document.addEventListener('click',function(){menu.hidden=true;btn.setAttribute('aria-expanded','false');});
+      menu.querySelectorAll('[data-set-lang]').forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-set-lang'));menu.hidden=true;});});
+    });
+  })();
+  </script>
 
 </body>
 </html>
