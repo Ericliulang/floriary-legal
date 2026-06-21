@@ -124,15 +124,15 @@
         <p>你的成长记录照片与植株封面图的存储方式由你是否为付费会员决定：</p>
         <ul>
           <li><strong>免费用户</strong>：图片<strong>仅保存在你的设备本地</strong>（App Documents 目录），不上传至花迹服务器，也不逐张跨设备同步。换新设备或重装后，结构化数据会从花迹服务器恢复，但照片不会自动跟随。</li>
-          <li><strong>付费会员</strong>：图片<strong>上传至花迹自有对象存储服务（腾讯云 COS，每账号 10 GB）</strong>，iOS 与 Android 全平台跨设备同步、换机自动恢复。照片不占用你的 iCloud 空间。</li>
-          <li>与图片关联的<strong>结构化数据</strong>（花园/植株/记录文字、标签、提醒配置等）会正常同步到花迹服务器；图片本体同步至花迹 COS（付费会员）或仅留本地（免费用户）。</li>
+          <li><strong>付费会员</strong>：图片<strong>上传至花迹服务器（每账号 10 GB）</strong>，iOS 与 Android 全平台跨设备同步、换机自动恢复。照片不占用你的 iCloud 空间。</li>
+          <li>与图片关联的<strong>结构化数据</strong>（花园/植株/记录文字、标签、提醒配置等）会正常同步到花迹服务器；图片本体同步至花迹服务器（付费会员）或仅留本地（免费用户）。</li>
         </ul>
-        <div class="callout"><strong>以下情形图片会上传到花迹服务器/COS：</strong>① 你<strong>主动提交反馈</strong>时附带的图片；② 你<strong>同意识图训练数据采集后</strong>采集的识图照片（详见 1.4）；③ <strong>付费会员的成长记录照片与植株封面</strong>（用于跨平台同步，每账号 10 GB）。</div>
+        <div class="callout"><strong>以下情形图片会上传到花迹服务器：</strong>① 你<strong>主动提交反馈</strong>时附带的图片；② 你<strong>同意识图训练数据采集后</strong>采集的识图照片（详见 1.4）；③ <strong>付费会员的成长记录照片与植株封面</strong>（用于跨平台同步，每账号 10 GB）。</div>
         <h3>1.4 识图功能的信息处理</h3>
         <p>当你使用「识图（拍照认植物）」功能时：</p>
         <ul>
           <li>你选择的照片会先在本机压缩，并在上传前<strong>剥除 EXIF 元数据（含 GPS 位置等）进行隐私脱敏</strong>。</li>
-          <li>脱敏后的照片会<strong>临时传输给第三方植物识别服务</strong>（该服务可能位于中国境外）以完成识别；识别完成后该临时图像即被清理，不作为云端相册长期保留。</li>
+          <li>脱敏后的照片会<strong>临时传输给第三方植物识别服务</strong>（百度识图，境内服务商）以完成识别；识别完成后该临时图像即被清理，不作为云端相册长期保留。</li>
           <li>识别记录（候选物种结果、图片哈希、你最终确认或选择的物种）会保存在花迹服务器，用于改进识别质量并完善植物库。</li>
           <li><strong>首次使用识图需经你明确同意</strong>：① 照片将传输给第三方识别服务以完成识别；② 花迹会保存你的识图照片与识别/确认结果，用于改进花迹自有的植物识别模型。<strong>未同意则无法使用识图功能。</strong>同意行为会记录版本与时间戳以备审计。</li>
           <li>用于改进模型的识图照片在入库前同样经 <strong>EXIF 脱敏</strong>后存储；你注销账号时，相关识图照片与识别记录会一并清理。</li>
@@ -166,8 +166,8 @@
         <h3>3.1 存储位置</h3>
         <ul>
           <li><strong>结构化数据</strong>（账号信息、花园/植株/记录文字、标签、资产信息、识别记录、订阅状态等）：存储在花迹自建服务器（国内区：腾讯云云服务器 + 云数据库）。</li>
-          <li><strong>成长记录照片与植株封面</strong>：免费用户仅存储在设备本地（App Documents）；付费会员存储在<strong>花迹自有对象存储（腾讯云 COS，每账号 10 GB）</strong>，用于 iOS 与 Android 跨设备同步。</li>
-          <li><strong>反馈附图、识图训练照片（仅在你同意后）</strong>：经脱敏后存储在花迹对象存储服务（国内区：腾讯云 COS）。</li>
+          <li><strong>成长记录照片与植株封面</strong>：免费用户仅存储在设备本地（App Documents）；付费会员存储在<strong>花迹服务器（每账号 10 GB）</strong>，用于 iOS 与 Android 跨设备同步。</li>
+          <li><strong>反馈附图、识图训练照片（仅在你同意后）</strong>：经脱敏后存储在花迹服务器（国内腾讯云）。</li>
           <li><strong>本地 token</strong>：仅存储在你的设备本地，不经过花迹服务器。</li>
         </ul>
         <h3>3.2 保留期限</h3>
@@ -178,7 +178,7 @@
             <tr><td>申请注销后</td><td>进入 7 天冷静期；冷静期结束后对数据进行软删除和匿名化处理（花园/植株/记录/标签等与真实用户身份解除关联，邮箱等可识别信息从用户记录中清除）</td></tr>
             <tr><td>识图照片与识别记录（注销后）</td><td>随账号注销流程一并清理</td></tr>
             <tr><td>反馈数据</td><td>处理完成后按问题追溯需要保留合理期限</td></tr>
-            <tr><td>你手动删除的记录</td><td>关联的服务器图片（含 COS 中的会员照片、反馈附图）标记为待清理，由定期任务处理；本机本地照片由设备本地清除</td></tr>
+            <tr><td>你手动删除的记录</td><td>关联的服务器图片（含会员同步照片、反馈附图）标记为待清理，由定期任务处理；本机本地照片由设备本地清除</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -191,12 +191,11 @@
           <li><strong>IAP 收据验证</strong>：向 Apple App Store 服务器核查你的订阅收据，以确认订阅有效性。Apple 的隐私实践详见 <a href="https://www.apple.com/legal/privacy/zh-cn/" target="_blank" rel="noopener">Apple 隐私政策</a>。</li>
           <li><strong>App Store Server Notifications</strong>：接收 Apple 主动推送的订阅状态变更通知（续费、到期、退款等）。</li>
           <li><strong>Sign in with Apple</strong>：使用该登录方式时，Apple 会向花迹提供你的唯一标识符和（可选的）邮箱地址。</li>
-          <li><strong>腾讯云 COS（会员照片存储）</strong>：付费会员的成长记录照片与植株封面存储在花迹自有腾讯云 COS 中（每账号 10 GB），用于跨平台同步。腾讯云作为基础设施提供商，不独立使用你的照片数据。</li>
         </ul>
         <h3>4.2 云基础设施提供商</h3>
-        <p>花迹将服务器数据存储在<strong>腾讯云（国内）</strong>的服务器上。该服务商作为数据处理者，仅在花迹的指令下处理数据，不独立使用你的数据。</p>
+        <p>花迹将服务器数据（含付费会员同步的照片，每账号 10 GB）存储在<strong>腾讯云（国内）</strong>的服务器上。腾讯云作为基础设施提供商/数据处理者，仅在花迹的指令下处理数据，不独立使用你的数据。</p>
         <h3>4.3 第三方植物识别服务（识图）</h3>
-        <p>使用识图功能时，经脱敏的照片会<strong>临时传输</strong>给第三方植物识别服务（该服务可能位于中国境外）用于识别，处理完毕后临时图像即被清除。<strong>首次使用识图时会就此向你单独征得同意</strong>；未同意则不会传输、识图功能不可用。</p>
+        <p>使用识图功能时，经脱敏的照片会<strong>临时传输</strong>给第三方植物识别服务（百度识图，境内服务商）用于识别，处理完毕后临时图像即被清除。<strong>首次使用识图时会就此向你单独征得同意</strong>；未同意则不会传输、识图功能不可用。</p>
         <h3>4.4 法律要求</h3>
         <p>如法律法规、法院命令或政府机构强制要求，我们可能依法披露必要信息。</p>
       </section>
@@ -305,15 +304,15 @@
         <p>Storage depends on whether you are a paid member:</p>
         <ul>
           <li><strong>Free users</strong>: images are <strong>stored only on your device</strong> (App Documents). They are not uploaded to Floriary servers nor synced per-file across devices. After switching or reinstalling, structured data is restored from Floriary's server, but photos do not follow automatically.</li>
-          <li><strong>Paid members</strong>: images are <strong>uploaded to Floriary's own object storage (Tencent COS, 10 GB per account)</strong> and synced across iOS and Android devices / restored on a new phone automatically. Photos do not use your iCloud storage.</li>
-          <li>The associated <strong>structured data</strong> (gardens/plants/notes, tags, reminder settings) syncs to Floriary's server; image files go to Floriary COS (paid) or stay local (free).</li>
+          <li><strong>Paid members</strong>: images are <strong>uploaded to Floriary's servers (10 GB per account)</strong> and synced across iOS and Android devices / restored on a new phone automatically. Photos do not use your iCloud storage.</li>
+          <li>The associated <strong>structured data</strong> (gardens/plants/notes, tags, reminder settings) syncs to Floriary's server; image files go to Floriary's servers (paid) or stay local (free).</li>
         </ul>
-        <div class="callout"><strong>Images uploaded to Floriary servers/COS:</strong> ① images attached when you <strong>submit feedback</strong>; ② identification photos collected <strong>after you consent</strong> to training-data collection (see 1.4); ③ <strong>paid members' growth photos and plant covers</strong> (for cross-platform sync, 10 GB per account).</div>
+        <div class="callout"><strong>Images uploaded to Floriary's servers:</strong> ① images attached when you <strong>submit feedback</strong>; ② identification photos collected <strong>after you consent</strong> to training-data collection (see 1.4); ③ <strong>paid members' growth photos and plant covers</strong> (for cross-platform sync, 10 GB per account).</div>
         <h3>1.4 Identification feature</h3>
         <p>When you use "Identify (photograph a plant)":</p>
         <ul>
           <li>Your selected photos are first compressed on-device and <strong>have EXIF metadata (including GPS) stripped for privacy</strong> before upload.</li>
-          <li>The de-identified photos are <strong>temporarily transmitted to a third-party plant recognition service</strong> (which may be located outside mainland China) to perform recognition; the temporary image is cleared afterward and not kept as a long-term cloud album.</li>
+          <li>The de-identified photos are <strong>temporarily transmitted to a third-party plant recognition service</strong> (Baidu, within mainland China) to perform recognition; the temporary image is cleared afterward and not kept as a long-term cloud album.</li>
           <li>Recognition records (candidate species, image hash, the species you finally confirm/select) are stored on Floriary's server to improve recognition quality and the plant library.</li>
           <li><strong>First use of Identify requires your explicit consent</strong>: ① photos will be sent to a third-party service for recognition; ② Floriary will keep your identification photos and recognition/confirmation results to improve its own plant recognition model. <strong>Without consent, Identify cannot be used.</strong> Consent is logged with version and timestamp.</li>
           <li>Identification photos used for model improvement are also <strong>EXIF-stripped</strong> before storage; when you delete your account, the related photos and records are removed.</li>
@@ -347,8 +346,8 @@
         <h3>3.1 Where data is stored</h3>
         <ul>
           <li><strong>Structured data</strong> (account, gardens/plants/notes, tags, assets, recognition records, subscription status): on Floriary's servers (China region: Tencent Cloud servers + database).</li>
-          <li><strong>Growth photos and plant covers</strong>: free users — device-local only (App Documents); paid members — <strong>Floriary's own object storage (Tencent COS, 10 GB per account)</strong>, for cross-platform sync on iOS and Android.</li>
-          <li><strong>Feedback images and identification training photos (only after your consent)</strong>: de-identified and stored in Floriary's object storage (China region: Tencent COS).</li>
+          <li><strong>Growth photos and plant covers</strong>: free users — device-local only (App Documents); paid members — <strong>Floriary's servers (10 GB per account)</strong>, for cross-platform sync on iOS and Android.</li>
+          <li><strong>Feedback images and identification training photos (only after your consent)</strong>: de-identified and stored on Floriary's servers (China region: Tencent Cloud).</li>
           <li><strong>Local tokens</strong>: stored only on your device.</li>
         </ul>
         <h3>3.2 Retention</h3>
@@ -359,7 +358,7 @@
             <tr><td>After deletion request</td><td>Enters a 7-day grace period; after it ends, data is soft-deleted and anonymized (gardens/plants/logs/tags decoupled from your identity; email and other identifiers cleared from the user record)</td></tr>
             <tr><td>Identification photos & records (after deletion)</td><td>Cleared together with the deletion flow</td></tr>
             <tr><td>Feedback data</td><td>Kept for a reasonable period for issue traceability</td></tr>
-            <tr><td>Records you delete manually</td><td>Associated server images (including COS photos for paid members, feedback images) are marked for cleanup and handled by scheduled tasks; device-local photos are removed by the device</td></tr>
+            <tr><td>Records you delete manually</td><td>Associated server images (including paid members' synced photos, feedback images) are marked for cleanup and handled by scheduled tasks; device-local photos are removed by the device</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -372,12 +371,11 @@
           <li><strong>IAP receipt validation</strong>: checking receipts with Apple App Store servers. See the <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</li>
           <li><strong>App Store Server Notifications</strong>: receiving subscription status changes (renewal, expiry, refund).</li>
           <li><strong>Sign in with Apple</strong>: Apple provides your unique identifier and (optionally) your email.</li>
-          <li><strong>Tencent COS (member photo storage)</strong>: paid members' growth photos and plant covers are stored in Floriary's own Tencent COS (10 GB per account) for cross-platform sync. Tencent Cloud acts as an infrastructure provider only and does not use your photos independently.</li>
         </ul>
         <h3>4.2 Cloud infrastructure providers</h3>
-        <p>Floriary stores server data on <strong>Tencent Cloud (China)</strong>. The provider acts as a data processor, only on Floriary's instructions, and does not use your data independently.</p>
+        <p>Floriary stores server data (including paid members' synced photos, 10 GB per account) on <strong>Tencent Cloud (China)</strong>. The provider acts as an infrastructure provider / data processor, only on Floriary's instructions, and does not use your data independently.</p>
         <h3>4.3 Third-party plant recognition (Identify)</h3>
-        <p>When you use Identify, de-identified photos are <strong>temporarily transmitted</strong> to a third-party recognition service (which may be outside mainland China) and the temporary image is cleared afterward. <strong>Your separate consent is obtained on first use</strong>; without consent, no transmission occurs and Identify is unavailable.</p>
+        <p>When you use Identify, de-identified photos are <strong>temporarily transmitted</strong> to a third-party recognition service (Baidu, within mainland China) and the temporary image is cleared afterward. <strong>Your separate consent is obtained on first use</strong>; without consent, no transmission occurs and Identify is unavailable.</p>
         <h3>4.4 Legal requirements</h3>
         <p>We may disclose necessary information where required by law, court order, or government authority.</p>
       </section>
@@ -486,15 +484,15 @@
         <p>具體儲存方式由你是否為付費會員決定：</p>
         <ul>
           <li><strong>免費使用者</strong>：圖片<strong>僅儲存在你的裝置本機</strong>（App Documents 目錄），不上傳至花迹伺服器，也不逐張跨裝置同步。換新裝置或重新安裝後，結構化資料會從花迹伺服器還原，但照片不會自動跟隨。</li>
-          <li><strong>付費會員</strong>：圖片<strong>上傳至花迹自有物件儲存服務（騰訊 COS，每帳號 10 GB）</strong>，iOS 與 Android 全平台跨裝置同步、換機自動還原。照片不占用你的 iCloud 空間。</li>
-          <li>與圖片關聯的<strong>結構化資料</strong>（花園/植株/記錄文字、標籤、提醒設定等）會正常同步到花迹伺服器；圖片本體同步至花迹 COS（付費會員）或僅留本機（免費使用者）。</li>
+          <li><strong>付費會員</strong>：圖片<strong>上傳至花迹伺服器（每帳號 10 GB）</strong>，iOS 與 Android 全平台跨裝置同步、換機自動還原。照片不占用你的 iCloud 空間。</li>
+          <li>與圖片關聯的<strong>結構化資料</strong>（花園/植株/記錄文字、標籤、提醒設定等）會正常同步到花迹伺服器；圖片本體同步至花迹伺服器（付費會員）或僅留本機（免費使用者）。</li>
         </ul>
-        <div class="callout"><strong>以下情形圖片會上傳到花迹伺服器/COS：</strong>① 你<strong>主動提交回饋</strong>時附帶的圖片；② 你<strong>同意辨識訓練資料採集後</strong>採集的辨識照片（詳見 1.4）；③ <strong>付費會員的成長記錄照片與植株封面</strong>（用於跨平台同步，每帳號 10 GB）。</div>
+        <div class="callout"><strong>以下情形圖片會上傳到花迹伺服器：</strong>① 你<strong>主動提交回饋</strong>時附帶的圖片；② 你<strong>同意辨識訓練資料採集後</strong>採集的辨識照片（詳見 1.4）；③ <strong>付費會員的成長記錄照片與植株封面</strong>（用於跨平台同步，每帳號 10 GB）。</div>
         <h3>1.4 辨識功能的資訊處理</h3>
         <p>當你使用「辨識（拍照認植物）」功能時：</p>
         <ul>
           <li>你選擇的照片會先在本機壓縮，並在上傳前<strong>移除 EXIF 中繼資料（含 GPS 位置等）進行隱私去識別化</strong>。</li>
-          <li>去識別化後的照片會<strong>暫時傳輸給第三方植物辨識服務</strong>（該服務可能位於中國境外）以完成辨識；辨識完成後該暫時影像即被清除，不作為雲端相簿長期保留。</li>
+          <li>去識別化後的照片會<strong>暫時傳輸給第三方植物辨識服務</strong>（百度辨識，境內服務商）以完成辨識；辨識完成後該暫時影像即被清除，不作為雲端相簿長期保留。</li>
           <li>辨識記錄（候選物種結果、圖片雜湊、你最終確認或選擇的物種）會儲存在花迹伺服器，用於改進辨識品質並完善植物庫。</li>
           <li><strong>首次使用辨識需經你明確同意</strong>：① 照片將傳輸給第三方辨識服務以完成辨識；② 花迹會儲存你的辨識照片與辨識/確認結果，用於改進花迹自有的植物辨識模型。<strong>未同意則無法使用辨識功能。</strong>同意行為會記錄版本與時間戳記以備稽核。</li>
           <li>用於改進模型的辨識照片在入庫前同樣經 <strong>EXIF 去識別化</strong>後儲存；你註銷帳號時，相關辨識照片與辨識記錄會一併清除。</li>
@@ -528,8 +526,8 @@
         <h3>3.1 儲存位置</h3>
         <ul>
           <li><strong>結構化資料</strong>（帳號資訊、花園/植株/記錄文字、標籤、資產資訊、辨識記錄、訂閱狀態等）：儲存在花迹自建伺服器（國內區：騰訊雲雲伺服器 + 雲資料庫）。</li>
-          <li><strong>成長記錄照片與植株封面</strong>：免費使用者僅儲存在裝置本機（App Documents）；付費會員儲存在<strong>花迹自有物件儲存（騰訊 COS，每帳號 10 GB）</strong>，用於 iOS 與 Android 跨裝置同步。</li>
-          <li><strong>回饋附圖、辨識訓練照片（僅在你同意後）</strong>：經去識別化後儲存在花迹物件儲存服務（國內區：騰訊 COS）。</li>
+          <li><strong>成長記錄照片與植株封面</strong>：免費使用者僅儲存在裝置本機（App Documents）；付費會員儲存在<strong>花迹伺服器（每帳號 10 GB）</strong>，用於 iOS 與 Android 跨裝置同步。</li>
+          <li><strong>回饋附圖、辨識訓練照片（僅在你同意後）</strong>：經去識別化後儲存在花迹伺服器（國內騰訊雲）。</li>
           <li><strong>本機 token</strong>：僅儲存在你的裝置本機，不經過花迹伺服器。</li>
         </ul>
         <h3>3.2 保留期限</h3>
@@ -540,7 +538,7 @@
             <tr><td>申請註銷後</td><td>進入 7 天冷靜期；冷靜期結束後對資料進行軟刪除與匿名化處理（花園/植株/記錄/標籤等與真實使用者身分解除關聯，電子郵件等可識別資訊從使用者記錄中清除）</td></tr>
             <tr><td>辨識照片與辨識記錄（註銷後）</td><td>隨帳號註銷流程一併清除</td></tr>
             <tr><td>回饋資料</td><td>處理完成後依問題追溯需要保留合理期限</td></tr>
-            <tr><td>你手動刪除的記錄</td><td>關聯的伺服器圖片（含 COS 中的會員照片、回饋附圖）標記為待清除，由定期工作處理；本機本機照片由裝置清除</td></tr>
+            <tr><td>你手動刪除的記錄</td><td>關聯的伺服器圖片（含會員同步照片、回饋附圖）標記為待清除，由定期工作處理；本機本機照片由裝置清除</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -553,12 +551,11 @@
           <li><strong>IAP 收據驗證</strong>：向 Apple App Store 伺服器核對你的訂閱收據。Apple 的隱私實務詳見 <a href="https://www.apple.com/legal/privacy/zh-tw/" target="_blank" rel="noopener">Apple 隱私政策</a>。</li>
           <li><strong>App Store Server Notifications</strong>：接收 Apple 主動推送的訂閱狀態變更通知（續訂、到期、退款等）。</li>
           <li><strong>Sign in with Apple</strong>：使用該登入方式時，Apple 會向花迹提供你的唯一識別碼與（可選的）電子郵件地址。</li>
-          <li><strong>騰訊 COS（會員照片儲存）</strong>：付費會員的成長記錄照片與植株封面儲存在花迹自有騰訊 COS（每帳號 10 GB），用於跨平台同步。騰訊雲作為基礎設施提供商，不獨立使用你的照片資料。</li>
         </ul>
         <h3>4.2 雲端基礎設施提供商</h3>
-        <p>花迹將伺服器資料儲存在<strong>騰訊雲（國內）</strong>的伺服器上。該服務商作為資料處理者，僅在花迹的指示下處理資料，不獨立使用你的資料。</p>
+        <p>花迹將伺服器資料（含付費會員同步的照片，每帳號 10 GB）儲存在<strong>騰訊雲（國內）</strong>的伺服器上。騰訊雲作為基礎設施提供商/資料處理者，僅在花迹的指示下處理資料，不獨立使用你的資料。</p>
         <h3>4.3 第三方植物辨識服務（辨識）</h3>
-        <p>使用辨識功能時，經去識別化的照片會<strong>暫時傳輸</strong>給第三方植物辨識服務（該服務可能位於中國境外）用於辨識，處理完畢後暫時影像即被清除。<strong>首次使用辨識時會就此向你單獨徵得同意</strong>；未同意則不會傳輸、辨識功能無法使用。</p>
+        <p>使用辨識功能時，經去識別化的照片會<strong>暫時傳輸</strong>給第三方植物辨識服務（百度辨識，境內服務商）用於辨識，處理完畢後暫時影像即被清除。<strong>首次使用辨識時會就此向你單獨徵得同意</strong>；未同意則不會傳輸、辨識功能無法使用。</p>
         <h3>4.4 法律要求</h3>
         <p>如法律法規、法院命令或政府機關強制要求，我們可能依法揭露必要資訊。</p>
       </section>
@@ -667,15 +664,15 @@
         <p>保存方法は有料会員かどうかで決まります：</p>
         <ul>
           <li><strong>無料ユーザー</strong>：画像は<strong>端末内のみに保存</strong>されます（App Documents）。Floriary サーバーへのアップロードや端末間の個別同期は行いません。機種変更・再インストール後、構造化データはサーバーから復元されますが、写真は自動的には引き継がれません。</li>
-          <li><strong>有料会員</strong>：画像は<strong>Floriary 自社オブジェクトストレージ（Tencent COS、アカウントあたり 10 GB）へアップロード</strong>され、iOS と Android でクロスデバイス同期・機種変更時に復元されます。iCloud の容量を使用しません。</li>
-          <li>画像に紐づく<strong>構造化データ</strong>（庭・植物・メモ、タグ、リマインダー設定など）は Floriary サーバーへ同期されます。画像本体は Floriary COS（有料会員）または端末内（無料ユーザー）に保存されます。</li>
+          <li><strong>有料会員</strong>：画像は<strong>Floriary サーバー（アカウントあたり 10 GB）へアップロード</strong>され、iOS と Android でクロスデバイス同期・機種変更時に復元されます。iCloud の容量を使用しません。</li>
+          <li>画像に紐づく<strong>構造化データ</strong>（庭・植物・メモ、タグ、リマインダー設定など）は Floriary サーバーへ同期されます。画像本体は Floriary サーバー（有料会員）または端末内（無料ユーザー）に保存されます。</li>
         </ul>
-        <div class="callout"><strong>Floriary サーバー/COS へアップロードされる画像：</strong>① <strong>フィードバック送信</strong>時に添付した画像；② 識別の訓練データ収集に<strong>同意した後</strong>に収集される識別写真（1.4 参照）；③ <strong>有料会員の成長記録写真・植物カバー</strong>（クロスプラットフォーム同期用、アカウントあたり 10 GB）。</div>
+        <div class="callout"><strong>Floriary サーバーへアップロードされる画像：</strong>① <strong>フィードバック送信</strong>時に添付した画像；② 識別の訓練データ収集に<strong>同意した後</strong>に収集される識別写真（1.4 参照）；③ <strong>有料会員の成長記録写真・植物カバー</strong>（クロスプラットフォーム同期用、アカウントあたり 10 GB）。</div>
         <h3>1.4 識別機能における情報処理</h3>
         <p>「識別（写真で植物を判定）」機能の利用時：</p>
         <ul>
           <li>選択した写真は端末上で圧縮され、アップロード前に<strong>EXIF メタデータ（GPS 等を含む）を除去して匿名化</strong>します。</li>
-          <li>匿名化された写真は識別のため<strong>第三者の植物識別サービスへ一時的に送信</strong>されます（当該サービスは中国国外にある場合があります）。識別後、一時画像は消去され、長期的なクラウドアルバムとしては保持しません。</li>
+          <li>匿名化された写真は識別のため<strong>第三者の植物識別サービス（百度／Baidu、中国国内）へ一時的に送信</strong>されます。識別後、一時画像は消去され、長期的なクラウドアルバムとしては保持しません。</li>
           <li>識別記録（候補種、画像ハッシュ、最終的に確認・選択した種）は識別品質の改善と植物図鑑の充実のため Floriary サーバーに保存されます。</li>
           <li><strong>識別の初回利用にはあなたの明確な同意が必要です</strong>：① 写真は識別のため第三者サービスへ送信されます；② Floriary は自社の植物識別モデル改善のため、あなたの識別写真と識別/確認結果を保存します。<strong>同意しない場合、識別機能は利用できません。</strong>同意はバージョンと時刻を記録します。</li>
           <li>モデル改善に用いる識別写真も保存前に <strong>EXIF を除去</strong>します。アカウント削除時、関連する写真と記録は併せて消去されます。</li>
@@ -709,8 +706,8 @@
         <h3>3.1 保存場所</h3>
         <ul>
           <li><strong>構造化データ</strong>（アカウント、庭・植物・メモ、タグ、アセット、識別記録、サブスク状態など）：Floriary の自社サーバー（中国区：Tencent Cloud サーバー＋データベース）。</li>
-          <li><strong>成長記録写真・植物カバー</strong>：無料ユーザーは端末内のみ（App Documents）；有料会員は<strong>Floriary 自社オブジェクトストレージ（Tencent COS、アカウントあたり 10 GB）</strong>に保存され、iOS と Android でクロスデバイス同期されます。</li>
-          <li><strong>フィードバック画像・識別訓練写真（同意した場合のみ）</strong>：匿名化後、Floriary のオブジェクトストレージ（中国区：Tencent COS）に保存。</li>
+          <li><strong>成長記録写真・植物カバー</strong>：無料ユーザーは端末内のみ（App Documents）；有料会員は<strong>Floriary サーバー（アカウントあたり 10 GB）</strong>に保存され、iOS と Android でクロスデバイス同期されます。</li>
+          <li><strong>フィードバック画像・識別訓練写真（同意した場合のみ）</strong>：匿名化後、Floriary サーバー（中国区：Tencent Cloud）に保存。</li>
           <li><strong>ローカルトークン</strong>：端末内のみに保存。</li>
         </ul>
         <h3>3.2 保持期間</h3>
@@ -721,7 +718,7 @@
             <tr><td>削除申請後</td><td>7日間の猶予期間に入り、終了後にソフト削除・匿名化（庭/植物/記録/タグ等を本人と切り離し、メール等の識別情報を削除）</td></tr>
             <tr><td>識別写真・記録（削除後）</td><td>削除フローで併せて消去</td></tr>
             <tr><td>フィードバックデータ</td><td>追跡の必要に応じ合理的期間保持</td></tr>
-            <tr><td>手動削除した記録</td><td>関連サーバー画像（会員の COS 写真・フィードバック画像等）は消去待ちとして定期処理；端末内写真は端末が削除</td></tr>
+            <tr><td>手動削除した記録</td><td>関連サーバー画像（会員が同期した写真・フィードバック画像等）は消去待ちとして定期処理；端末内写真は端末が削除</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -734,12 +731,11 @@
           <li><strong>IAP レシート検証</strong>：Apple App Store サーバーでレシートを確認。<a href="https://www.apple.com/legal/privacy/ja/" target="_blank" rel="noopener">Apple プライバシーポリシー</a>参照。</li>
           <li><strong>App Store Server Notifications</strong>：サブスク状態の変更（更新・期限切れ・返金）を受信。</li>
           <li><strong>Sign in with Apple</strong>：一意の識別子と（任意で）メールアドレスが Floriary に提供されます。</li>
-          <li><strong>Tencent COS（会員写真ストレージ）</strong>：有料会員の成長記録写真・植物カバーは Floriary 自社 Tencent COS（アカウントあたり 10 GB）に保存され、クロスプラットフォーム同期に使用されます。Tencent Cloud はインフラ提供者としてのみ機能し、写真データを独自には利用しません。</li>
         </ul>
         <h3>4.2 クラウド基盤事業者</h3>
-        <p>Floriary はサーバーデータを <strong>Tencent Cloud（中国）</strong>に保存します。当該事業者はデータ処理者として Floriary の指示の下でのみ処理し、データを独自に利用しません。</p>
+        <p>Floriary はサーバーデータ（有料会員が同期した写真を含む、アカウントあたり 10 GB）を <strong>Tencent Cloud（中国）</strong>に保存します。当該事業者はインフラ提供者／データ処理者として Floriary の指示の下でのみ処理し、データを独自に利用しません。</p>
         <h3>4.3 第三者の植物識別サービス（識別）</h3>
-        <p>識別利用時、匿名化された写真は識別のため第三者サービス（中国国外の場合あり）へ<strong>一時送信</strong>され、処理後に消去されます。<strong>初回利用時に別途同意</strong>を得ます。同意しない場合は送信されず、識別機能は利用できません。</p>
+        <p>識別利用時、匿名化された写真は識別のため第三者サービス（百度／Baidu、中国国内）へ<strong>一時送信</strong>され、処理後に消去されます。<strong>初回利用時に別途同意</strong>を得ます。同意しない場合は送信されず、識別機能は利用できません。</p>
         <h3>4.4 法的要求</h3>
         <p>法令・裁判所命令・政府当局の要求がある場合、必要な情報を法に従い開示することがあります。</p>
       </section>
@@ -848,15 +844,15 @@
         <p>저장 방식은 유료 회원 여부에 따라 결정됩니다:</p>
         <ul>
           <li><strong>무료 사용자</strong>: 이미지는 <strong>기기에만 저장</strong>됩니다(App Documents). Floriary 서버 업로드나 기기 간 개별 동기화를 하지 않습니다. 기기 변경·재설치 후 구조화 데이터는 서버에서 복원되지만 사진은 자동으로 따라오지 않습니다.</li>
-          <li><strong>유료 회원</strong>: 이미지는 <strong>Floriary 자체 오브젝트 스토리지(Tencent COS, 계정당 10 GB)에 업로드</strong>되어 iOS와 Android 기기 간 동기화·기기 변경 시 복원됩니다. iCloud 용량을 사용하지 않습니다.</li>
-          <li>이미지에 연결된 <strong>구조화 데이터</strong>(정원/식물/메모, 태그, 알림 설정 등)는 Floriary 서버로 동기화됩니다. 이미지 자체는 Floriary COS(유료 회원) 또는 기기에만(무료 사용자) 저장됩니다.</li>
+          <li><strong>유료 회원</strong>: 이미지는 <strong>Floriary 서버(계정당 10 GB)에 업로드</strong>되어 iOS와 Android 기기 간 동기화·기기 변경 시 복원됩니다. iCloud 용량을 사용하지 않습니다.</li>
+          <li>이미지에 연결된 <strong>구조화 데이터</strong>(정원/식물/메모, 태그, 알림 설정 등)는 Floriary 서버로 동기화됩니다. 이미지 자체는 Floriary 서버(유료 회원) 또는 기기에만(무료 사용자) 저장됩니다.</li>
         </ul>
-        <div class="callout"><strong>Floriary 서버/COS에 업로드되는 이미지:</strong> ① <strong>피드백 제출</strong> 시 첨부한 이미지; ② 학습 데이터 수집에 <strong>동의한 후</strong> 수집되는 식별 사진(1.4 참조); ③ <strong>유료 회원의 성장 기록 사진·식물 커버</strong>(크로스 플랫폼 동기화용, 계정당 10 GB).</div>
+        <div class="callout"><strong>Floriary 서버에 업로드되는 이미지:</strong> ① <strong>피드백 제출</strong> 시 첨부한 이미지; ② 학습 데이터 수집에 <strong>동의한 후</strong> 수집되는 식별 사진(1.4 참조); ③ <strong>유료 회원의 성장 기록 사진·식물 커버</strong>(크로스 플랫폼 동기화용, 계정당 10 GB).</div>
         <h3>1.4 식별 기능의 정보 처리</h3>
         <p>‘식별(사진으로 식물 인식)’ 기능 사용 시:</p>
         <ul>
           <li>선택한 사진은 기기에서 압축되고, 업로드 전에 <strong>EXIF 메타데이터(GPS 등 포함)를 제거하여 비식별화</strong>합니다.</li>
-          <li>비식별화된 사진은 식별을 위해 <strong>제3자 식물 인식 서비스로 일시 전송</strong>됩니다(해당 서비스는 중국 외에 있을 수 있음). 식별 후 임시 이미지는 삭제되며 장기 클라우드 앨범으로 보관하지 않습니다.</li>
+          <li>비식별화된 사진은 식별을 위해 <strong>제3자 식물 인식 서비스(Baidu/바이두, 중국 내)로 일시 전송</strong>됩니다. 식별 후 임시 이미지는 삭제되며 장기 클라우드 앨범으로 보관하지 않습니다.</li>
           <li>인식 기록(후보 종, 이미지 해시, 최종 확인·선택한 종)은 인식 품질 개선과 식물 도감 보완을 위해 Floriary 서버에 저장됩니다.</li>
           <li><strong>식별 최초 사용에는 명시적 동의가 필요합니다</strong>: ① 사진이 인식을 위해 제3자 서비스로 전송됨; ② Floriary가 자체 식물 인식 모델 개선을 위해 식별 사진과 인식/확인 결과를 저장함. <strong>동의하지 않으면 식별 기능을 사용할 수 없습니다.</strong> 동의는 버전과 시각이 기록됩니다.</li>
           <li>모델 개선에 사용되는 식별 사진도 저장 전 <strong>EXIF가 제거</strong>됩니다. 계정 삭제 시 관련 사진과 기록은 함께 삭제됩니다.</li>
@@ -890,8 +886,8 @@
         <h3>3.1 저장 위치</h3>
         <ul>
           <li><strong>구조화 데이터</strong>(계정, 정원/식물/메모, 태그, 자산, 인식 기록, 구독 상태 등): Floriary 자체 서버(중국 리전: Tencent Cloud 서버+DB).</li>
-          <li><strong>성장 기록 사진·식물 커버</strong>: 무료 사용자는 기기에만(App Documents); 유료 회원은 <strong>Floriary 자체 오브젝트 스토리지(Tencent COS, 계정당 10 GB)</strong>에 저장하여 iOS와 Android 기기 간 동기화.</li>
-          <li><strong>피드백 이미지·식별 학습 사진(동의 시에만)</strong>: 비식별화 후 Floriary 오브젝트 스토리지(중국 리전: Tencent COS)에 저장.</li>
+          <li><strong>성장 기록 사진·식물 커버</strong>: 무료 사용자는 기기에만(App Documents); 유료 회원은 <strong>Floriary 서버(계정당 10 GB)</strong>에 저장하여 iOS와 Android 기기 간 동기화.</li>
+          <li><strong>피드백 이미지·식별 학습 사진(동의 시에만)</strong>: 비식별화 후 Floriary 서버(중국 리전: Tencent Cloud)에 저장.</li>
           <li><strong>로컬 토큰</strong>: 기기에만 저장.</li>
         </ul>
         <h3>3.2 보관 기간</h3>
@@ -902,7 +898,7 @@
             <tr><td>삭제 신청 후</td><td>7일 유예 기간 진입, 종료 후 소프트 삭제·익명화(정원/식물/기록/태그 등을 본인과 분리, 이메일 등 식별 정보 삭제)</td></tr>
             <tr><td>식별 사진·기록(삭제 후)</td><td>삭제 절차와 함께 삭제</td></tr>
             <tr><td>피드백 데이터</td><td>문제 추적 필요에 따라 합리적 기간 보관</td></tr>
-            <tr><td>수동 삭제한 기록</td><td>연결된 서버 이미지(회원 COS 사진·피드백 이미지 등)는 삭제 대기로 정기 처리; 기기 사진은 기기가 삭제</td></tr>
+            <tr><td>수동 삭제한 기록</td><td>연결된 서버 이미지(회원이 동기화한 사진·피드백 이미지 등)는 삭제 대기로 정기 처리; 기기 사진은 기기가 삭제</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -915,12 +911,11 @@
           <li><strong>IAP 영수증 검증</strong>: Apple App Store 서버에서 영수증 확인. <a href="https://www.apple.com/legal/privacy/ko/" target="_blank" rel="noopener">Apple 개인정보 처리방침</a> 참조.</li>
           <li><strong>App Store Server Notifications</strong>: 구독 상태 변경(갱신·만료·환불) 수신.</li>
           <li><strong>Sign in with Apple</strong>: 고유 식별자와 (선택적) 이메일을 Floriary에 제공.</li>
-          <li><strong>Tencent COS(회원 사진 스토리지)</strong>: 유료 회원의 성장 기록 사진·식물 커버는 Floriary 자체 Tencent COS(계정당 10 GB)에 저장되어 크로스 플랫폼 동기화에 사용됩니다. Tencent Cloud는 인프라 제공자로만 기능하며 사진 데이터를 독자적으로 이용하지 않습니다.</li>
         </ul>
         <h3>4.2 클라우드 인프라 제공자</h3>
-        <p>Floriary는 서버 데이터를 <strong>Tencent Cloud(중국)</strong>에 저장합니다. 해당 제공자는 처리자로서 Floriary의 지시에 따라서만 처리하며 데이터를 독자적으로 이용하지 않습니다.</p>
+        <p>Floriary는 서버 데이터(유료 회원이 동기화한 사진 포함, 계정당 10 GB)를 <strong>Tencent Cloud(중국)</strong>에 저장합니다. Tencent Cloud는 인프라 제공자/처리자로서 Floriary의 지시에 따라서만 처리하며 데이터를 독자적으로 이용하지 않습니다.</p>
         <h3>4.3 제3자 식물 인식 서비스(식별)</h3>
-        <p>식별 사용 시 비식별화된 사진이 인식을 위해 제3자 서비스(중국 외 가능)로 <strong>일시 전송</strong>되며 처리 후 삭제됩니다. <strong>최초 사용 시 별도 동의</strong>를 받습니다. 동의하지 않으면 전송되지 않으며 식별 기능을 사용할 수 없습니다.</p>
+        <p>식별 사용 시 비식별화된 사진이 인식을 위해 제3자 서비스(Baidu/바이두, 중국 내)로 <strong>일시 전송</strong>되며 처리 후 삭제됩니다. <strong>최초 사용 시 별도 동의</strong>를 받습니다. 동의하지 않으면 전송되지 않으며 식별 기능을 사용할 수 없습니다.</p>
         <h3>4.4 법적 요구</h3>
         <p>법령·법원 명령·정부 기관의 요구가 있는 경우 필요한 정보를 법에 따라 제공할 수 있습니다.</p>
       </section>
