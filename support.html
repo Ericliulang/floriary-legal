@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>技术支持 — 花迹 Floriary</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <style>
     :root{
       --brand-800:#2D5A3D;--brand-700:#3E6B4F;--brand-600:#5FAE6E;--brand-400:#8FC79A;
@@ -46,7 +48,7 @@
 <body>
 
   <header class="site-header">
-    <div class="logo-icon">🌿</div>
+    <img class="logo-icon" src="assets/app-logo.png" alt="" style="object-fit:contain;background:transparent">
     <span class="brand">花迹 Floriary</span>
     <div class="lang-switch">
       <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">🌐 <span id="langLabel">简体中文</span> ▾</button>
@@ -99,13 +101,14 @@
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="index.html" data-i18n="nav.home"></a>
-      <a href="privacy.html" data-i18n="nav.privacy"></a>
-      <a href="terms.html" data-i18n="nav.terms"></a>
-      <a href="support.html" data-i18n="nav.support"></a>
+      <a href="/" data-i18n="nav.home"></a>
+      <a href="/privacy" data-i18n="nav.privacy"></a>
+      <a href="/terms" data-i18n="nav.terms"></a>
+      <a href="/support" data-i18n="nav.support"></a>
       <a href="mailto:simplord@163.com" data-i18n="nav.contact"></a>
     </div>
     <p>© 2026 花迹 Floriary · Eric Liu · All rights reserved.</p>
+    <p style="margin-top:8px"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">浙ICP备2026044805号-1</a></p>
   </footer>
 
   <script>
@@ -113,55 +116,55 @@
     var LABELS={zh:'简体中文','zh-Hant':'繁體中文',en:'English',ja:'日本語',ko:'한국어'};
     var T={
       zh:{title:'技术支持',subtitle:'花迹 Floriary · 每一寸生长，都有迹可循',
-        aboutH:'关于花迹',aboutP:'花迹是一款面向植物爱好者的成长记录应用：管理你的花园与植株，记录每次浇水、施肥、修剪与成长变化，设置养护提醒，并通过统计与图鉴回看你的养护足迹。如使用中遇到任何问题或有功能建议，欢迎通过下方方式联系我们。',
+        aboutH:'关于花迹',aboutP:'花迹是一款面向植物爱好者的成长记录应用：管理你的花园与植株，记录每次浇水、施肥、修剪与成长变化，设置养护提醒，并通过统计与图鉴回看你的养护足迹。支持 iOS 与 Android 双平台。如使用中遇到任何问题或有功能建议，欢迎通过下方方式联系我们。',
         faqH:'常见问题',
-        q1:'数据会跨设备同步吗？',a1:'花园、植株、成长记录文字、养护提醒等结构化数据会自动云同步，换设备登录同一账号即可恢复。照片方面：会员的照片通过你自己的 iCloud 跨设备同步、换机自动恢复；免费用户的照片仅保存在本机。',
-        q2:'如何管理或取消订阅？',a2:'会员订阅通过 Apple 账户扣费。可在 iPhone「设置 → 你的 Apple 账户 → 订阅」中随时管理或关闭自动续费；需在当前订阅周期结束前至少 24 小时操作。永久会员为一次性买断、不自动续费。',
-        q3:'收不到养护提醒通知？',a3:'请在 iPhone「设置 → 通知 → 花迹」中确认已允许通知；App 内「设置 → 通知」也提供前往系统设置的入口。',
+        q1:'数据会跨设备同步吗？',a1:'花园、植株、成长记录文字、养护提醒等结构化数据会自动云同步，换设备登录同一账号即可恢复。照片方面：会员的照片上传至花迹云端（每账号 10 GB），iOS 与 Android 均可跨设备同步、换机自动恢复；免费用户的照片仅保存在本机。',
+        q2:'如何管理或取消订阅？',a2:'会员订阅通过 Apple 账户（iOS）或 Google Play（Android）扣费。iOS 用户可在「设置 → 你的 Apple 账户 → 订阅」随时管理或关闭自动续费，需在当前周期结束前至少 24 小时操作。',
+        q3:'收不到养护提醒通知？',a3:'iOS：请在「设置 → 通知 → 花迹」中确认已允许通知。Android：请在「设置 → 应用 → 花迹 → 通知」中开启通知权限。App 内「设置 → 通知」也提供前往系统设置的入口。',
         q4:'如何注销账号？',a4:'在「我的 → 账号详情页」底部可发起账号注销，提交后进入冷静期（默认 7 天），期间可随时登录撤销；到期后数据将被清理或匿名化。注销 App 账号不会自动取消 Apple 订阅，请另行在 App Store 取消。',
         q5:'忘记密码怎么办？',a5:'在登录页点「忘记密码」，通过邮箱验证码重置；或使用 Apple 登录。',
         contactH:'联系我们',contactP:'遇到问题、需要帮助或有建议，欢迎联系：',
         devLabel:'开发者',emailLabel:'支持邮箱',contactNote:'为便于排查，反馈时可附上 App 版本、设备型号与系统版本。',
         'nav.home':'首页','nav.privacy':'隐私政策','nav.terms':'用户协议','nav.support':'技术支持','nav.contact':'联系我们'},
       'zh-Hant':{title:'技術支援',subtitle:'花迹 Floriary · 每一寸生長，都有跡可循',
-        aboutH:'關於花迹',aboutP:'花迹是一款面向植物愛好者的成長記錄應用：管理你的花園與植株，記錄每次澆水、施肥、修剪與成長變化，設定養護提醒，並透過統計與圖鑑回看你的養護足跡。如使用中遇到任何問題或有功能建議，歡迎透過下方方式聯絡我們。',
+        aboutH:'關於花迹',aboutP:'花迹是一款面向植物愛好者的成長記錄應用：管理你的花園與植株，記錄每次澆水、施肥、修剪與成長變化，設定養護提醒，並透過統計與圖鑑回看你的養護足跡。支援 iOS 與 Android 雙平台。如使用中遇到任何問題或有功能建議，歡迎透過下方方式聯絡我們。',
         faqH:'常見問題',
-        q1:'資料會跨裝置同步嗎？',a1:'花園、植株、成長記錄文字、養護提醒等結構化資料會自動雲端同步，換裝置登入同一帳號即可還原。照片方面：會員的照片透過你自己的 iCloud 跨裝置同步、換機自動還原；免費用戶的照片僅保存在本機。',
-        q2:'如何管理或取消訂閱？',a2:'會員訂閱透過 Apple 帳戶扣款。可在 iPhone「設定 → 你的 Apple 帳戶 → 訂閱」中隨時管理或關閉自動續訂；需在目前訂閱週期結束前至少 24 小時操作。永久會員為一次性買斷、不自動續訂。',
-        q3:'收不到養護提醒通知？',a3:'請在 iPhone「設定 → 通知 → 花迹」中確認已允許通知；App 內「設定 → 通知」也提供前往系統設定的入口。',
+        q1:'資料會跨裝置同步嗎？',a1:'花園、植株、成長記錄文字、養護提醒等結構化資料會自動雲端同步，換裝置登入同一帳號即可還原。照片方面：會員的照片上傳至花迹雲端（每帳號 10 GB），iOS 與 Android 均可跨裝置同步、換機自動還原；免費用戶的照片僅保存在本機。',
+        q2:'如何管理或取消訂閱？',a2:'會員訂閱透過 Apple 帳戶（iOS）或 Google Play（Android）扣款。iOS 用戶可在「設定 → 你的 Apple 帳戶 → 訂閱」中隨時管理或關閉自動續訂，需在目前週期結束前至少 24 小時操作。',
+        q3:'收不到養護提醒通知？',a3:'iOS：請在「設定 → 通知 → 花迹」中確認已允許通知。Android：請在「設定 → 應用程式 → 花迹 → 通知」中開啟通知權限。App 內「設定 → 通知」也提供前往系統設定的入口。',
         q4:'如何登出/註銷帳號？',a4:'在「我的 → 帳號詳情頁」底部可發起帳號註銷，提交後進入冷靜期（預設 7 天），期間可隨時登入撤銷；到期後資料將被清理或匿名化。註銷 App 帳號不會自動取消 Apple 訂閱，請另行在 App Store 取消。',
         q5:'忘記密碼怎麼辦？',a5:'在登入頁點「忘記密碼」，透過電子郵件驗證碼重設；或使用 Apple 登入。',
         contactH:'聯絡我們',contactP:'遇到問題、需要協助或有建議，歡迎聯絡：',
         devLabel:'開發者',emailLabel:'支援信箱',contactNote:'為便於排查，回報時可附上 App 版本、裝置型號與系統版本。',
         'nav.home':'首頁','nav.privacy':'隱私政策','nav.terms':'使用者協議','nav.support':'技術支援','nav.contact':'聯絡我們'},
-      en:{title:'Support',subtitle:'Floriary · Every bit of growth leaves a trace',
-        aboutH:'About Floriary',aboutP:'Floriary is a growth journal for plant lovers: manage your gardens and plants, record every watering, feeding, pruning and change, set care reminders, and revisit your care journey through stats and the plant library. If you run into any issue or have a suggestion, please reach out below.',
-        faqH:'Frequently asked questions',
-        q1:'Does my data sync across devices?',a1:'Structured data (gardens, plants, growth notes, care reminders) syncs automatically — sign in with the same account on a new device to restore it. Photos: members’ photos sync across devices via your own iCloud and restore on a new phone; free users’ photos are stored only on the device.',
-        q2:'How do I manage or cancel my subscription?',a2:'Membership is billed through your Apple account. Manage or turn off auto-renew anytime in iPhone Settings → your Apple Account → Subscriptions, at least 24 hours before the period ends. The Lifetime plan is a one-time purchase and does not renew.',
-        q3:'I’m not receiving care reminders.',a3:'Make sure notifications are allowed in iPhone Settings → Notifications → Floriary; the app’s Settings → Notifications also links to System Settings.',
+      en:{title:’Support’,subtitle:’Floriary · Every bit of growth leaves a trace’,
+        aboutH:’About Floriary’,aboutP:’Floriary is a growth journal for plant lovers: manage your gardens and plants, record every watering, feeding, pruning and change, set care reminders, and revisit your care journey through stats and the plant library. Available on iOS and Android. If you run into any issue or have a suggestion, please reach out below.’,
+        faqH:’Frequently asked questions’,
+        q1:’Does my data sync across devices?’,a1:’Structured data (gardens, plants, growth notes, care reminders) syncs automatically — sign in with the same account on a new device to restore it. Photos: members\’ photos are uploaded to Floriary cloud (10 GB per account) and sync across iOS and Android devices; free users\’ photos are stored only on the device.’,
+        q2:’How do I manage or cancel my subscription?’,a2:’Membership is billed through your Apple account (iOS) or Google Play (Android). iOS: manage or turn off auto-renew in iPhone Settings → your Apple Account → Subscriptions, at least 24 hours before the period ends. Android: manage in Google Play → Subscriptions.’,
+        q3:’I\’m not receiving care reminders.’,a3:’iOS: make sure notifications are allowed in Settings → Notifications → Floriary. Android: go to Settings → Apps → Floriary → Notifications to enable them. The app\’s Settings → Notifications also links to System Settings.’,
         q4:'How do I delete my account?',a4:'You can start account deletion at the bottom of My → Account. After submitting, a grace period (7 days by default) begins during which you can sign in and cancel; afterwards your data is cleared or anonymized. Deleting your app account does not cancel your Apple subscription — cancel that separately in the App Store.',
         q5:'I forgot my password.',a5:'Tap “Forgot password” on the login page to reset via an email code, or sign in with Apple.',
         contactH:'Contact us',contactP:'For issues, help or suggestions, contact:',
         devLabel:'Developer',emailLabel:'Support email',contactNote:'To help us diagnose, please include your app version, device model and OS version.',
         'nav.home':'Home','nav.privacy':'Privacy','nav.terms':'Terms','nav.support':'Support','nav.contact':'Contact'},
       ja:{title:'サポート',subtitle:'Floriary · 育つすべての瞬間に、軌跡を',
-        aboutH:'Floriary について',aboutP:'Floriary は植物好きのための成長記録アプリです。庭と植物を管理し、水やり・肥料・剪定・変化を記録し、お手入れリマインダーを設定。統計と図鑑でお手入れの軌跡をふり返れます。問題やご要望があれば下記からご連絡ください。',
+        aboutH:'Floriary について',aboutP:'Floriary は植物好きのための成長記録アプリです。庭と植物を管理し、水やり・肥料・剪定・変化を記録し、お手入れリマインダーを設定。統計と図鑑でお手入れの軌跡をふり返れます。iOS と Android の両プラットフォームに対応しています。問題やご要望があれば下記からご連絡ください。',
         faqH:'よくある質問',
-        q1:'データは複数端末で同期されますか？',a1:'構造化データ（庭・植物・成長メモ・お手入れリマインダー）は自動で同期され、別の端末で同じアカウントにログインすれば復元できます。写真：プレミアムの写真はあなた自身の iCloud で同期・機種変更時に復元、無料ユーザーの写真は端末内のみに保存されます。',
-        q2:'サブスクの管理・解約方法は？',a2:'メンバーシップは Apple アカウントで課金されます。iPhone の「設定 →（Apple アカウント）→ サブスクリプション」でいつでも管理・自動更新の解除ができます（期間終了の24時間以上前に）。買い切りプランは自動更新されません。',
-        q3:'お手入れ通知が届きません。',a3:'iPhone の「設定 → 通知 → 花迹」で通知が許可されているか確認してください。アプリの「設定 → 通知」からシステム設定へ移動できます。',
+        q1:'データは複数端末で同期されますか？',a1:'構造化データ（庭・植物・成長メモ・お手入れリマインダー）は自動で同期され、別の端末で同じアカウントにログインすれば復元できます。写真：有料会員の写真は Floriary クラウド（アカウントあたり 10 GB）にアップロードされ、iOS と Android でクロスデバイス同期・機種変更時に復元されます。無料ユーザーの写真は端末内のみです。',
+        q2:'サブスクの管理・解約方法は？',a2:'メンバーシップは Apple アカウント（iOS）または Google Play（Android）で課金されます。iOS は iPhone の「設定 →（Apple アカウント）→ サブスクリプション」でいつでも管理・解除できます（期間終了の24時間以上前に）。Android は Google Play の「定期購入」から管理できます。',
+        q3:'お手入れ通知が届きません。',a3:'iOS：iPhone の「設定 → 通知 → 花迹」で通知が許可されているか確認してください。Android：「設定 → アプリ → 花迹 → 通知」で通知をオンにしてください。アプリの「設定 → 通知」からシステム設定へ移動できます。',
         q4:'アカウントの削除方法は？',a4:'「マイ → アカウント詳細」下部から削除を申請できます。申請後は猶予期間（既定7日間）に入り、ログインして取り消せます。期間終了後にデータは消去または匿名化されます。アプリのアカウント削除では Apple サブスクは解約されません。App Store で別途解約してください。',
         q5:'パスワードを忘れました。',a5:'ログイン画面の「パスワードをお忘れですか」からメールの認証コードで再設定、または Apple でサインインしてください。',
         contactH:'お問い合わせ',contactP:'問題・サポート・ご要望は以下までご連絡ください：',
         devLabel:'開発者',emailLabel:'サポートメール',contactNote:'調査のため、アプリのバージョン・端末・OS バージョンを添えてください。',
         'nav.home':'ホーム','nav.privacy':'プライバシー','nav.terms':'利用規約','nav.support':'サポート','nav.contact':'お問い合わせ'},
       ko:{title:'지원',subtitle:'Floriary · 모든 성장의 순간에 흔적이 남습니다',
-        aboutH:'Floriary 소개',aboutP:'Floriary는 식물 애호가를 위한 성장 기록 앱입니다. 정원과 식물을 관리하고 물주기·비료·가지치기·변화를 기록하며, 케어 알림을 설정하고 통계와 도감으로 케어 발자취를 돌아봅니다. 문제나 제안이 있으면 아래로 연락해 주세요.',
+        aboutH:'Floriary 소개',aboutP:'Floriary는 식물 애호가를 위한 성장 기록 앱입니다. 정원과 식물을 관리하고 물주기·비료·가지치기·변화를 기록하며, 케어 알림을 설정하고 통계와 도감으로 케어 발자취를 돌아봅니다. iOS와 Android 모두 지원합니다. 문제나 제안이 있으면 아래로 연락해 주세요.',
         faqH:'자주 묻는 질문',
-        q1:'데이터가 여러 기기에서 동기화되나요?',a1:'구조화 데이터(정원·식물·성장 메모·케어 알림)는 자동 동기화되며, 다른 기기에서 같은 계정으로 로그인하면 복원됩니다. 사진: 프리미엄 사진은 본인의 iCloud로 동기화·기기 변경 시 복원되고, 무료 사용자의 사진은 기기에만 저장됩니다.',
-        q2:'구독 관리/취소는 어떻게 하나요?',a2:'멤버십은 Apple 계정으로 청구됩니다. iPhone 설정 → Apple 계정 → 구독에서 언제든 관리하거나 자동 갱신을 끌 수 있습니다(기간 종료 24시간 전까지). 평생 구매는 자동 갱신되지 않습니다.',
-        q3:'케어 알림이 오지 않아요.',a3:'iPhone 설정 → 알림 → 花迹에서 알림이 허용되어 있는지 확인하세요. 앱의 설정 → 알림에서도 시스템 설정으로 이동할 수 있습니다.',
+        q1:'데이터가 여러 기기에서 동기화되나요?',a1:'구조화 데이터(정원·식물·성장 메모·케어 알림)는 자동 동기화되며, 다른 기기에서 같은 계정으로 로그인하면 복원됩니다. 사진: 유료 회원의 사진은 Floriary 클라우드(계정당 10 GB)에 업로드되어 iOS와 Android 기기 간 동기화·기기 변경 시 복원되고, 무료 사용자의 사진은 기기에만 저장됩니다.',
+        q2:'구독 관리/취소는 어떻게 하나요?',a2:'멤버십은 Apple 계정(iOS) 또는 Google Play(Android)로 청구됩니다. iOS: iPhone 설정 → Apple 계정 → 구독에서 언제든 관리하거나 자동 갱신을 끌 수 있습니다(기간 종료 24시간 전까지). Android: Google Play → 정기 결제에서 관리하세요.',
+        q3:'케어 알림이 오지 않아요.',a3:'iOS: iPhone 설정 → 알림 → 花迹에서 알림이 허용되어 있는지 확인하세요. Android: 설정 → 앱 → 花迹 → 알림에서 알림을 켜세요. 앱의 설정 → 알림에서도 시스템 설정으로 이동할 수 있습니다.',
         q4:'계정을 어떻게 삭제하나요?',a4:'마이 → 계정 상세 하단에서 계정 삭제를 신청할 수 있습니다. 신청 후 유예 기간(기본 7일)에 들어가며 로그인하여 취소할 수 있고, 이후 데이터는 삭제 또는 익명화됩니다. 앱 계정 삭제로 Apple 구독은 취소되지 않으니 App Store에서 별도로 취소하세요.',
         q5:'비밀번호를 잊었어요.',a5:'로그인 화면의 ‘비밀번호 찾기’에서 이메일 인증코드로 재설정하거나 Apple로 로그인하세요.',
         contactH:'문의',contactP:'문제·도움·제안은 아래로 연락해 주세요:',
