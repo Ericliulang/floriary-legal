@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>花迹 Floriary · 植物成长记录</title>
   <meta name="description" content="花迹 Floriary —— 记录每一株植物的成长，养护提醒到点不忘，数据洞察一目了然。每一寸生长，都有迹可循。">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
   <style>
     :root{
@@ -26,15 +28,15 @@
 
     /* Header */
     .hdr{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:10px;padding:14px clamp(16px,4vw,40px);
-      background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
-    .hdr.scrolled{border-color:var(--border)}
-    .logo{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--brand-800);font-size:16px;letter-spacing:.2px}
+      background:color-mix(in srgb,var(--brand-900) 90%,transparent);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid rgba(255,255,255,.1);transition:border-color .3s}
+    .hdr.scrolled{border-color:rgba(255,255,255,.18)}
+    .logo{display:flex;align-items:center;gap:9px;font-weight:700;color:#fff;font-size:16px;letter-spacing:.2px}
     .logo svg{width:26px;height:26px;flex:none}
     /* Lang switch */
     .lang{margin-left:auto;position:relative}
-    .lang-btn{font:inherit;font-size:13px;color:var(--ink-2);background:var(--surface);border:1px solid var(--border);border-radius:999px;
-      padding:7px 13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:border-color .2s,box-shadow .2s}
-    .lang-btn:hover{border-color:var(--brand-400);box-shadow:0 2px 10px rgba(45,90,61,.08)}
+    .lang-btn{font:inherit;font-size:13px;color:#EAF4ED;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);border-radius:999px;
+      padding:7px 13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:border-color .2s,box-shadow .2s,background .2s}
+    .lang-btn:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.18);box-shadow:0 2px 12px rgba(0,0,0,.18)}
     .lang-menu{position:absolute;right:0;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--border);border-radius:14px;
       box-shadow:0 12px 34px rgba(27,38,32,.14);padding:6px;min-width:150px;list-style:none;opacity:0;transform:translateY(-6px) scale(.98);
       pointer-events:none;transition:opacity .18s var(--ease),transform .18s var(--ease)}
@@ -142,8 +144,8 @@
 <body>
 
   <header class="hdr" id="hdr">
-    <a class="logo" href="index.html" aria-label="花迹 Floriary">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c0-5 0-8 3.5-11C18 8 18 5 18 5s-4 0-6.5 2.5C9 10 9 13 9 13" stroke="#3E6B4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 21c0-3.5-.5-6-3-8-2-1.6-3-4.5-3-4.5s3 .2 5 2c2.2 2 2.8 4.3 2.9 6" stroke="#5FAE6E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <a class="logo" href="/" aria-label="花迹 Floriary">
+      <img src="assets/app-logo.png" alt="" width="26" height="26" style="flex:none;border-radius:6px;object-fit:contain">
       花迹 Floriary
     </a>
     <div class="lang">
@@ -170,27 +172,23 @@
       </div>
     </div>
     <div class="hero-media">
-      <div class="device"><img src="assets/shots/garden.png" alt="花迹花园页面，展示植物网格与封面照片" loading="eager" width="1206" height="2622"></div>
+      <div class="device"><img data-shot="garden" src="assets/shots/zh/garden.png" alt="花迹花园页面，展示植物网格与封面照片" loading="eager" width="760" height="1652"></div>
     </div>
   </section>
 
   <!-- SHOWCASE -->
   <div class="section" style="padding-top:0">
     <div class="show reveal">
-      <div class="show-media"><div class="device"><img src="assets/shots/plant.png" alt="植株成长时光轴" loading="lazy" width="1206" height="2622"></div></div>
+      <div class="show-media"><div class="device"><img data-shot="plant" src="assets/shots/zh/plant.png" alt="植株成长时光轴" loading="lazy" width="760" height="1652"></div></div>
       <div class="show-text"><span class="k" data-i18n="s1.k"></span><h3 data-i18n="s1.t"></h3><p data-i18n="s1.d"></p></div>
     </div>
     <div class="show reveal">
-      <div class="show-media"><div class="device"><img src="assets/shots/care.png" alt="养护待办清单：逾期、今天、即将" loading="lazy" width="1206" height="2622"></div></div>
+      <div class="show-media"><div class="device"><img data-shot="care" src="assets/shots/zh/care.png" alt="养护待办清单：逾期、今天、即将" loading="lazy" width="760" height="1652"></div></div>
       <div class="show-text"><span class="k" data-i18n="s2.k"></span><h3 data-i18n="s2.t"></h3><p data-i18n="s2.d"></p></div>
     </div>
     <div class="show reveal">
-      <div class="show-media"><div class="device"><img src="assets/shots/stats.png" alt="档案页：热力图、连击与数据洞察" loading="lazy" width="1206" height="2622"></div></div>
+      <div class="show-media"><div class="device"><img data-shot="stats" src="assets/shots/zh/stats.png" alt="档案页：热力图、连击与数据洞察" loading="lazy" width="760" height="1652"></div></div>
       <div class="show-text"><span class="k" data-i18n="s3.k"></span><h3 data-i18n="s3.t"></h3><p data-i18n="s3.d"></p></div>
-    </div>
-    <div class="show reveal">
-      <div class="show-media"><div class="device"><img src="assets/shots/widget.png" alt="主屏小组件与灵动岛上的今日养护" loading="lazy" width="1206" height="2622"></div></div>
-      <div class="show-text"><span class="k" data-i18n="s4.k"></span><h3 data-i18n="s4.t"></h3><p data-i18n="s4.d"></p></div>
     </div>
   </div>
 
@@ -217,12 +215,13 @@
   <footer class="ft">
     <p class="tagline" data-i18n="footer.tagline"></p>
     <div class="ft-links">
-      <a href="privacy.html" data-i18n="nav.privacy"></a>
-      <a href="terms.html" data-i18n="nav.terms"></a>
-      <a href="support.html" data-i18n="nav.support"></a>
+      <a href="/privacy" data-i18n="nav.privacy"></a>
+      <a href="/terms" data-i18n="nav.terms"></a>
+      <a href="/support" data-i18n="nav.support"></a>
       <a href="mailto:simplord@163.com" data-i18n="nav.contact"></a>
     </div>
     <p>© 2026 花迹 Floriary · Eric Liu · All rights reserved.</p>
+    <p style="margin-top:8px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="color:var(--ink-3)">浙ICP备2026044805号-1</a><a href="https://beian.mps.gov.cn/#/query/webSearch?code=33011302001216" target="_blank" rel="noreferrer" style="color:var(--ink-3);display:inline-flex;align-items:center;gap:5px"><img src="assets/beian.png" alt="" width="14" height="14" style="vertical-align:middle">浙公网安备33011302001216号</a></p>
   </footer>
 
   <script>
@@ -327,6 +326,8 @@
       var d=T[lang]||T.zh;
       document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null)el.textContent=d[k];});
       document.querySelectorAll('[data-i18n-html]').forEach(function(el){var k=el.getAttribute('data-i18n-html');if(d[k]!=null)el.innerHTML=d[k];});
+      // 按语言切换截图（garden / plant / care / stats 各语言对应自己的界面截图）
+      document.querySelectorAll('[data-shot]').forEach(function(el){var s=el.getAttribute('data-shot');el.setAttribute('src','assets/shots/'+lang+'/'+s+'.png');});
       document.documentElement.setAttribute('data-lang',lang);
       document.documentElement.setAttribute('lang',HTMLLANG[lang]||'zh-CN');
       document.title=TITLES[lang]||TITLES.zh;
